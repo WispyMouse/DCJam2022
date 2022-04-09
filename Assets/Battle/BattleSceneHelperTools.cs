@@ -7,6 +7,9 @@ public class BattleSceneHelperTools : SceneHelperTools
     public Transform[] FoePositions;
     public Foe FoePF;
 
+    public Transform PlayerHealthHUDPosition;
+    public PlayerHealthInCombat HudPF;
+
     public void EndBattle()
     {
         SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.EndCurrentState());

@@ -72,6 +72,18 @@ public class BattleState : SceneLoadingGameplayState
             Opponents.OpposingMembers[ii].Visual = foe;
             foe.SetDataMember(Opponents.OpposingMembers[ii]);
         }
+
+        for (int ii = 0; ii < BattleSceneHelperToolsInstance.PlayerHealthHUDPosition.childCount; ii++)
+        {
+            GameObject.Destroy(BattleSceneHelperToolsInstance.PlayerHealthHUDPosition.GetChild(ii).gameObject);
+        }
+
+        for (int ii = 0; ii < PlayerPartyPointer.PartyMembers.Count; ii++)
+        {
+            PlayerHealthInCombat player = GameObject.Instantiate(BattleSceneHelperToolsInstance.HudPF, BattleSceneHelperToolsInstance.PlayerHealthHUDPosition);
+            player.SetPlayer(PlayerPartyPointer.PartyMembers[ii]);
+            PlayerPartyPointer.PartyMembers[ii].Hud = player;
+        }
     }
 
     public override IEnumerator StartState(GlobalStateMachine globalStateMachine, IGameplayState previousState)
@@ -90,7 +102,7 @@ public class BattleState : SceneLoadingGameplayState
         else
         {
             BattleCommands = new List<BattleCommand>();
-            yield return globalStateMachine.PushNewState(new ChooseCommandsForPartyState(this));
+            yield return globalStateMachine.PushNewState(new ChoosePartysCommandsState(this));
         }
     }
 }
