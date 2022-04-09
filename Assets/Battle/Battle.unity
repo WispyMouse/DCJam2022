@@ -514,6 +514,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6973cfac559343940978c3319a145d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FoePositions:
+  - {fileID: 714745214}
+  - {fileID: 149069897}
+  - {fileID: 2069146758}
+  - {fileID: 1299774447}
+  - {fileID: 1562207137}
+  - {fileID: 949394675}
 --- !u!4 &206008858
 Transform:
   m_ObjectHideFlags: 0

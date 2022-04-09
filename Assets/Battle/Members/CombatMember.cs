@@ -8,5 +8,5 @@ using UnityEngine;
 public class CombatMember
 {
     public string DisplayName { get; set; }
-    public GameObject Visual { get; set; }
+    public Foe Visual { get; set; }
 }

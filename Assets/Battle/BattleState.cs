@@ -26,9 +26,7 @@ public class BattleState : SceneLoadingGameplayState
     /// </summary>
     public List<BattleCommand> BattleCommands { get; set; } = new List<BattleCommand>();
 
-    public Transform[] FoePositions;
-
-    public Foe FoePF;
+    BattleSceneHelperTools BattleSceneHelperToolsInstance { get; set; }
 
     public BattleOpponents LastLoadedOpponents { get; set; }
 
@@ -56,19 +54,21 @@ public class BattleState : SceneLoadingGameplayState
     {
         yield return base.Load();
 
+        BattleSceneHelperToolsInstance = GameObject.FindObjectOfType<BattleSceneHelperTools>();
+
         PlayerPartyPointer = SceneHelperInstance.PlayerParty;
 
-        foreach (Transform curFoePosition in FoePositions)
+        foreach (Transform curFoePosition in BattleSceneHelperToolsInstance.FoePositions)
         {
             for (int ii = 0; ii < curFoePosition.childCount; ii++)
             {
-                GameObject.Destroy(curFoePosition.GetChild(ii));
+                GameObject.Destroy(curFoePosition.GetChild(ii).gameObject);
             }
         }
 
-        for (int ii = 0; ii < FoePositions.Length && ii < Opponents.OpposingMembers.Count; ii++)
+        for (int ii = 0; ii < BattleSceneHelperToolsInstance.FoePositions.Length && ii < Opponents.OpposingMembers.Count; ii++)
         {
-            Foe foe = GameObject.Instantiate(FoePF, FoePositions[ii]);
+            Foe foe = GameObject.Instantiate(BattleSceneHelperToolsInstance.FoePF, BattleSceneHelperToolsInstance.FoePositions[ii]);
             Opponents.OpposingMembers[ii].Visual = foe;
             foe.SetDataMember(Opponents.OpposingMembers[ii]);
         }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BattleSceneHelperTools : SceneHelperTools
 {
+    public Transform[] FoePositions;
+    public Foe FoePF;
+
     public void EndBattle()
     {
         SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.EndCurrentState());
