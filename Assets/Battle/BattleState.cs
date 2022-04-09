@@ -26,6 +26,12 @@ public class BattleState : SceneLoadingGameplayState
     /// </summary>
     public List<BattleCommand> BattleCommands { get; set; } = new List<BattleCommand>();
 
+    public Transform[] FoePositions;
+
+    public Foe FoePF;
+
+    public BattleOpponents LastLoadedOpponents { get; set; }
+
     public override void SetControls(WarrencrawlInputs controls)
     {
         // TODO: Enable battle controls
@@ -51,6 +57,21 @@ public class BattleState : SceneLoadingGameplayState
         yield return base.Load();
 
         PlayerPartyPointer = SceneHelperInstance.PlayerParty;
+
+        foreach (Transform curFoePosition in FoePositions)
+        {
+            for (int ii = 0; ii < curFoePosition.childCount; ii++)
+            {
+                GameObject.Destroy(curFoePosition.GetChild(ii));
+            }
+        }
+
+        for (int ii = 0; ii < FoePositions.Length && ii < Opponents.OpposingMembers.Count; ii++)
+        {
+            Foe foe = GameObject.Instantiate(FoePF, FoePositions[ii]);
+            Opponents.OpposingMembers[ii].Visual = foe;
+            foe.SetDataMember(Opponents.OpposingMembers[ii]);
+        }
     }
 
     public override IEnumerator StartState(GlobalStateMachine globalStateMachine, IGameplayState previousState)
