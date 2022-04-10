@@ -13,6 +13,11 @@ public class MessageBoxState : IGameplayState
         messageToShow = message;
     }
 
+    public IEnumerator Initialize()
+    {
+        yield break;
+    }
+
     public IEnumerator AnimateTransitionIn(IGameplayState previousState)
     {
         yield break;

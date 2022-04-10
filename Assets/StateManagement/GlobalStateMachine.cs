@@ -64,7 +64,7 @@ public class GlobalStateMachine
         }
 
         PresentStates.Push(newState);
-        yield return WarmUpAndStartCurrentState(oldState);
+        yield return WarmUpAndStartCurrentState(oldState, true);
     }
 
     /// <summary>
@@ -79,7 +79,7 @@ public class GlobalStateMachine
         yield return oldState?.AnimateTransitionOut(newState);
         yield return oldState?.ChangeUp(newState);
         PresentStates.Push(newState);
-        yield return WarmUpAndStartCurrentState(oldState);
+        yield return WarmUpAndStartCurrentState(oldState, true);
     }
 
     /// <summary>
@@ -95,14 +95,14 @@ public class GlobalStateMachine
         yield return oldState?.AnimateTransitionOut(nextState);
         yield return oldState?.ExitState(nextState);
 
-        yield return WarmUpAndStartCurrentState(oldState);
+        yield return WarmUpAndStartCurrentState(oldState, false);
     }
 
     /// <summary>
     /// Prepares and starts the <see cref="CurrentState"/>, if there is one.
     /// </summary>
     /// <param name="lastState">The previously active state.</param>
-    private IEnumerator WarmUpAndStartCurrentState(IGameplayState lastState)
+    private IEnumerator WarmUpAndStartCurrentState(IGameplayState lastState, bool shouldInitialize)
     {
         if (CurrentState == null)
         {
@@ -110,6 +110,12 @@ public class GlobalStateMachine
         }
 
         yield return CurrentState.Load();
+
+        if (shouldInitialize)
+        {
+            yield return CurrentState.Initialize();
+        }
+
         yield return CurrentState.AnimateTransitionIn(lastState);
         CurrentState.SetControls(lastActiveControls);
         yield return CurrentState.StartState(this, lastState);

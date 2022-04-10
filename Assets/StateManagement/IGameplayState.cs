@@ -33,6 +33,11 @@ public interface IGameplayState
     IEnumerator Load();
 
     /// <summary>
+    /// Runs the first time the state is added to the state machine.
+    /// </summary>
+    IEnumerator Initialize();
+
+    /// <summary>
     /// Plays any animations that are related to this state coming to the front.
     /// At the end of this IEnumerator, the game should be ready to play and receive input.
     /// Start a coroutine (not yield it) for animations that play while the transitioning is finishing.

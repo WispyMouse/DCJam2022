@@ -30,9 +30,9 @@ public class SceneHelper : MonoBehaviour
         if (PlayerParty == null)
         {
             PlayerParty = new PlayerParty();
-            PlayerParty.AddPartyMember(new CombatMember() { DisplayName = "AaaaAAA" });
-            PlayerParty.AddPartyMember(new CombatMember() { DisplayName = "BbbbBBB" });
-            PlayerParty.AddPartyMember(new CombatMember() { DisplayName = "SsssSSS" });
+            PlayerParty.AddPartyMember(new CombatMember() { DisplayName = "AaaaAAA", AttackOptions = new List<string>() { "Foo", "Bar", "Foobar", "Barfoo" } });
+            PlayerParty.AddPartyMember(new CombatMember() { DisplayName = "BbbbBBB", AttackOptions = new List<string>() { "Ice", "Iiiiice", "Oice", "Jerry" } });
+            PlayerParty.AddPartyMember(new CombatMember() { DisplayName = "SsssSSS", AttackOptions = new List<string>() { "Ffmmmmf", "Gunana", "Wicked", "Sherchunkle" } });
         }
 
         if (GlobalStateMachineInstance == null)

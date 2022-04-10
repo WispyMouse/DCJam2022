@@ -30,6 +30,8 @@ public class BattleState : SceneLoadingGameplayState
 
     public BattleOpponents LastLoadedOpponents { get; set; }
 
+    public GameObject CommitButton;
+
     public override void SetControls(WarrencrawlInputs controls)
     {
         // TODO: Enable battle controls
@@ -50,12 +52,8 @@ public class BattleState : SceneLoadingGameplayState
         Opponents = opponents;
     }
 
-    public override IEnumerator Load()
+    public override IEnumerator Initialize()
     {
-        yield return base.Load();
-
-        BattleSceneHelperToolsInstance = GameObject.FindObjectOfType<BattleSceneHelperTools>();
-
         PlayerPartyPointer = SceneHelperInstance.PlayerParty;
 
         foreach (Transform curFoePosition in BattleSceneHelperToolsInstance.FoePositions)
@@ -84,25 +82,21 @@ public class BattleState : SceneLoadingGameplayState
             player.SetPlayer(PlayerPartyPointer.PartyMembers[ii]);
             PlayerPartyPointer.PartyMembers[ii].Hud = player;
         }
+
+        yield break;
+    }
+
+    public override IEnumerator Load()
+    {
+        yield return base.Load();
+
+        BattleSceneHelperToolsInstance = GameObject.FindObjectOfType<BattleSceneHelperTools>();
     }
 
     public override IEnumerator StartState(GlobalStateMachine globalStateMachine, IGameplayState previousState)
     {
-        if (previousState is ChooseCommandsForPartyState && BattleCommands.Any())
-        {
-            foreach (CombatMember opponent in Opponents.OpposingMembers)
-            {
-                int randomTarget = Random.Range(0, PlayerPartyPointer.PartyMembers.Count);
-
-                BattleCommands.Add(new BattleCommand(opponent, PlayerPartyPointer.PartyMembers[randomTarget]));
-            }
-
-            yield return globalStateMachine.PushNewState(new ResolveCommandsState(this, BattleCommands));
-        }
-        else
-        {
-            BattleCommands = new List<BattleCommand>();
-            yield return globalStateMachine.PushNewState(new ChoosePartysCommandsState(this));
-        }
+        BattleCommands = new List<BattleCommand>();
+        Debug.Log("The stack is being emptied to here, new battlecommands");
+        yield return globalStateMachine.PushNewState(new ChoosePartysCommandsState(globalStateMachine, this));
     }
 }

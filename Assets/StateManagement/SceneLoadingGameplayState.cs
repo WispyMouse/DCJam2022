@@ -34,6 +34,11 @@ public abstract class SceneLoadingGameplayState : IGameplayState
         SceneHelperInstance = GameObject.FindObjectOfType<SceneHelper>();
     }
 
+    public virtual IEnumerator Initialize()
+    {
+        yield break;
+    }
+
     public virtual IEnumerator AnimateTransitionOut(IGameplayState nextState)
     {
         if (nextState == null)

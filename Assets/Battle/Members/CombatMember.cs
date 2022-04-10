@@ -10,4 +10,5 @@ public class CombatMember
     public string DisplayName { get; set; }
     public Foe Visual { get; set; }
     public PlayerHealthInCombat Hud { get; set; }
+    public List<string> AttackOptions { get; set; }
 }
