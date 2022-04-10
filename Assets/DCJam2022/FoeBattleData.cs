@@ -8,4 +8,6 @@ public class FoeBattleData : ScriptableObject
     public string Name;
     public Sprite Appearance;
     public int Health;
+
+    public List<FoeAttackPhase> AttackPhases;
 }

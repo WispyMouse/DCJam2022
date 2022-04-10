@@ -7,6 +7,9 @@ public class PlayerParty
 {
     public List<PartyMember> PartyMembers { get; private set; } = new List<PartyMember>();
 
+    public int MaxAOF { get; set; }
+    public int CurAOF { get; set; }
+
     public void AddPartyMember(PartyMember toAdd)
     {
         PartyMembers.Add(toAdd);

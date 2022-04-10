@@ -28,9 +28,12 @@ public class BattleState : SceneLoadingGameplayState
 
     BattleSceneHelperTools BattleSceneHelperToolsInstance { get; set; }
 
-    public BattleOpponents LastLoadedOpponents { get; set; }
 
     public GameObject CommitButton;
+    public EncounterBattle Encounter { get; set; }
+
+    int CurWave { get; set; } = 0;
+    bool FirstWaveSpawned { get; set; } = false;
 
     public override void SetControls(WarrencrawlInputs controls)
     {
@@ -52,24 +55,20 @@ public class BattleState : SceneLoadingGameplayState
         Opponents = opponents;
     }
 
+    public BattleState(EncounterBattle encounter)
+    {
+        Encounter = encounter;
+        Opponents = new BattleOpponents();
+
+        foreach (FoeEncounterPhase foe in encounter.Foes[CurWave].FoesInWave)
+        {
+            Opponents.AddOpposingMember(new FoeMember(foe));
+        }
+    }
+
     public override IEnumerator Initialize()
     {
         PlayerPartyPointer = SceneHelperInstance.PlayerParty;
-
-        foreach (Transform curFoePosition in BattleSceneHelperToolsInstance.FoePositions)
-        {
-            for (int ii = 0; ii < curFoePosition.childCount; ii++)
-            {
-                GameObject.Destroy(curFoePosition.GetChild(ii).gameObject);
-            }
-        }
-
-        for (int ii = 0; ii < BattleSceneHelperToolsInstance.FoePositions.Length && ii < Opponents.OpposingMembers.Count; ii++)
-        {
-            Foe foe = GameObject.Instantiate(BattleSceneHelperToolsInstance.FoePF, BattleSceneHelperToolsInstance.FoePositions[ii]);
-            Opponents.OpposingMembers[ii].Visual = foe;
-            foe.SetDataMember(Opponents.OpposingMembers[ii]);
-        }
 
         for (int ii = 0; ii < BattleSceneHelperToolsInstance.PlayerHealthHUDPosition.childCount; ii++)
         {
@@ -95,17 +94,85 @@ public class BattleState : SceneLoadingGameplayState
 
     public override IEnumerator StartState(GlobalStateMachine globalStateMachine, IGameplayState previousState)
     {
+        yield return base.StartState(globalStateMachine, previousState);
+
         BattleCommands = new List<BattleCommand>();
         Debug.Log("The stack is being emptied to here, new battlecommands");
-        yield return globalStateMachine.PushNewState(new ChoosePartysCommandsState(globalStateMachine, this));
+        AOFBar.Instance.SetValue(PlayerPartyPointer.CurAOF, PlayerPartyPointer.MaxAOF);
+
+        if (Encounter != null)
+        {
+            BattleSceneHelperToolsInstance.EncounterName.text = Encounter.EncounterName;
+        }
+
+        if (!FirstWaveSpawned)
+        {
+            FirstWaveSpawned = true;
+            yield return SpawnCurrentWaveAndContinueFight();
+        }
+        else if (Opponents.OpposingMembers.All(op => op.CurProblemJuice <= 0))
+        {
+            yield return ProceedNextWave();
+        }
+        else
+        {
+            yield return globalStateMachine.PushNewState(new ChoosePartysCommandsState(globalStateMachine, this));
+        }
     }
 
     public static BattleOpponents GetDemoOpponents()
     {
         BattleOpponents opponents = new BattleOpponents();
-        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes A", MaxProblemJuice = 50 });
-        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes B", MaxProblemJuice = 50 });
-        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes C", MaxProblemJuice = 50 });
+        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes A", MaxProblemJuice = 5 });
+        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes B", MaxProblemJuice = 5 });
+        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes C", MaxProblemJuice = 5 });
         return opponents;
+    }
+
+    public IEnumerator ProceedNextWave()
+    {
+        CurWave++;
+
+        if (CurWave >= Encounter.Foes.Count)
+        {
+            Debug.Log("You win!");
+            yield return StateMachineInstance.EndCurrentState();
+        }
+        else
+        {
+            yield return SpawnCurrentWaveAndContinueFight();
+        }
+    }
+
+    public IEnumerator SpawnCurrentWaveAndContinueFight()
+    {
+        foreach (Transform curFoePosition in BattleSceneHelperToolsInstance.FoePositions)
+        {
+            for (int ii = 0; ii < curFoePosition.childCount; ii++)
+            {
+                GameObject.Destroy(curFoePosition.GetChild(ii).gameObject);
+            }
+        }
+
+        if (Encounter != null)
+        {
+            BattleOpponents curOpponents = new BattleOpponents();
+
+            foreach (FoeEncounterPhase foe in Encounter.Foes[CurWave].FoesInWave)
+            {
+                curOpponents.AddOpposingMember(new FoeMember(foe));
+            }
+
+            Opponents = curOpponents;
+        }
+
+        for (int ii = 0; ii < BattleSceneHelperToolsInstance.FoePositions.Length && ii < Opponents.OpposingMembers.Count; ii++)
+        {
+            Foe foe = GameObject.Instantiate(BattleSceneHelperToolsInstance.FoePF, BattleSceneHelperToolsInstance.FoePositions[ii]);
+            Opponents.OpposingMembers[ii].Visual = foe;
+            foe.SetDataMember(Opponents.OpposingMembers[ii]);
+        }
+
+        yield return StateMachineInstance.PushNewState(new ChoosePartysCommandsState(StateMachineInstance, this));
     }
 }

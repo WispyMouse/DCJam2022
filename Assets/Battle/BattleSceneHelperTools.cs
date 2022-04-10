@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class BattleSceneHelperTools : SceneHelperTools
 {
@@ -12,6 +13,7 @@ public class BattleSceneHelperTools : SceneHelperTools
     public PlayerHealthInCombat HudPF;
 
     public GameObject CommitButton;
+    public TMP_Text EncounterName;
 
     public void EndBattle()
     {

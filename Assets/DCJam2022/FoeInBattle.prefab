@@ -400,6 +400,7 @@ MonoBehaviour:
   HighlightArrow: {fileID: 328686197978589089}
   HealthSlider: {fileID: 5561716035324015164}
   HealthText: {fileID: 4070313262869722562}
+  Renderer: {fileID: 8816518090911114163}
   Root: {fileID: 8816518090911114165}
 --- !u!65 &5742961882765562701
 BoxCollider:

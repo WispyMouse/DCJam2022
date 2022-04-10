@@ -52,8 +52,6 @@ public class ResolveState : IGameplayState
     {
         foreach (BattleCommand command in managedBattleState.BattleCommands)
         {
-            Debug.Log($"Resolve this command from {command.ActingMember.DisplayName} targeting {command.Target.DisplayName} with {command.ActionTaken}");
-            
             if (command.ActingMember is FoeMember)
             {
                 FoeMember foeMember = (FoeMember)command.ActingMember;
@@ -64,20 +62,52 @@ public class ResolveState : IGameplayState
                 }
             }
 
+            ConsoleManager.Instance.AddToLog($"Resolve this command from {command.ActingMember.DisplayName} targeting {command.Target.DisplayName} with {command.ActionTaken}");
+
             if (command.Target is FoeMember)
             {
                 FoeMember foeMember = (FoeMember)command.Target;
-                foeMember.CurProblemJuice = Mathf.Max(0, foeMember.CurProblemJuice - Mathf.CeilToInt(Random.value * 20));
+                int damage = Mathf.CeilToInt(Random.value * 5);
+                ConsoleManager.Instance.AddToLog($"{foeMember.DisplayName} damaged for {damage}.");
+                foeMember.CurProblemJuice = Mathf.Max(0, foeMember.CurProblemJuice - damage);
+
+                if (foeMember.CurProblemJuice <= 0)
+                {
+                    ConsoleManager.Instance.AddToLog("Solved!");
+                    yield return new WaitForSeconds(.2f);
+                }
+
                 foeMember.Visual.UpdateFromMember();
+
+                yield return new WaitForSeconds(.2f);
             }
             else
             {
                 PartyMember partyMember = (PartyMember)command.Target;
-                partyMember.CurNRG = Mathf.Max(0, partyMember.CurNRG - Mathf.CeilToInt(Random.value * 20));
-                partyMember.Hud.UpdateFromPlayer();
+
+                int damage = Mathf.CeilToInt(Random.value * 5);
+
+                if (partyMember.CurNRG <= 0)
+                {
+                    ConsoleManager.Instance.AddToLog($"AOF damaged for {damage}.");
+                    managedBattleState.PlayerPartyPointer.CurAOF = Mathf.Max(0, managedBattleState.PlayerPartyPointer.CurAOF - damage);
+                    AOFBar.Instance.SetValue(managedBattleState.PlayerPartyPointer.CurAOF, managedBattleState.PlayerPartyPointer.MaxAOF);
+                }
+                else
+                {
+                    ConsoleManager.Instance.AddToLog($"{partyMember.DisplayName} damaged for {damage}.");
+                    partyMember.CurNRG = Mathf.Max(0, partyMember.CurNRG - damage);
+                    partyMember.Hud.UpdateFromPlayer();
+                }
             }
 
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(.4f);
+        }
+
+        foreach (FoeMember foe in managedBattleState.Opponents.OpposingMembers)
+        {
+            foe.GoNextPhase();
+            foe.Visual.UpdateFromMember();
         }
 
         yield return stateMachine.EndCurrentState();

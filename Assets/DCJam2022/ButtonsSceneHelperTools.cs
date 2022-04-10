@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class ButtonsSceneHelperTools : SceneHelperTools
         {
             EncounterBattle encounter = Encounters[ii];
             Button newButton = Instantiate(ButtonPF, ButtonParent);
+            newButton.GetComponentInChildren<TMP_Text>().text = encounter.EncounterName;
 
             int indexCapture = ii;
             newButton.onClick.AddListener(() => StartEncounter(indexCapture));
@@ -31,8 +33,6 @@ public class ButtonsSceneHelperTools : SceneHelperTools
     public void StartEncounter(int encounterId)
     {
         Debug.Log($"Begin encounterId {encounterId}");
-        BattleOpponents opponents = BattleState.GetDemoOpponents();
-
-        SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.ChangeToState(new BattleState(opponents)));
+        SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.PushNewState(new BattleState(Encounters[encounterId])));
     }
 }

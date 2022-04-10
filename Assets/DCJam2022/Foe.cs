@@ -13,6 +13,7 @@ public class Foe : MonoBehaviour
 
     public Slider HealthSlider;
     public TMP_Text HealthText;
+    public SpriteRenderer Renderer;
 
     public GameObject Root;
 
@@ -28,6 +29,17 @@ public class Foe : MonoBehaviour
         HealthSlider.maxValue = DataMember.MaxProblemJuice;
         HealthSlider.value = DataMember.CurProblemJuice;
         HealthText.text = DataMember.CurProblemJuice.ToString();
+
+        if (DataMember.BattleData != null)
+        {
+            Renderer.sprite = DataMember.BattleData.Appearance;
+
+            if (DataMember.BattleData.AttackPhases[DataMember.CurPhase].AppearenceInPhase != null)
+            {
+                Renderer.sprite = DataMember.BattleData.AttackPhases[DataMember.CurPhase].AppearenceInPhase;
+            }
+        }
+        
 
         if (DataMember.CurProblemJuice <= 0)
         {

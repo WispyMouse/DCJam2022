@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "DCJam2022/CreateEncounterBattle")]
 public class EncounterBattle : ScriptableObject
 {
-    public List<FoeBattleData> Foes;
+    public string EncounterName;
+    public List<EncounterWave> Foes;
 }

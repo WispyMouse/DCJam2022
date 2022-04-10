@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerHealthInCombat : MonoBehaviour
 {
     public TMP_Text PlayerNameLabel;
-    public GameObject KOFadeScreen;
+    public GameObject DangerNote;
     public GameObject FadeScreen;
     public GameObject CommandsScreen;
     public GameObject ChooseTargetScreen;
@@ -38,7 +38,7 @@ public class PlayerHealthInCombat : MonoBehaviour
 
         if (Player.CurNRG <= 0)
         {
-            SetKO();
+            SetDanger();
         }
     }
 
@@ -60,6 +60,8 @@ public class PlayerHealthInCombat : MonoBehaviour
             newButton.GetComponentInChildren<TMP_Text>().text = optionHolder;
             newButton.onClick.AddListener(() => { takeAction(Player, optionHolder); });
         }
+
+        UpdateFromPlayer();
     }
 
     public void SetChooseTargets(string action, Action<PartyMember> cancelAction)
@@ -88,16 +90,15 @@ public class PlayerHealthInCombat : MonoBehaviour
         FadeScreen.SetActive(true);
     }
 
-    public void SetKO()
+    public void SetDanger()
     {
-        ClearOptions();
-        CommandsScreen.SetActive(true);
+        DangerNote.SetActive(true);
     }
 
     void ClearOptions()
     {
         CommandsScreen.SetActive(false);
-        KOFadeScreen.SetActive(false);
+        DangerNote.SetActive(false);
         FadeScreen.SetActive(false);
         ChooseTargetScreen.SetActive(false);
         ActionSelectedScreen.SetActive(false);
