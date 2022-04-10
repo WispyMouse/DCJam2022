@@ -74,6 +74,11 @@ public abstract class SceneLoadingGameplayState : IGameplayState
     {
         StateMachineInstance = globalStateMachine;
 
+        foreach (GameObject rootObj in SceneManager.GetSceneByName(SceneName).GetRootGameObjects())
+        {
+            rootObj.SetActive(true);
+        }
+
         yield break;
     }
 
