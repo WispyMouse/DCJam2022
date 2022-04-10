@@ -9,8 +9,6 @@ public class PartySelectionState : SceneLoadingGameplayState
 
     List<DelverProfile> SelectedDelvers { get; set; } = new List<DelverProfile>();
 
-    GlobalStateMachine stateMachine { get; set; }
-
 
     public override void SetControls(WarrencrawlInputs controls)
     {
@@ -24,6 +22,8 @@ public class PartySelectionState : SceneLoadingGameplayState
 
     public override IEnumerator Load()
     {
+        yield return base.Load();
+
         HelperTools = GameObject.FindObjectOfType<PartySelectionSceneHelperTools>();
         HelperTools.ClearButtonPressed.AddListener(() => { ClearButtonClicked(); });
         HelperTools.DelveButtonPressed.AddListener(() => DelveButtonClicked());
@@ -32,15 +32,12 @@ public class PartySelectionState : SceneLoadingGameplayState
         yield break;
     }
 
-    public override IEnumerator StartState(GlobalStateMachine globalStateMachine, IGameplayState previousState)
-    {
-        yield return base.StartState(globalStateMachine, previousState);
-    }
-
     public void DelveButtonClicked()
     {
         HelperTools.SceneHelperInstance.PlayerParty = new PlayerParty(SelectedDelvers);
-        HelperTools.StartCoroutine(stateMachine.ChangeToState(new ButtonsState()));
+        HelperTools.SceneHelperInstance.PlayerParty.MaxAOF = 10;
+        HelperTools.SceneHelperInstance.PlayerParty.CurAOF = HelperTools.SceneHelperInstance.PlayerParty.MaxAOF;
+        SceneHelperInstance.TransitionsInstance.StartCoroutine(StateMachineInstance.ChangeToState(new ButtonsState()));
     }
 
     public void ClearButtonClicked()

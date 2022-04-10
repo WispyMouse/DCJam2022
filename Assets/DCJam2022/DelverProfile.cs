@@ -7,4 +7,16 @@ public class DelverProfile : ScriptableObject
 {
     public string ProfileName;
     public Sprite ChooseAPartyMemberPicture;
+    public string Blurb;
+    public int MaxNRG;
+
+    public int Precision;
+    public int Perception;
+    public int Perseverence;
+
+    public string FirstSkill;
+    public string SecondSkill;
+    public string ThirdSkill;
+
+    public List<string> AttackOptions;
 }

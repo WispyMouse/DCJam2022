@@ -37,6 +37,8 @@ public class Transitions : MonoBehaviour
         AnimatorInstance.SetTrigger("FinishTransition");
 
         yield return new WaitUntil(() => AnimationFinished);
+
+        Debug.Log("Scurvy");
     }
 
     /// <summary>

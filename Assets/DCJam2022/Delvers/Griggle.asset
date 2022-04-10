@@ -13,4 +13,17 @@ MonoBehaviour:
   m_Name: Griggle
   m_EditorClassIdentifier: 
   ProfileName: Griggle
-  ChooseAPartyMemberPicture: {fileID: 21300000, guid: 55f20fd7255bcf344b03b507194e0b0d, type: 3}
+  ChooseAPartyMemberPicture: {fileID: 21300000, guid: a2beee11c6ebe1b47b994d00bbb7286b, type: 3}
+  Blurb: The most talented engineer in their guild... that would show up.
+  MaxNRG: 5
+  Precision: 1
+  Perception: 2
+  Perseverence: 3
+  FirstSkill: Tall
+  SecondSkill: Encouraging
+  ThirdSkill: Bright as a Bulb
+  AttackOptions:
+  - Hop to It
+  - Gumption
+  - Sticky Wrench
+  - Rest

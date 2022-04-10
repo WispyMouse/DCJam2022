@@ -13,4 +13,17 @@ MonoBehaviour:
   m_Name: Yangus
   m_EditorClassIdentifier: 
   ProfileName: Yangus
-  ChooseAPartyMemberPicture: {fileID: 21300000, guid: 55f20fd7255bcf344b03b507194e0b0d, type: 3}
+  ChooseAPartyMemberPicture: {fileID: 21300000, guid: ee6f8ab5105717a498ae3f157f229258, type: 3}
+  Blurb: Never gives up. Never surrenders.
+  MaxNRG: 11
+  Precision: 1
+  Perception: 1
+  Perseverence: 3
+  FirstSkill: Restless
+  SecondSkill: Caffeinated
+  ThirdSkill: Reliable
+  AttackOptions:
+  - Get It!
+  - Apply Yangus
+  - Doubletime
+  - Rest?

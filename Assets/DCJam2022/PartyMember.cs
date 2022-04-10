@@ -19,6 +19,9 @@ public class PartyMember : CombatMember
     public PartyMember(DelverProfile fromProfile)
     {
         FromProfile = fromProfile;
+        DisplayName = fromProfile.ProfileName;
+        AttackOptions = fromProfile.AttackOptions;
+        MaxNRG = fromProfile.MaxNRG;
     }
 
     public void RefreshOutOfBattle()

@@ -13,4 +13,17 @@ MonoBehaviour:
   m_Name: Cathy
   m_EditorClassIdentifier: 
   ProfileName: Cathy
-  ChooseAPartyMemberPicture: {fileID: 21300000, guid: 55f20fd7255bcf344b03b507194e0b0d, type: 3}
+  ChooseAPartyMemberPicture: {fileID: 21300000, guid: 6e14a4725e83fc54eb92b1cfad3e7d12, type: 3}
+  Blurb: Has been told she's good luck by a lot of people.
+  MaxNRG: 4
+  Precision: 3
+  Perception: 3
+  Perseverence: 1
+  FirstSkill: Lucky
+  SecondSkill: Super Honest
+  ThirdSkill: Flying
+  AttackOptions:
+  - Explore
+  - Insight
+  - Tickle
+  - Rest

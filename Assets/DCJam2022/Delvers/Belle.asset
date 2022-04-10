@@ -13,4 +13,17 @@ MonoBehaviour:
   m_Name: Belle
   m_EditorClassIdentifier: 
   ProfileName: Belle
-  ChooseAPartyMemberPicture: {fileID: 21300000, guid: 55f20fd7255bcf344b03b507194e0b0d, type: 3}
+  ChooseAPartyMemberPicture: {fileID: 21300000, guid: 966f131bb71963d4db8abb0a2674c736, type: 3}
+  Blurb: Putting the brain in bird brain.
+  MaxNRG: 6
+  Precision: 2
+  Perception: 3
+  Perseverence: 1
+  FirstSkill: Flying
+  SecondSkill: Pensive
+  ThirdSkill: Restless
+  AttackOptions:
+  - Consider
+  - Solve
+  - Perch
+  - Rest
