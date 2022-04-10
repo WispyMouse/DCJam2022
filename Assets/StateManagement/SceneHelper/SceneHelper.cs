@@ -4,6 +4,8 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 /// <summary>
 /// The global entry point for regular gameplay of this engine.
@@ -19,6 +21,8 @@ public class SceneHelper : MonoBehaviour
     public Transitions TransitionsInstance;
     public PlayerParty PlayerParty { get; set; }
     public SaveDataManager SaveDataManagerInstance;
+
+    
 
     private void Awake()
     {

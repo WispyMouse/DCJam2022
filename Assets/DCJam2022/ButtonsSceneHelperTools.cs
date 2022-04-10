@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonsSceneHelperTools : SceneHelperTools
 {
-    public List<EncounterBattle> Encounters = new List<EncounterBattle>();
+    public List<ObstacleEvent> Events = new List<ObstacleEvent>();
     public Button ButtonPF;
     public Transform ButtonParent;
 
@@ -14,14 +14,13 @@ public class ButtonsSceneHelperTools : SceneHelperTools
     {
         yield return base.StartChild();
 
-        for (int ii = 0; ii < Encounters.Count; ii++)
+        for (int ii = 0; ii < Events.Count; ii++)
         {
-            EncounterBattle encounter = Encounters[ii];
+            ObstacleEvent encounter = Events[ii];
             Button newButton = Instantiate(ButtonPF, ButtonParent);
-            newButton.GetComponentInChildren<TMP_Text>().text = encounter.EncounterName;
+            newButton.GetComponentInChildren<TMP_Text>().text = encounter.ObstacleName;
 
-            int indexCapture = ii;
-            newButton.onClick.AddListener(() => StartEncounter(indexCapture));
+            newButton.onClick.AddListener(() => StartEvent(encounter));
         }
     }
 
@@ -30,9 +29,14 @@ public class ButtonsSceneHelperTools : SceneHelperTools
         return new ButtonsState();
     }
 
-    public void StartEncounter(int encounterId)
+    public void StartEvent(ObstacleEvent eventToStart)
     {
-        Debug.Log($"Begin encounterId {encounterId}");
-        SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.PushNewState(new BattleState(Encounters[encounterId])));
+        if (!(SceneHelper.GlobalStateMachineInstance.CurrentState is ButtonsState))
+        {
+            return;
+        }
+
+        Debug.Log($"Begin {eventToStart.ObstacleName}");
+        SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.PushNewState(new HandleObstacleState(eventToStart)));
     }
 }

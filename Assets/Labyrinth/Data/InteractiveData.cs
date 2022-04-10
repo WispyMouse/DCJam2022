@@ -26,6 +26,8 @@ public class InteractiveData
         }
     }
 
+    public ObstacleEvent ObstacleEventData;
+
     public string Message;
 
     public List<InteractiveAppearanceCheck> Checks = new List<InteractiveAppearanceCheck>();

@@ -136,7 +136,7 @@ public class BattleState : SceneLoadingGameplayState
         if (CurWave >= Encounter.Foes.Count)
         {
             Debug.Log("You win!");
-            yield return StateMachineInstance.EndCurrentState();
+            SceneHelperInstance.StartCoroutine(StateMachineInstance.EndCurrentState());
         }
         else
         {
