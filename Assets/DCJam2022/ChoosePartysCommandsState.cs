@@ -79,7 +79,7 @@ public class ChoosePartysCommandsState : IGameplayState
     void SetReadyState()
     {
         int setCommands = 0;
-        foreach (CombatMember partyMember in managedBattleState.PlayerPartyPointer.PartyMembers)
+        foreach (PartyMember partyMember in managedBattleState.PlayerPartyPointer.PartyMembers)
         {
             BattleCommand chosenCommand = managedBattleState.BattleCommands.FirstOrDefault(bc => bc.ActingMember == partyMember);
 
@@ -108,7 +108,7 @@ public class ChoosePartysCommandsState : IGameplayState
         }
     }
 
-    void CancelChoice(CombatMember forMember)
+    void CancelChoice(PartyMember forMember)
     {
         managedBattleState.BattleCommands.RemoveAll(bc => bc.ActingMember == forMember);
         forMember.Hud.SetReady(CommandSelected);
@@ -116,6 +116,13 @@ public class ChoosePartysCommandsState : IGameplayState
 
     void GoToResolve()
     {
+        foreach (FoeMember foe in managedBattleState.Opponents.OpposingMembers)
+        {
+            if (foe.CurProblemJuice > 0)
+            {
+                managedBattleState.BattleCommands.Add(new BattleCommand(foe, managedBattleState.PlayerPartyPointer.GetRandom(), "poke"));
+            }
+        }
         battleSceneHelperTools.StartCoroutine(stateMachineInstance.ChangeToState(new ResolveState(stateMachineInstance, managedBattleState)));
     }
 }

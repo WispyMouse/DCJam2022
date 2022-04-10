@@ -5,10 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Represents any character participating in a Battle.
 /// </summary>
-public class CombatMember
+public abstract class CombatMember
 {
     public string DisplayName { get; set; }
-    public Foe Visual { get; set; }
-    public PlayerHealthInCombat Hud { get; set; }
-    public List<string> AttackOptions { get; set; }
 }

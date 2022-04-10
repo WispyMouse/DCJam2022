@@ -20,11 +20,7 @@ public class BattleSceneHelperTools : SceneHelperTools
 
     public override IGameplayState GetNewDemoState()
     {
-        BattleOpponents opponents = new BattleOpponents();
-
-        opponents.AddOpposingMember(new CombatMember() { DisplayName = "Dirty Dishes A" });
-        opponents.AddOpposingMember(new CombatMember() { DisplayName = "Dirty Dishes B" });
-        opponents.AddOpposingMember(new CombatMember() { DisplayName = "Dirty Dishes C" });
+        BattleOpponents opponents = BattleState.GetDemoOpponents();
 
         return new BattleState(opponents);
     }

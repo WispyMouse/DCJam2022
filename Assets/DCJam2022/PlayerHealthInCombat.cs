@@ -17,16 +17,32 @@ public class PlayerHealthInCombat : MonoBehaviour
     public Button AttackOption;
     public Transform AttackOptionParent;
 
-    public CombatMember Player { get; private set; }
+    public Slider NRGSlider;
+    public TMP_Text NRGLabel;
 
-    public void SetPlayer(CombatMember member)
+    public PartyMember Player { get; private set; }
+
+    public void SetPlayer(PartyMember member)
     {
         PlayerNameLabel.text = member.DisplayName;
 
         Player = member;
+        UpdateFromPlayer();
     }
 
-    public void SetReady(System.Action<CombatMember,string> takeAction)
+    public void UpdateFromPlayer()
+    {
+        NRGSlider.maxValue = Player.MaxNRG;
+        NRGSlider.value = Player.CurNRG;
+        NRGLabel.text = Player.CurNRG.ToString();
+
+        if (Player.CurNRG <= 0)
+        {
+            SetKO();
+        }
+    }
+
+    public void SetReady(System.Action<PartyMember, string> takeAction)
     {
         ClearOptions();
         CommandsScreen.SetActive(true);
@@ -46,7 +62,7 @@ public class PlayerHealthInCombat : MonoBehaviour
         }
     }
 
-    public void SetChooseTargets(string action, Action<CombatMember> cancelAction)
+    public void SetChooseTargets(string action, Action<PartyMember> cancelAction)
     {
         ClearOptions();
         ChooseTargetScreen.SetActive(true);
@@ -56,7 +72,7 @@ public class PlayerHealthInCombat : MonoBehaviour
         cancelButton.onClick.AddListener(() => cancelAction(Player));
     }
 
-    public void SetCommand(BattleCommand toCommand, Action<CombatMember> cancelAction)
+    public void SetCommand(BattleCommand toCommand, Action<PartyMember> cancelAction)
     {
         ClearOptions();
         ActionSelectedScreen.SetActive(true);

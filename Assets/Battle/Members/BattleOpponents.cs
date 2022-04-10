@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BattleOpponents
 {
-    public List<CombatMember> OpposingMembers { get; private set; } = new List<CombatMember>();
+    public List<FoeMember> OpposingMembers { get; private set; } = new List<FoeMember>();
 
-    public void AddOpposingMember(CombatMember toAdd)
+    public void AddOpposingMember(FoeMember toAdd)
     {
         OpposingMembers.Add(toAdd);
     }

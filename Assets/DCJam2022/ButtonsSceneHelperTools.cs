@@ -31,10 +31,7 @@ public class ButtonsSceneHelperTools : SceneHelperTools
     public void StartEncounter(int encounterId)
     {
         Debug.Log($"Begin encounterId {encounterId}");
-        BattleOpponents opponents = new BattleOpponents();
-        opponents.AddOpposingMember(new CombatMember() { DisplayName = "A" });
-        opponents.AddOpposingMember(new CombatMember() { DisplayName = "B" });
-        opponents.AddOpposingMember(new CombatMember() { DisplayName = "C" });
+        BattleOpponents opponents = BattleState.GetDemoOpponents();
 
         SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.ChangeToState(new BattleState(opponents)));
     }

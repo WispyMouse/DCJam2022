@@ -52,7 +52,32 @@ public class ResolveState : IGameplayState
     {
         foreach (BattleCommand command in managedBattleState.BattleCommands)
         {
-            Debug.Log($"Resolve this command from {command.ActingMember.DisplayName}");
+            Debug.Log($"Resolve this command from {command.ActingMember.DisplayName} targeting {command.Target.DisplayName} with {command.ActionTaken}");
+            
+            if (command.ActingMember is FoeMember)
+            {
+                FoeMember foeMember = (FoeMember)command.ActingMember;
+                if (foeMember.CurProblemJuice <= 0)
+                {
+                    Debug.Log("User was KO'd, skipping");
+                    continue;
+                }
+            }
+
+            if (command.Target is FoeMember)
+            {
+                FoeMember foeMember = (FoeMember)command.Target;
+                foeMember.CurProblemJuice = Mathf.Max(0, foeMember.CurProblemJuice - Mathf.CeilToInt(Random.value * 20));
+                foeMember.Visual.UpdateFromMember();
+            }
+            else
+            {
+                PartyMember partyMember = (PartyMember)command.Target;
+                partyMember.CurNRG = Mathf.Max(0, partyMember.CurNRG - Mathf.CeilToInt(Random.value * 20));
+                partyMember.Hud.UpdateFromPlayer();
+            }
+
+            yield return new WaitForSeconds(.2f);
         }
 
         yield return stateMachine.EndCurrentState();

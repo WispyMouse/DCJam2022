@@ -36,7 +36,7 @@ public class ChooseTargetForPartyActionState : IGameplayState
 
     public IEnumerator ChangeUp(IGameplayState nextState)
     {
-        foreach (CombatMember opponent in activeBattleState.Opponents.OpposingMembers)
+        foreach (FoeMember opponent in activeBattleState.Opponents.OpposingMembers)
         {
             opponent.Visual.ClearTargetable();
             opponent.Visual.SetUnhighlighted();
@@ -51,7 +51,7 @@ public class ChooseTargetForPartyActionState : IGameplayState
     {
         Debug.Log("ChooseTarget ExitState");
 
-        foreach (CombatMember opponent in activeBattleState.Opponents.OpposingMembers)
+        foreach (FoeMember opponent in activeBattleState.Opponents.OpposingMembers)
         {
             opponent.Visual.ClearTargetable();
             opponent.Visual.SetUnhighlighted();
@@ -76,7 +76,7 @@ public class ChooseTargetForPartyActionState : IGameplayState
 
     public IEnumerator StartState(GlobalStateMachine stateMachine, IGameplayState previousState)
     {
-        foreach (CombatMember partyMember in activeBattleState.PlayerPartyPointer.PartyMembers)
+        foreach (PartyMember partyMember in activeBattleState.PlayerPartyPointer.PartyMembers)
         {
             if (partyMember == choosingMember)
             {
@@ -88,7 +88,7 @@ public class ChooseTargetForPartyActionState : IGameplayState
             }
         }
 
-        foreach (CombatMember opponent in activeBattleState.Opponents.OpposingMembers)
+        foreach (FoeMember opponent in activeBattleState.Opponents.OpposingMembers)
         {
             opponent.Visual.SetTargetable(TargetChosen);
         }
@@ -106,7 +106,7 @@ public class ChooseTargetForPartyActionState : IGameplayState
     void TargetChosen(CombatMember target)
     {
         Debug.Log("Target chosen");
-        activeBattleState.BattleCommands.Add(new BattleCommand(choosingMember, null));
+        activeBattleState.BattleCommands.Add(new BattleCommand(choosingMember, target, forCommand));
         activeBattleState.SceneHelperInstance.StartCoroutine(stateMachineInstance.EndCurrentState());
     }
 

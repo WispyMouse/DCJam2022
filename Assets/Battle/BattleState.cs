@@ -99,4 +99,13 @@ public class BattleState : SceneLoadingGameplayState
         Debug.Log("The stack is being emptied to here, new battlecommands");
         yield return globalStateMachine.PushNewState(new ChoosePartysCommandsState(globalStateMachine, this));
     }
+
+    public static BattleOpponents GetDemoOpponents()
+    {
+        BattleOpponents opponents = new BattleOpponents();
+        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes A", MaxProblemJuice = 50 });
+        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes B", MaxProblemJuice = 50 });
+        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes C", MaxProblemJuice = 50 });
+        return opponents;
+    }
 }
