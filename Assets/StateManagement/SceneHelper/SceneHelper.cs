@@ -21,8 +21,8 @@ public class SceneHelper : MonoBehaviour
     public Transitions TransitionsInstance;
     public PlayerParty PlayerParty { get; set; }
     public SaveDataManager SaveDataManagerInstance;
+    public List<DelverProfile> DefaultDelvers;
 
-    
 
     private void Awake()
     {
@@ -34,9 +34,10 @@ public class SceneHelper : MonoBehaviour
         if (PlayerParty == null)
         {
             PlayerParty = new PlayerParty() { MaxAOF = 10, CurAOF = 10 };
-            PlayerParty.AddPartyMember(new PartyMember() { DisplayName = "AaaaAAA", MaxNRG = 6, AttackOptions = new List<string>() { "Foo", "Bar", "Foobar", "Barfoo" } });
-            PlayerParty.AddPartyMember(new PartyMember() { DisplayName = "BbbbBBB", MaxNRG = 7, AttackOptions = new List<string>() { "Ice", "Iiiiice", "Oice", "Jerry" } });
-            PlayerParty.AddPartyMember(new PartyMember() { DisplayName = "SsssSSS", MaxNRG = 8, AttackOptions = new List<string>() { "Ffmmmmf", "Gunana", "Wicked", "Sherchunkle" } });
+            foreach (DelverProfile profile in DefaultDelvers)
+            {
+                PlayerParty.AddPartyMember(profile);
+            }
         }
 
         if (GlobalStateMachineInstance == null)

@@ -154,6 +154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransitionsInstance: {fileID: 1198888854}
   SaveDataManagerInstance: {fileID: 695845986}
+  DefaultDelvers:
+  - {fileID: 11400000, guid: e334c6e9c1123c84cbe79d6b666e4289, type: 2}
+  - {fileID: 11400000, guid: 1ede7d2275b1c6443bbf5204e1420a9e, type: 2}
+  - {fileID: 11400000, guid: 38a1658caa4cd1e499364d8dec7f133f, type: 2}
 --- !u!4 &55072121
 Transform:
   m_ObjectHideFlags: 0

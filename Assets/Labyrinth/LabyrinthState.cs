@@ -220,6 +220,7 @@ public class LabyrinthState : SceneLoadingGameplayState
     /// </summary>
     public IEnumerator Interact()
     {
+        Debug.Log("Start to Interact in LabyrinthState");
         // Are we on top of a same tile interactive?
         LabyrinthCell curCell = LevelToLoad.LabyrinthData.CellAtCoordinate(PointOfViewInstance.CurCoordinates);
 
@@ -234,6 +235,7 @@ public class LabyrinthState : SceneLoadingGameplayState
 
         if (forwardCell == null)
         {
+            Debug.Log("Forward cell doesn't exist");
             LockingAnimationFinished?.Invoke(this, new EventArgs());
             yield break;
         }
@@ -242,6 +244,7 @@ public class LabyrinthState : SceneLoadingGameplayState
 
         if (interactivesAtCell == null || !interactivesAtCell.Any())
         {
+            Debug.Log("No interactive on forward cell");
             LockingAnimationFinished?.Invoke(this, new EventArgs());
             yield break;
         }
@@ -292,21 +295,18 @@ public class LabyrinthState : SceneLoadingGameplayState
 
     IEnumerator InteractWithInteractive(LabyrinthCell onCell)
     {
+        Debug.Log("Begin interaction with element");
         IEnumerable<InteractiveData> interactivesOnCell = LevelToLoad.LabyrinthData.InteractivesAtCoordinate(onCell.Coordinate);
 
         if (!interactivesOnCell.Any())
         {
+            Debug.Log("No element found to interact with");
             yield break;
         }
 
         // todo: consistent handling of choosing which interactive to interface with if there are multiple options
         InteractiveData firstInteractive = interactivesOnCell.First();
         
-        yield return StateMachineInstance.PushNewState(new MessageBoxState(firstInteractive.Message));
-
-        foreach (InteractiveSetFlag flagSet in firstInteractive.FlagSet)
-        {
-            SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData.SetFlag(flagSet.FlagName, flagSet.Value);
-        }
+        yield return StateMachineInstance.PushNewState(new HandleObstacleState(firstInteractive.ObstacleEventData));
     }
 }

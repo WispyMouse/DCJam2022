@@ -56,7 +56,7 @@ public class StairInteractiveTests
             };
             testLevel.LabyrinthData.LabyrinthInteractives = new List<InteractiveData>()
             {
-                new InteractiveData() { Kind = InteractiveKind.Stairs, OnCoordinates = new HashSet<CellCoordinates> { new CellCoordinates(0, 1, 0)}}
+                new InteractiveData() { Kind = InteractiveKind.Stairs, OnCoordinates = new List<CellCoordinates> { new CellCoordinates(0, 1, 0)}}
             };
             testLevel.CombatClockEnabled = false;
             return testLevel;

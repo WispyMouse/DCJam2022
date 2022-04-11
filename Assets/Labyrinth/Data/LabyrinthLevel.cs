@@ -73,6 +73,7 @@ public class LabyrinthLevel
     /// </summary>
     private void UnrollMap()
     {
+        Debug.Log("Start unrolling map");
         loadedCellMap = new Dictionary<CellCoordinates, LabyrinthCell>();
         foreach (LabyrinthCell cell in Cells)
         {
@@ -96,6 +97,7 @@ public class LabyrinthLevel
         loadedInteractiveMap = new Dictionary<CellCoordinates, HashSet<InteractiveData>>();
         foreach (InteractiveData interactive in LabyrinthInteractives)
         {
+            Debug.Log($"{interactive.ObstacleEventData.ObstacleName} // {interactive.OnCoordinates.Count}");
             foreach (CellCoordinates coordinate in interactive.OnCoordinates)
             {
                 if (loadedInteractiveMap.ContainsKey(coordinate))

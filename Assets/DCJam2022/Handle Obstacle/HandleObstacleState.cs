@@ -58,7 +58,15 @@ public class HandleObstacleState : IGameplayState
             yield break;
         }
 
-        yield return stateMachine.PushNewState(component.GetNewState(SetPointer));
+        if (component.CloseCurrentState)
+        {
+            yield return stateMachine.EndCurrentState();
+            yield return stateMachine.ChangeToState(component.GetNewState(SetPointer));
+        }
+        else
+        {
+            yield return stateMachine.PushNewState(component.GetNewState(SetPointer));
+        }
     }
 
     public void UnsetControls(WarrencrawlInputs activeInput)

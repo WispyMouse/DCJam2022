@@ -154,25 +154,26 @@ public class LabyrinthSceneHelperToolsEditor : Editor
 
             foreach (Collider interactiveCollider in processingInteractive.GetComponentsInChildren<Collider>())
             {
-                int farthestWest = Mathf.FloorToInt(interactiveCollider.bounds.min.x);
-                int farthestSouth = Mathf.FloorToInt(interactiveCollider.bounds.min.z);
-                int farthestBottom = Mathf.FloorToInt(interactiveCollider.bounds.min.y);
+                int farthestWest = Mathf.FloorToInt(interactiveCollider.bounds.min.x + interactiveCollider.transform.position.x);
+                int farthestSouth = Mathf.FloorToInt(interactiveCollider.bounds.min.z + interactiveCollider.transform.position.z);
+                int farthestBottom = Mathf.FloorToInt(interactiveCollider.bounds.min.y + interactiveCollider.transform.position.y);
 
-                int farthestEast = Mathf.CeilToInt(interactiveCollider.bounds.max.x);
-                int farthestNorth = Mathf.CeilToInt(interactiveCollider.bounds.max.z);
-                int farthestTop = Mathf.CeilToInt(interactiveCollider.bounds.max.y);
+                int farthestEast = Mathf.CeilToInt(interactiveCollider.bounds.max.x + interactiveCollider.transform.position.x);
+                int farthestNorth = Mathf.CeilToInt(interactiveCollider.bounds.max.z + interactiveCollider.transform.position.z);
+                int farthestTop = Mathf.CeilToInt(interactiveCollider.bounds.max.y + interactiveCollider.transform.position.y);
 
                 for (int xx = farthestWest; xx <= farthestEast; xx++)
                 {
-                    for (int zz = farthestSouth; zz <= farthestSouth; zz++)
+                    for (int zz = farthestSouth; zz <= farthestNorth; zz++)
                     {
                         // todo: implement farthestBottom, farthestTop; multiple types of verticality
 
                         IEnumerable<LabyrinthCell> matchingCells = newLevel.Cells.Where(c => c.Coordinate.X == xx && c.Coordinate.Y == zz);
                         foreach (LabyrinthCell cell in matchingCells)
                         {
-                            if (Physics.OverlapBox(cell.Worldspace, Vector3.one / 2f, Quaternion.identity, interactive.intValue).Any(foundCollider => foundCollider == interactiveCollider))
+                            if (Physics.OverlapBox(cell.Worldspace, Vector3.one / 3f, Quaternion.identity, interactive.intValue).Any(foundCollider => foundCollider == interactiveCollider))
                             {
+                                Debug.Log($"{processingInteractive.Data.ObstacleEventData.ObstacleName} // {cell.Coordinate}");
                                 processingInteractive.Data.OnCoordinates.Add(cell.Coordinate);
                             }
                         }

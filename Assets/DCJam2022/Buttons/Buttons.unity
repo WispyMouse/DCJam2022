@@ -459,6 +459,14 @@ PrefabInstance:
       propertyPath: ButtonParent
       value: 
       objectReference: {fileID: 866184152}
+    - target: {fileID: 2168038603757620675, guid: e1e6ad85b34c637499e7affc64d3dcab, type: 3}
+      propertyPath: Events.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168038603757620675, guid: e1e6ad85b34c637499e7affc64d3dcab, type: 3}
+      propertyPath: Events.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d7cfe36d95ed9e47993c2801e0fb27f, type: 2}
     - target: {fileID: 2168038603757620700, guid: e1e6ad85b34c637499e7affc64d3dcab, type: 3}
       propertyPath: m_Name
       value: ButtonSceneHelperTools

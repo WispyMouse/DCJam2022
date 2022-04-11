@@ -102,6 +102,7 @@ public class LabyrinthInputHandler : MonoBehaviour, ILabyrinthActions
 
     public void OnInteract(InputAction.CallbackContext context)
     {
+        Debug.Log("Attempting to interact");
         if (!context.performed)
         {
             return;
@@ -109,6 +110,7 @@ public class LabyrinthInputHandler : MonoBehaviour, ILabyrinthActions
 
         if (!CanAnimate())
         {
+            Debug.Log("Cannot animate");
             return;
         }
 

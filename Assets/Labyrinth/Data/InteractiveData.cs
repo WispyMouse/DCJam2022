@@ -28,12 +28,9 @@ public class InteractiveData
 
     public ObstacleEvent ObstacleEventData;
 
-    public string Message;
-
     public List<InteractiveAppearanceCheck> Checks = new List<InteractiveAppearanceCheck>();
-    public List<InteractiveSetFlag> FlagSet = new List<InteractiveSetFlag>();
 
-    public HashSet<CellCoordinates> OnCoordinates = new HashSet<CellCoordinates>();
+    public List<CellCoordinates> OnCoordinates = new List<CellCoordinates>();
 
     public bool IsActive { get; set; } = true;
     public LabyrinthInteractive WorldInteractive { get; set; }

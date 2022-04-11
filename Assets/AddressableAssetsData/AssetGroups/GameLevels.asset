@@ -16,17 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 39127dd4fd4809a4ca7c036bd0a76ac0
-  m_SerializeEntries:
-  - m_GUID: 2f4345f630adbec498ccc2c0fd555aa8
-    m_Address: DemoLevelA1
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - levelScene
-  - m_GUID: 1ddeceaf1844d264b874d02672f552e2
-    m_Address: FlushedOutDemoFloor
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - levelScene
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 8939e430449de284ea477e3d91db8d03, type: 2}
   m_SchemaSet:

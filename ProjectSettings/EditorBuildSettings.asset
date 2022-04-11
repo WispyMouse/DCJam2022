@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/DCJam2022/PartySelection.unity
+    path: Assets/DCJam2022/Iniitial Scene/InitialScene.unity
+    guid: 09c0942d4fa1f9a4eb27c5ce329825c4
+  - enabled: 1
+    path: Assets/DCJam2022/Party Selection/PartySelection.unity
     guid: 7c56ec50711f631408e5a1a3f31506da
   - enabled: 1
-    path: Assets/DCJam2022/Buttons.unity
+    path: Assets/DCJam2022/Buttons/Buttons.unity
     guid: 7247124f5fd09a346a7b4e392122c8a5
   - enabled: 1
     path: Assets/StateManagement/SceneHelper/SceneHelper.unity
@@ -17,5 +20,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Battle/Battle.unity
     guid: 72fb384320827684383f8db377640c78
+  - enabled: 1
+    path: Assets/Labyrinth/Scene/Labyrinth.unity
+    guid: fdcc1b10e4c296749bfb9cc2c4d4abee
+  - enabled: 1
+    path: Assets/StateManagement/Town/Town.unity
+    guid: 03fe8e709386b174fa9f6f92826bb341
+  - enabled: 1
+    path: Assets/Labyrinth/GameLevel/Levels/LabyrinthOfWonders.unity
+    guid: 586744dba83cb014d94b95e5c2d2f894
+  - enabled: 1
+    path: Assets/DCJam2022/ReportCard/ReportCard.unity
+    guid: e2734093a1484384f8d30f3547b7a1f1
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: bd5dc4b905aa9d747a0e84ce4fecdb76, type: 2}

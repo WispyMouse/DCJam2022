@@ -9,5 +9,7 @@ public abstract class ObstacleEventComponent : ScriptableObject
 {
     public int EventId;
 
+    public virtual bool CloseCurrentState => false;
+
     public abstract IGameplayState GetNewState(Action<int> setPointer);
 }

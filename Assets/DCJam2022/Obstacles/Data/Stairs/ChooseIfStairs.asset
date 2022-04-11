@@ -10,16 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d347e4b301294dbe728de9d019195, type: 3}
-  m_Name: w1_1_WhatDoYouDo
+  m_Name: ChooseIfStairs
   m_EditorClassIdentifier: 
-  EventId: 1
-  Text: What do you do?
+  EventId: 0
+  Text: Return to town to heal and end the day?
   Entries:
-  - ChoiceName: Rekindle Magic
-    GotoId: 10
-  - ChoiceName: Repair Crack
-    GotoId: 20
-  - ChoiceName: Open New Wellspring
-    GotoId: 30
-  - ChoiceName: Turn Back
+  - ChoiceName: Go To Town
+    GotoId: 1
+  - ChoiceName: Stay Here
     GotoId: -1
