@@ -23,7 +23,7 @@ MonoBehaviour:
   SecondSkill: Encouraging
   ThirdSkill: Bright as a Bulb
   AttackOptions:
-  - Hop to It
-  - Gumption
-  - Sticky Wrench
-  - Rest
+  - {fileID: 11400000, guid: ad724efbfee830e49a7642130f7cb287, type: 2}
+  - {fileID: 11400000, guid: b368616686f10934c8b19cd0787e4379, type: 2}
+  - {fileID: 11400000, guid: 74aefc3739ececf46ade3ae1de6305f5, type: 2}
+  - {fileID: 11400000, guid: a87868f2d188a0a43b6c3ef5553523a3, type: 2}

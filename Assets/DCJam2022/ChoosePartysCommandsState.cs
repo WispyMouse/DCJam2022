@@ -70,7 +70,7 @@ public class ChoosePartysCommandsState : IGameplayState
         
     }
 
-    public void CommandSelected(CombatMember forMember, string command)
+    public void CommandSelected(CombatMember forMember, PlayerMove command)
     {
         Debug.Log("Command selected");
         managedBattleState.SceneHelperInstance.StartCoroutine(stateMachineInstance.PushNewState(new ChooseTargetForPartyActionState(stateMachineInstance, managedBattleState, forMember, command)));
@@ -120,7 +120,7 @@ public class ChoosePartysCommandsState : IGameplayState
         {
             if (foe.CurProblemJuice > 0)
             {
-                managedBattleState.BattleCommands.Add(new BattleCommand(foe, managedBattleState.PlayerPartyPointer.GetRandom(), "poke"));
+                managedBattleState.BattleCommands.Add(new BattleCommand(foe, managedBattleState.PlayerPartyPointer.GetRandom(), foe.BattleData.AttackPhases[foe.CurPhase].UsedMove));
             }
         }
         battleSceneHelperTools.StartCoroutine(stateMachineInstance.ChangeToState(new ResolveState(stateMachineInstance, managedBattleState)));

@@ -7,9 +7,9 @@ public class ChooseTargetForPartyActionState : IGameplayState
     CombatMember choosingMember { get; set; }
     BattleState activeBattleState { get; set; }
     GlobalStateMachine stateMachineInstance { get; set; }
-    string forCommand { get; set; }
+    PlayerMove forCommand { get; set; }
 
-    public ChooseTargetForPartyActionState(GlobalStateMachine stateMachine, BattleState battleState, CombatMember forMember, string command)
+    public ChooseTargetForPartyActionState(GlobalStateMachine stateMachine, BattleState battleState, CombatMember forMember, PlayerMove command)
     {
         stateMachineInstance = stateMachine;
         activeBattleState = battleState;

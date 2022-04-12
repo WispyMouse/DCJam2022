@@ -23,7 +23,7 @@ MonoBehaviour:
   SecondSkill: Caffeinated
   ThirdSkill: Reliable
   AttackOptions:
-  - Get It!
-  - Apply Yangus
-  - Doubletime
-  - Rest?
+  - {fileID: 11400000, guid: e64dd5a4cabcfc24da187567c060830e, type: 2}
+  - {fileID: 11400000, guid: 1dd565a89dda1444d97fa6bddc9c0c2b, type: 2}
+  - {fileID: 11400000, guid: 9738ca74be7bc9941b73514264f0e643, type: 2}
+  - {fileID: 11400000, guid: f9e27cd52d5b45247a352423d662aadf, type: 2}

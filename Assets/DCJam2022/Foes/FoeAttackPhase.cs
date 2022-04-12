@@ -6,5 +6,5 @@ using UnityEngine;
 public class FoeAttackPhase
 {
     public Sprite AppearenceInPhase;
-    public string ActionToTake;
+    public ObstacleMove UsedMove;
 }

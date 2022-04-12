@@ -14,7 +14,7 @@ public class PlayerHealthInCombat : MonoBehaviour
     public GameObject ChooseTargetScreen;
     public GameObject ActionSelectedScreen;
 
-    public Button AttackOption;
+    public MoveInEncounter AttackOption;
     public Transform AttackOptionParent;
 
     public Slider NRGSlider;
@@ -42,7 +42,7 @@ public class PlayerHealthInCombat : MonoBehaviour
         }
     }
 
-    public void SetReady(System.Action<PartyMember, string> takeAction)
+    public void SetReady(System.Action<PartyMember, PlayerMove> takeAction)
     {
         ClearOptions();
         CommandsScreen.SetActive(true);
@@ -52,13 +52,12 @@ public class PlayerHealthInCombat : MonoBehaviour
             Destroy(AttackOptionParent.GetChild(ii).gameObject);
         }
 
-        foreach (string option in Player.AttackOptions)
+        foreach (PlayerMove option in Player.FromProfile.AttackOptions)
         {
-            Button newButton = Instantiate(AttackOption, AttackOptionParent);
+            MoveInEncounter newButton = Instantiate(AttackOption, AttackOptionParent);
 
-            string optionHolder = option;
-            newButton.GetComponentInChildren<TMP_Text>().text = optionHolder;
-            newButton.onClick.AddListener(() => { takeAction(Player, optionHolder); });
+            PlayerMove optionHolder = option;
+            newButton.SetFromMove(Player, optionHolder, takeAction);
         }
 
         UpdateFromPlayer();

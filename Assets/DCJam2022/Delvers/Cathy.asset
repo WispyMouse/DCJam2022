@@ -23,7 +23,7 @@ MonoBehaviour:
   SecondSkill: Super Honest
   ThirdSkill: Flying
   AttackOptions:
-  - Explore
-  - Insight
-  - Tickle
-  - Rest
+  - {fileID: 11400000, guid: 79431f21c07afd44f8c7790cbcdfbe5c, type: 2}
+  - {fileID: 11400000, guid: b7ae53272d805ad45b154e70b89a3be0, type: 2}
+  - {fileID: 11400000, guid: 4a3ba4eadd9c0f94db52616ee6c57c46, type: 2}
+  - {fileID: 11400000, guid: a87868f2d188a0a43b6c3ef5553523a3, type: 2}

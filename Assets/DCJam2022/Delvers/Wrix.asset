@@ -23,7 +23,7 @@ MonoBehaviour:
   SecondSkill: Encouraging
   ThirdSkill: Restless
   AttackOptions:
-  - Brag
-  - Show For It
-  - Creativity
-  - Rest
+  - {fileID: 11400000, guid: 2ce95b90000bef442a69a46f57208bbe, type: 2}
+  - {fileID: 11400000, guid: 90b65e19e63fe0e49a27837e72419188, type: 2}
+  - {fileID: 11400000, guid: cdcefcc8298a7a14cb5a1e2cda66febf, type: 2}
+  - {fileID: 11400000, guid: a87868f2d188a0a43b6c3ef5553523a3, type: 2}

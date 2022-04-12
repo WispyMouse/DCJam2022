@@ -560,7 +560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9151743920181956845
 RectTransform:
   m_ObjectHideFlags: 0
@@ -824,7 +824,7 @@ MonoBehaviour:
   CommandsScreen: {fileID: 1822063407978827906}
   ChooseTargetScreen: {fileID: 5624891797301875946}
   ActionSelectedScreen: {fileID: 2997813950577123828}
-  AttackOption: {fileID: 401984911414937612, guid: 1cdbdb0b7224aba428b43a3bfaee9f2e, type: 3}
+  AttackOption: {fileID: 6342385935005449561, guid: 73b7377c05ffb4343a41cc786c609c23, type: 3}
   AttackOptionParent: {fileID: 9151743920181956845}
   NRGSlider: {fileID: 766191040402013459}
   NRGLabel: {fileID: 7073001859696712405}

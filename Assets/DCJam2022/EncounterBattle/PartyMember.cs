@@ -5,7 +5,6 @@ using UnityEngine;
 public class PartyMember : CombatMember
 {
     public PlayerHealthInCombat Hud { get; set; }
-    public List<string> AttackOptions { get; set; }
     public int MaxNRG { get; set; }
     public int CurNRG { get; set; }
 
@@ -20,7 +19,6 @@ public class PartyMember : CombatMember
     {
         FromProfile = fromProfile;
         DisplayName = fromProfile.ProfileName;
-        AttackOptions = fromProfile.AttackOptions;
         MaxNRG = fromProfile.MaxNRG;
     }
 

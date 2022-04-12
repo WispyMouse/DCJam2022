@@ -6,9 +6,9 @@ public class BattleCommand
 {
     public CombatMember ActingMember { get; set; }
     public CombatMember Target { get; set; }
-    public string ActionTaken { get; set; }
+    public MoveBase ActionTaken { get; set; }
 
-    public BattleCommand(CombatMember actor, CombatMember target, string actionTaken)
+    public BattleCommand(CombatMember actor, CombatMember target, MoveBase actionTaken)
     {
         this.ActingMember = actor;
         this.Target = target;

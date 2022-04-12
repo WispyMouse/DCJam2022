@@ -10,7 +10,7 @@ public class SelectedDelverBottom : MonoBehaviour
     public Image SelectedImage;
     public TMP_Text DungeoneerName;
     public Transform MovesHolder;
-    public TMP_Text MoveName;
+    public PartyMoveSelectionLabel MoveName;
 
     public void SetDelver(DelverProfile profile)
     {
@@ -23,11 +23,12 @@ public class SelectedDelverBottom : MonoBehaviour
             Destroy(MovesHolder.GetChild(ii).gameObject);
         }
 
-        foreach (string move in Profile.AttackOptions)
+        foreach (PlayerMove move in Profile.AttackOptions)
         {
-            TMP_Text text = Instantiate(MoveName, MovesHolder);
-            text.text = move;
+            PartyMoveSelectionLabel text = Instantiate(MoveName, MovesHolder);
+            text.SetFromMove(move);
         }
+
         DungeoneerName.text = profile.ProfileName;
     }
 }

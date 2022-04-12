@@ -23,7 +23,7 @@ MonoBehaviour:
   SecondSkill: Reliable
   ThirdSkill: Sleepy
   AttackOptions:
-  - Listen
-  - Organize
-  - Work Quickly
-  - Rest
+  - {fileID: 11400000, guid: b473ea1f6586dc241a1a5bc0844d37bc, type: 2}
+  - {fileID: 11400000, guid: 31c29ddeb334aa64a8ad973be8c499c3, type: 2}
+  - {fileID: 11400000, guid: 86239abc85de9884eb51ab8899f88be1, type: 2}
+  - {fileID: 11400000, guid: a87868f2d188a0a43b6c3ef5553523a3, type: 2}
