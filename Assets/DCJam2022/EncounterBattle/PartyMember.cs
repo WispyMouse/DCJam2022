@@ -26,4 +26,9 @@ public class PartyMember : CombatMember
     {
         CurNRG = MaxNRG;
     }
+
+    public void LoseNRG(int amount)
+    {
+        CurNRG = Mathf.Clamp(0, MaxNRG, CurNRG - amount);
+    }
 }

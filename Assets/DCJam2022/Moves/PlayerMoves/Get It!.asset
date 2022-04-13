@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Get It!
   m_EditorClassIdentifier: 
   MoveName: Get It!
-  Targeting: 0
+  Verbs: gets
+  Targeting: 1
   StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
+  DamageFloor: 3
+  DamageCeiling: 5
+  Description: Get {0}-{1} progress done on one obstacle.
   IsHealing: 0
-  Speed: 0
+  Speed: 1

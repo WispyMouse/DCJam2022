@@ -46,4 +46,9 @@ public class PlayerParty
         int randomIndex = Random.Range(0, PartyMembers.Count);
         return PartyMembers[randomIndex];
     }
+
+    public void LoseAOF(int amount)
+    {
+        CurAOF = Mathf.Clamp(0, MaxAOF, CurAOF - amount);
+    }
 }

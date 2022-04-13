@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Sticky Wrench
   m_EditorClassIdentifier: 
   MoveName: Sticky Wrench
-  Targeting: 0
+  Verbs: wrenches
+  Targeting: 1
   StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
+  DamageFloor: 2
+  DamageCeiling: 10
+  Description: Applies {0}-{1} progress.
   IsHealing: 0
   Speed: 0

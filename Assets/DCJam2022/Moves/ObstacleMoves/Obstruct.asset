@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Obstruct
   m_EditorClassIdentifier: 
   MoveName: Obstruct
+  Verbs: obstructs
   Targeting: 1
   StatusEffect: 0
   DamageFloor: 1

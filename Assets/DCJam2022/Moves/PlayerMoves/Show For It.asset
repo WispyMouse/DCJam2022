@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Show For It
   m_EditorClassIdentifier: 
   MoveName: Show For It
-  Targeting: 0
+  Verbs: shows off to
+  Targeting: 2
   StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
+  DamageFloor: 1
+  DamageCeiling: 3
+  Description: Applies {0}-{1} progress to each obstacle.
   IsHealing: 0
-  Speed: 0
+  Speed: 1

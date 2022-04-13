@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Rest question mark
   m_EditorClassIdentifier: 
   MoveName: Rest?
+  Verbs: tries to rest
   Targeting: 0
   StatusEffect: 0
   DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
-  IsHealing: 0
+  DamageCeiling: 4
+  Description: Restores {0}-{1} NRG.
+  IsHealing: 1
   Speed: 0

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Frustrate
   m_EditorClassIdentifier: 
   MoveName: Frustrate
+  Verbs: frustrates
   Targeting: 1
   StatusEffect: 0
   DamageFloor: 3

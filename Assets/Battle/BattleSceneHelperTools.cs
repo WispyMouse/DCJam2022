@@ -15,6 +15,8 @@ public class BattleSceneHelperTools : SceneHelperTools
     public GameObject CommitButton;
     public TMP_Text EncounterName;
 
+    public List<FoeBattleData> DefaultFoes;
+
     public void EndBattle()
     {
         SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.EndCurrentState());
@@ -22,7 +24,7 @@ public class BattleSceneHelperTools : SceneHelperTools
 
     public override IGameplayState GetNewDemoState()
     {
-        BattleOpponents opponents = BattleState.GetDemoOpponents();
+        BattleOpponents opponents = new BattleOpponents(DefaultFoes);
 
         return new BattleState(opponents);
     }

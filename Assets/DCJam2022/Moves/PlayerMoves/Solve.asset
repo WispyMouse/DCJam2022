@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Solve
   m_EditorClassIdentifier: 
   MoveName: Solve
-  Targeting: 0
+  Verbs: solves
+  Targeting: 1
   StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
+  DamageFloor: 6
+  DamageCeiling: 6
+  Description: Applies {0} progress to one obstacle.
   IsHealing: 0
   Speed: 0

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Creativity
   m_EditorClassIdentifier: 
   MoveName: Creativity
-  Targeting: 0
+  Verbs: creatively approaches
+  Targeting: 2
   StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
+  DamageFloor: 1
+  DamageCeiling: 2
+  Description: Quickly applies {0}-{1} progress to all obstacles.
   IsHealing: 0
-  Speed: 0
+  Speed: 2

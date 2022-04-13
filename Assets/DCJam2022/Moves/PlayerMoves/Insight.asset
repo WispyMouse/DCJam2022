@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Insight
   m_EditorClassIdentifier: 
   MoveName: Insight
-  Targeting: 0
-  StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
+  Verbs: gets insight into
+  Targeting: 1
+  StatusEffect: 1
+  DamageFloor: 1
+  DamageCeiling: 2
+  Description: Applies {0}-{1} progress and stuns an obstacle.
   IsHealing: 0
-  Speed: 0
+  Speed: 1

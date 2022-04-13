@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Explore
   m_EditorClassIdentifier: 
   MoveName: Explore
-  Targeting: 0
+  Verbs: explores
+  Targeting: 2
   StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
+  DamageFloor: 2
+  DamageCeiling: 3
+  Description: Applies {0}-{1} progress to all obstacles, slowly.
   IsHealing: 0
   Speed: 0

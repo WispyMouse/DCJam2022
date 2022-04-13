@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intense
   m_EditorClassIdentifier: 
   MoveName: Intense
+  Verbs: intensely towards
   Targeting: 3
   StatusEffect: 0
   DamageFloor: 2

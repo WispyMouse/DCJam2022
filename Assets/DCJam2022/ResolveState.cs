@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ResolveState : IGameplayState
 {
+    public const float WaitAfterLoggingTargets = .4f;
+    public const float WaitAfterLoggingEffect = .2f;
+    public const float WaitAfterActionResolves = .25f;
+
     BattleState managedBattleState { get; set; }
     GlobalStateMachine stateMachineInstance { get; set; }
 
@@ -64,44 +68,7 @@ public class ResolveState : IGameplayState
 
             ConsoleManager.Instance.AddToLog($"Resolve this command from {command.ActingMember.DisplayName} targeting {command.Target.DisplayName} with {command.ActionTaken}");
 
-            if (command.Target is FoeMember)
-            {
-                FoeMember foeMember = (FoeMember)command.Target;
-                int damage = Mathf.CeilToInt(Random.value * 5);
-                ConsoleManager.Instance.AddToLog($"{foeMember.DisplayName} damaged for {damage}.");
-                foeMember.CurProblemJuice = Mathf.Max(0, foeMember.CurProblemJuice - damage);
-
-                if (foeMember.CurProblemJuice <= 0)
-                {
-                    ConsoleManager.Instance.AddToLog("Solved!");
-                    yield return new WaitForSeconds(.2f);
-                }
-
-                foeMember.Visual.UpdateFromMember();
-
-                yield return new WaitForSeconds(.2f);
-            }
-            else
-            {
-                PartyMember partyMember = (PartyMember)command.Target;
-
-                int damage = Mathf.CeilToInt(Random.value * 5);
-
-                if (partyMember.CurNRG <= 0)
-                {
-                    ConsoleManager.Instance.AddToLog($"AOF damaged for {damage}.");
-                    managedBattleState.PlayerPartyPointer.CurAOF = Mathf.Max(0, managedBattleState.PlayerPartyPointer.CurAOF - damage);
-                    AOFBar.Instance.SetValue(managedBattleState.PlayerPartyPointer.CurAOF, managedBattleState.PlayerPartyPointer.MaxAOF);
-                }
-                else
-                {
-                    ConsoleManager.Instance.AddToLog($"{partyMember.DisplayName} damaged for {damage}.");
-                    partyMember.CurNRG = Mathf.Max(0, partyMember.CurNRG - damage);
-                    partyMember.Hud.UpdateFromPlayer();
-                }
-            }
-
-            yield return new WaitForSeconds(.4f);
+            yield return command.TakeAction(managedBattleState);
         }
 
         foreach (FoeMember foe in managedBattleState.Opponents.OpposingMembers)

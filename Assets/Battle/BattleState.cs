@@ -120,15 +120,6 @@ public class BattleState : SceneLoadingGameplayState
         }
     }
 
-    public static BattleOpponents GetDemoOpponents()
-    {
-        BattleOpponents opponents = new BattleOpponents();
-        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes A", MaxProblemJuice = 5 });
-        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes B", MaxProblemJuice = 5 });
-        opponents.AddOpposingMember(new FoeMember() { DisplayName = "Dirty Dishes C", MaxProblemJuice = 5 });
-        return opponents;
-    }
-
     public IEnumerator ProceedNextWave()
     {
         CurWave++;

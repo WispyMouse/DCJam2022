@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Listen
   m_EditorClassIdentifier: 
   MoveName: Listen
+  Verbs: listens to
   Targeting: 2
   StatusEffect: 0
   DamageFloor: 1

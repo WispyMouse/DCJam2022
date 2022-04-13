@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Trouble
   m_EditorClassIdentifier: 
   MoveName: Trouble
+  Verbs: troubles
   Targeting: 1
   StatusEffect: 1
   DamageFloor: 1

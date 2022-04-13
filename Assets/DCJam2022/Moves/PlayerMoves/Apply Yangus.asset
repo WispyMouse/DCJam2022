@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Apply Yangus
   m_EditorClassIdentifier: 
   MoveName: Apply Yangus
-  Targeting: 0
+  Verbs: yanguses
+  Targeting: 1
   StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
+  DamageFloor: 2
+  DamageCeiling: 4
+  Description: Applies {0}-{1} progress to one target. Do your best!
   IsHealing: 0
-  Speed: 0
+  Speed: 1

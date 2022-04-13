@@ -32,4 +32,9 @@ public class FoeMember : CombatMember
 
         CurPhase = (CurPhase + 1) % BattleData.AttackPhases.Count;
     }
+
+    public void Progress(int amount)
+    {
+        CurProblemJuice = Mathf.Clamp(0, MaxProblemJuice,CurProblemJuice - amount);
+    }
 }

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Hop to It
   m_EditorClassIdentifier: 
   MoveName: Hop To It
-  Targeting: 0
+  Verbs: hops to
+  Targeting: 1
   StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
+  DamageFloor: 2
+  DamageCeiling: 4
+  Description: Quickly applies {0}-{1} progress to one obstacle.
   IsHealing: 0
-  Speed: 0
+  Speed: 2

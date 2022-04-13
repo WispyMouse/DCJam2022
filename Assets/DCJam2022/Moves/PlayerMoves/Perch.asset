@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Perch
   m_EditorClassIdentifier: 
   MoveName: Perch
+  Verbs: perches
   Targeting: 0
   StatusEffect: 0
-  DamageFloor: 0
-  DamageCeiling: 0
-  Description: ~
-  IsHealing: 0
-  Speed: 0
+  DamageFloor: 4
+  DamageCeiling: 4
+  Description: Restores {0} NRG to yourself.
+  IsHealing: 1
+  Speed: 1
