@@ -32,8 +32,12 @@ public class BattleState : SceneLoadingGameplayState
     public GameObject CommitButton;
     public EncounterBattle Encounter { get; set; }
 
+    public static bool LastWasVictory { get; set; } = false;
+
     int CurWave { get; set; } = 0;
     bool FirstWaveSpawned { get; set; } = false;
+
+    public bool Retreat { get; set; } = false;
 
     public override void SetControls(WarrencrawlInputs controls)
     {
@@ -105,6 +109,17 @@ public class BattleState : SceneLoadingGameplayState
             BattleSceneHelperToolsInstance.EncounterName.text = Encounter.EncounterName;
         }
 
+        if (PlayerPartyPointer.CurAOF <= 0)
+        {
+            LastWasVictory = false;
+            ConsoleManager.Instance.AddToLog("AOF has hit 0!");
+            yield return new WaitForSeconds(.2f);
+            ConsoleManager.Instance.AddToLog("Returning to Town and resting...");
+            yield return new WaitForSeconds(.6f);
+            yield return globalStateMachine.ChangeToState(new TownState());
+            yield break;
+        }
+
         if (!FirstWaveSpawned)
         {
             FirstWaveSpawned = true;
@@ -127,6 +142,7 @@ public class BattleState : SceneLoadingGameplayState
         if (CurWave >= Encounter.Foes.Count)
         {
             Debug.Log("You win!");
+            LastWasVictory = true;
             SceneHelperInstance.StartCoroutine(StateMachineInstance.EndCurrentState());
         }
         else

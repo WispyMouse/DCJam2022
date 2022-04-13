@@ -29,6 +29,7 @@ public class ChoosePartysCommandsState : IGameplayState
     {
         battleSceneHelperTools.SetCommitButtonState(BattleSceneHelperTools.CommitButtonState.Hide);
         battleSceneHelperTools.CommitButtonPressed.RemoveAllListeners();
+        battleSceneHelperTools.RetreatButtonPressed.RemoveAllListeners();
         yield break;
     }
 
@@ -36,6 +37,7 @@ public class ChoosePartysCommandsState : IGameplayState
     {
         Debug.Log("Choose Party Commands State Exit");
         battleSceneHelperTools.SetCommitButtonState(BattleSceneHelperTools.CommitButtonState.Hide);
+        battleSceneHelperTools.RetreatButtonPressed.RemoveAllListeners();
         battleSceneHelperTools.CommitButtonPressed.RemoveAllListeners();
         yield break;
     }
@@ -61,6 +63,7 @@ public class ChoosePartysCommandsState : IGameplayState
         SetReadyState();
         
         battleSceneHelperTools.CommitButtonPressed.AddListener(() => GoToResolve());
+        battleSceneHelperTools.RetreatButtonPressed.AddListener(() => GoToRetreat());
 
         yield break;
     }
@@ -124,5 +127,10 @@ public class ChoosePartysCommandsState : IGameplayState
             }
         }
         battleSceneHelperTools.StartCoroutine(stateMachineInstance.ChangeToState(new ResolveState(stateMachineInstance, managedBattleState)));
+    }
+
+    void GoToRetreat()
+    {
+        battleSceneHelperTools.EndBattle(false);
     }
 }

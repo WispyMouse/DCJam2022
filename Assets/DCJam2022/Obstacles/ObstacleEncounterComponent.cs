@@ -11,7 +11,18 @@ public class ObstacleEncounterComponent : ObstacleEventComponent
 
     public override IGameplayState GetNewState(Action<int> setPointer)
     {
-        setPointer(EventId + 1);
         return new BattleState(Foes);
+    }
+
+    public override void AfterStateSetPointer(Action<int> setPointer)
+    {
+        if (BattleState.LastWasVictory)
+        {
+            setPointer(EventId + 1);
+        }
+        else
+        {
+            setPointer(-1);
+        }
     }
 }

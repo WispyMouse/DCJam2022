@@ -13,13 +13,24 @@ public class BattleSceneHelperTools : SceneHelperTools
     public PlayerHealthInCombat HudPF;
 
     public GameObject CommitButton;
+    public GameObject RetreatButton;
     public TMP_Text EncounterName;
 
     public List<FoeBattleData> DefaultFoes;
 
-    public void EndBattle()
+    public void EndBattle(bool isVictory = true)
     {
-        SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.EndCurrentState());
+        BattleState.LastWasVictory = isVictory;
+        SceneHelperInstance.StartCoroutine(EndUntilBelowBattle());
+    }
+
+    public IEnumerator EndUntilBelowBattle()
+    {
+        while (SceneHelper.GlobalStateMachineInstance.CurrentState is not BattleState)
+        {
+            yield return SceneHelper.GlobalStateMachineInstance.EndCurrentState();
+        }
+        yield return SceneHelper.GlobalStateMachineInstance.EndCurrentState();
     }
 
     public override IGameplayState GetNewDemoState()
@@ -30,6 +41,7 @@ public class BattleSceneHelperTools : SceneHelperTools
     }
 
     public UnityEvent CommitButtonPressed;
+    public UnityEvent RetreatButtonPressed;
 
     public enum CommitButtonState { NoneSet, SomeSet, AllSet, Hide }
     public void SetCommitButtonState(CommitButtonState state)
@@ -38,9 +50,11 @@ public class BattleSceneHelperTools : SceneHelperTools
         {
             case CommitButtonState.Hide:
                 CommitButton.gameObject.SetActive(false);
+                RetreatButton.SetActive(false);
                 break;
             default:
                 CommitButton.gameObject.SetActive(true);
+                RetreatButton.SetActive(true);
                 break;
         }
     }
@@ -48,5 +62,10 @@ public class BattleSceneHelperTools : SceneHelperTools
     public void OnCommitButton()
     {
         CommitButtonPressed.Invoke();
+    }
+
+    public void OnRetreatButton()
+    {
+        RetreatButtonPressed.Invoke();
     }
 }
