@@ -18,4 +18,9 @@ public class ConsoleManager : MonoBehaviour
     {
         LogText.text += $"\n{toAdd}";
     }
+
+    public void Clear()
+    {
+        LogText.text = "";
+    }
 }

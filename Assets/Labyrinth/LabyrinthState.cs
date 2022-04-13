@@ -307,6 +307,6 @@ public class LabyrinthState : SceneLoadingGameplayState
         // todo: consistent handling of choosing which interactive to interface with if there are multiple options
         InteractiveData firstInteractive = interactivesOnCell.First();
         
-        yield return StateMachineInstance.PushNewState(new HandleObstacleState(firstInteractive.ObstacleEventData));
+        yield return StateMachineInstance.PushNewState(new HandleObstacleState(SceneHelperInstance, firstInteractive.ObstacleEventData));
     }
 }

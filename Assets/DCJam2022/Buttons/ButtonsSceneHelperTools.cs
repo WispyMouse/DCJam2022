@@ -37,6 +37,6 @@ public class ButtonsSceneHelperTools : SceneHelperTools
         }
 
         Debug.Log($"Begin {eventToStart.ObstacleName}");
-        SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.PushNewState(new HandleObstacleState(eventToStart)));
+        SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.PushNewState(new HandleObstacleState(SceneHelperInstance, eventToStart)));
     }
 }

@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 70238714}
   - component: {fileID: 70238716}
   - component: {fileID: 70238715}
+  - component: {fileID: 70238717}
   m_Layer: 10
   m_Name: Up Next
   m_TagString: Untagged
@@ -357,6 +358,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70238713}
   m_CullTransparentMesh: 1
+--- !u!114 &70238717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70238713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8002c0ab94ebcb84cb57ce9a16118d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewRowParent: {fileID: 0}
+  RowPF: {fileID: 0}
 --- !u!1001 &74218467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -894,8 +909,13 @@ MonoBehaviour:
   PlayerHealthHUDPosition: {fileID: 1346996721}
   HudPF: {fileID: 422002143583290964, guid: fcc2d76a1cc8c9542922bfd94ed9701d, type: 3}
   CommitButton: {fileID: 1208023376}
+  RetreatButton: {fileID: 692919498}
   EncounterName: {fileID: 1458404741}
-  DefaultFoes: []
+  Preview: {fileID: 1938623423}
+  DefaultFoes:
+  - {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
+  - {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
+  - {fileID: 11400000, guid: 65e5d93ec64375947b98055f79c02e1f, type: 2}
   CommitButtonPressed:
     m_PersistentCalls:
       m_Calls: []
@@ -7256,6 +7276,7 @@ GameObject:
   - component: {fileID: 1938623422}
   - component: {fileID: 1938623421}
   - component: {fileID: 1938623420}
+  - component: {fileID: 1938623423}
   m_Layer: 10
   m_Name: Panel
   m_TagString: Untagged
@@ -7304,9 +7325,9 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 8
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
@@ -7351,6 +7372,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938623418}
   m_CullTransparentMesh: 1
+--- !u!114 &1938623423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938623418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8002c0ab94ebcb84cb57ce9a16118d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewRowParent: {fileID: 1938623419}
+  RowPF: {fileID: 6185612918651403646, guid: 64769e1ad16c26543ace570f73c3341f, type: 3}
 --- !u!4 &1953800179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8816518090911114164, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}

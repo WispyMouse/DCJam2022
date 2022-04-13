@@ -17,8 +17,8 @@ MonoBehaviour:
   Health: 4
   AttackPhases:
   - AppearenceInPhase: {fileID: 21300000, guid: 8d7cf0e1b05d6f245959b2c10d67d111, type: 3}
-    ActionToTake: TARGET NRG
+    UsedMove: {fileID: 11400000, guid: 88c744f867f5d984ba272b56b6555e2c, type: 2}
   - AppearenceInPhase: {fileID: 21300000, guid: ad08425ec85ac6549adb4965a91b830f, type: 3}
-    ActionToTake: DISABLE
+    UsedMove: {fileID: 11400000, guid: f91d773d2bc075242a8d6c1c1ed0679b, type: 2}
   - AppearenceInPhase: {fileID: 21300000, guid: 2d3a940cd64018c4397aaed78f58aff3, type: 3}
-    ActionToTake: TARGET AOF
+    UsedMove: {fileID: 11400000, guid: aa74b08ea7671cf48935b6e69224bb8c, type: 2}

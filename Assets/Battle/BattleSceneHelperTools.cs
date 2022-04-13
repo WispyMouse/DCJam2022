@@ -16,6 +16,8 @@ public class BattleSceneHelperTools : SceneHelperTools
     public GameObject RetreatButton;
     public TMP_Text EncounterName;
 
+    public IncomingPreview Preview;
+
     public List<FoeBattleData> DefaultFoes;
 
     public void EndBattle(bool isVictory = true)

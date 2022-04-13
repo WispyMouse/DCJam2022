@@ -72,6 +72,19 @@ public class ChoiceState : IGameplayState
             Button newButton = GameObject.Instantiate(ChoiceHandlerInstance.ChoicePF, ChoiceHandlerInstance.ChoiceParent);
             newButton.GetComponentInChildren<TMP_Text>().text = entry.ChoiceName;
             newButton.onClick.AddListener(() => { ChoiceSelected(entryHolder); });
+
+            bool shouldShow = true;
+
+            foreach (FlagCheckCondition check in entry.FlagsRequired)
+            {
+                if (ChoiceHandlerInstance.SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData.GetFlag(check.FlagToCheck) < check.RequiredMinValue)
+                {
+                    shouldShow = false;
+                    break;
+                }
+            }
+
+            newButton.interactable = shouldShow;
         }
 
         yield break;

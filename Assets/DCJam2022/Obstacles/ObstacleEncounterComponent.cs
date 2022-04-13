@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "DCJam2022/ObstacleEncounterComponent")]
+[CreateAssetMenu(menuName = "DCJam2022/EventComponents/ObstacleEncounterComponent")]
 public class ObstacleEncounterComponent : ObstacleEventComponent
 {
     public EncounterBattle Foes;
 
-    public override IGameplayState GetNewState(Action<int> setPointer)
+    public override IGameplayState GetNewState(SaveData activeSaveData, Action<int> setPointer)
     {
         return new BattleState(Foes);
     }
 
-    public override void AfterStateSetPointer(Action<int> setPointer)
+    public override void AfterStateSetPointer(SaveData activeSaveData, Action<int> setPointer)
     {
         if (BattleState.LastWasVictory)
         {

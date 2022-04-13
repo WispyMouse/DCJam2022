@@ -7,9 +7,11 @@ public class HandleObstacleState : IGameplayState
 {
     ObstacleEvent EventExperienced { get; set; }
     int curIdPointer { get; set; } = 0;
+    SceneHelper sceneHelper { get; set; }
 
-    public HandleObstacleState(ObstacleEvent forEvent)
+    public HandleObstacleState(SceneHelper sceneHelperInstance, ObstacleEvent forEvent)
     {
+        sceneHelper = sceneHelperInstance;
         EventExperienced = forEvent;
     }
 
@@ -45,33 +47,52 @@ public class HandleObstacleState : IGameplayState
 
     public void SetControls(WarrencrawlInputs activeInput)
     {
-        
+
     }
 
     public IEnumerator StartState(GlobalStateMachine stateMachine, IGameplayState previousState)
     {
-        ObstacleEventComponent component = EventExperienced.EventComponents.FirstOrDefault(ec => ec.EventId == curIdPointer);
+        // Look up the event matching our current event id; if it is null, then end the state
+        // Then ask it for the next state, which can run SetPointer to change the id targeted
+        // if the state it returns is null, then repeat the process; there was no new visual changes needed, retake the pointer and move forward
 
-        if (component == null)
+        IGameplayState nextState;
+        ObstacleEventComponent component;
+
+        do
         {
-            yield return stateMachine.EndCurrentState();
-            yield break;
-        }
+            component = EventExperienced.EventComponents.FirstOrDefault(ec => ec.EventId == curIdPointer);
+
+            if (component == null)
+            {
+                yield return stateMachine.EndCurrentState();
+                yield break;
+            }
+
+            nextState = component.GetNewState(sceneHelper.SaveDataManagerInstance.CurrentSaveData, SetPointer);
+        } while (nextState == null);
 
         if (component.CloseCurrentState)
         {
             yield return stateMachine.EndCurrentState();
-            yield return stateMachine.ChangeToState(component.GetNewState(SetPointer));
+
+            if (nextState != null)
+            {
+                yield return stateMachine.ChangeToState(nextState);
+            }
         }
         else
         {
-            yield return stateMachine.PushNewState(component.GetNewState(SetPointer));
+            if (nextState != null)
+            {
+                yield return stateMachine.PushNewState(component.GetNewState(sceneHelper.SaveDataManagerInstance.CurrentSaveData, SetPointer));
+            }
         }
     }
 
     public void UnsetControls(WarrencrawlInputs activeInput)
     {
-        
+
     }
 
     void SetPointer(int toPointer)

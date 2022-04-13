@@ -86,6 +86,8 @@ public class BattleState : SceneLoadingGameplayState
             PlayerPartyPointer.PartyMembers[ii].Hud = player;
         }
 
+        ConsoleManager.Instance.Clear();
+
         yield break;
     }
 
@@ -171,6 +173,7 @@ public class BattleState : SceneLoadingGameplayState
             }
 
             Opponents = curOpponents;
+            BattleSceneHelperToolsInstance.Preview.SetFromRemaining(Encounter.Foes.Skip(CurWave+1).ToList());
         }
 
         for (int ii = 0; ii < BattleSceneHelperToolsInstance.FoePositions.Length && ii < Opponents.OpposingMembers.Count; ii++)

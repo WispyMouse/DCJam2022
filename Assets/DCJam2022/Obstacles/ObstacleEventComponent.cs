@@ -11,8 +11,8 @@ public abstract class ObstacleEventComponent : ScriptableObject
 
     public virtual bool CloseCurrentState => false;
 
-    public abstract IGameplayState GetNewState(Action<int> setPointer);
-    public virtual void AfterStateSetPointer(Action<int> setPointer)
+    public abstract IGameplayState GetNewState(SaveData activeSaveData, Action<int> setPointer);
+    public virtual void AfterStateSetPointer(SaveData activeSaveData, Action<int> setPointer)
     {
 
     }

@@ -42,4 +42,11 @@ public class MoveTooltipShower : MonoBehaviour, IPointerEnterHandler, IPointerEx
         hoverTime = 0;
         beingHovered = false;
     }
+
+    private void OnDisable()
+    {
+        beingHovered = false;
+        hoverTime = 0;
+        Tooltip.Hide();
+    }
 }
