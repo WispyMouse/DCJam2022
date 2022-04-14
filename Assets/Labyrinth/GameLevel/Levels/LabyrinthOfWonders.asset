@@ -21,94 +21,6 @@ MonoBehaviour:
     StartingFacing: 0
     LabyrinthInteractives:
     - InteractiveID:
-        serializedGuid: 6ef8b83c-2535-4f00-8379-c7b0d95c99e0
-      Kind: 0
-      ObstacleEventData: {fileID: 0}
-      Checks:
-      - FlagNameToCheck: bookcase_moved
-        ShouldBeVisible: 1
-      OnCoordinates:
-      - X: -2
-        Y: 9
-        Z: 0
-      - X: -2
-        Y: 10
-        Z: 0
-      - X: -1
-        Y: 9
-        Z: 0
-      - X: -1
-        Y: 10
-        Z: 0
-      - X: -2
-        Y: 9
-        Z: 0
-      - X: -2
-        Y: 10
-        Z: 0
-      - X: -1
-        Y: 9
-        Z: 0
-      - X: -1
-        Y: 10
-        Z: 0
-      - X: -2
-        Y: 9
-        Z: 0
-      - X: -2
-        Y: 10
-        Z: 0
-      - X: -1
-        Y: 9
-        Z: 0
-      - X: -1
-        Y: 10
-        Z: 0
-      - X: -2
-        Y: 9
-        Z: 0
-      - X: -2
-        Y: 10
-        Z: 0
-      - X: -1
-        Y: 9
-        Z: 0
-      - X: -1
-        Y: 10
-        Z: 0
-    - InteractiveID:
-        serializedGuid: c17262d4-b0e0-4a16-be61-af2df533cbca
-      Kind: 3
-      ObstacleEventData: {fileID: 11400000, guid: edba99e5bf918a941bc08175eb7f7c91, type: 2}
-      Checks:
-      - FlagNameToCheck: bookcase_moved
-        ShouldBeVisible: 0
-      OnCoordinates:
-      - X: 0
-        Y: 10
-        Z: 0
-      - X: 0
-        Y: 11
-        Z: 0
-      - X: 0
-        Y: 10
-        Z: 0
-      - X: 0
-        Y: 11
-        Z: 0
-      - X: 0
-        Y: 10
-        Z: 0
-      - X: 0
-        Y: 11
-        Z: 0
-      - X: 0
-        Y: 10
-        Z: 0
-      - X: 0
-        Y: 11
-        Z: 0
-    - InteractiveID:
         serializedGuid: 8639f475-15d6-4eee-861b-39b45965bd99
       Kind: 3
       ObstacleEventData: {fileID: 11400000, guid: fb4ce56e70301414d9f89597cab19c5d, type: 2}
@@ -155,6 +67,40 @@ MonoBehaviour:
         Z: 0
       - X: 1
         Y: 1
+        Z: 0
+    - InteractiveID:
+        serializedGuid: c17262d4-b0e0-4a16-be61-af2df533cbca
+      Kind: 3
+      ObstacleEventData: {fileID: 11400000, guid: edba99e5bf918a941bc08175eb7f7c91, type: 2}
+      Checks:
+      - FlagNameToCheck: bookcase_moved
+        ShouldBeVisible: 0
+      OnCoordinates:
+      - X: 0
+        Y: 10
+        Z: 0
+      - X: 0
+        Y: 11
+        Z: 0
+    - InteractiveID:
+        serializedGuid: 6ef8b83c-2535-4f00-8379-c7b0d95c99e0
+      Kind: 0
+      ObstacleEventData: {fileID: 0}
+      Checks:
+      - FlagNameToCheck: bookcase_moved
+        ShouldBeVisible: 1
+      OnCoordinates:
+      - X: -2
+        Y: 9
+        Z: 0
+      - X: -2
+        Y: 10
+        Z: 0
+      - X: -1
+        Y: 9
+        Z: 0
+      - X: -1
+        Y: 10
         Z: 0
     Cells:
     - Coordinate:
