@@ -63,7 +63,7 @@ public class BattleCommand
                     ConsoleManager.Instance.AddToLog($"{affectedMember.DisplayName} is refreshed by {damageRoll}");
                     // ASSUMES ONLY PLAYERS CAN HEAL; temporary
                     ((PartyMember)affectedMember).LoseNRG(-damageRoll);
-                    yield return new WaitForSeconds(ResolveState.WaitAfterActionResolves);
+                    yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
                 }
                 else
                 {
@@ -71,7 +71,7 @@ public class BattleCommand
                     {
                         ConsoleManager.Instance.AddToLog($"{damageRoll} progress is made");
                         ((FoeMember)affectedMember).Progress(damageRoll);
-                        yield return new WaitForSeconds(ResolveState.WaitAfterActionResolves);
+                        yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
                     }
                     else
                     {
@@ -81,13 +81,13 @@ public class BattleCommand
                         {
                             ConsoleManager.Instance.AddToLog($"The party loses {damageRoll} AoF!!!");
                             battleState.PlayerPartyPointer.LoseAOF(damageRoll);
-                            yield return new WaitForSeconds(ResolveState.WaitAfterActionResolves);
+                            yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
                         }
                         else
                         {
                             ConsoleManager.Instance.AddToLog($"{affectedMember.DisplayName} loses {damageRoll} NRG");
                             ((PartyMember)affectedMember).LoseNRG(damageRoll);
-                            yield return new WaitForSeconds(ResolveState.WaitAfterActionResolves);
+                            yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
                         }
                     }
                 }

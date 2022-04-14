@@ -7,9 +7,14 @@ using UnityEngine;
 public class TownGotoEvent : ObstacleEventComponent
 {
     public override bool CloseCurrentState => true;
-    public override IGameplayState GetNewState(SaveData activeSaveData, Action<int> setPointer)
+    public override IGameplayState GetNewState(SaveData activeSaveData)
     {
         activeSaveData.Day++;
         return new TownState();
+    }
+
+    public override int AfterStateSetPointer(SaveData activeSaveData)
+    {
+        return -1;
     }
 }

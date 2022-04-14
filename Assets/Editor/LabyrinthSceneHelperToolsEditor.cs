@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ public class LabyrinthSceneHelperToolsEditor : Editor
 
     SerializedProperty inputHandler;
     SerializedProperty animationHandler;
+    SerializedProperty interactivePanel;
 
     void OnEnable()
     {
@@ -32,6 +34,7 @@ public class LabyrinthSceneHelperToolsEditor : Editor
 
         inputHandler = serializedObject.FindProperty(nameof(LabyrinthSceneHelperTools.InputHandler));
         animationHandler = serializedObject.FindProperty(nameof(LabyrinthSceneHelperTools.AnimationHandler));
+        interactivePanel = serializedObject.FindProperty(nameof(LabyrinthSceneHelperTools.InteractiveInFrontPanel));
     }
 
     public override void OnInspectorGUI()
@@ -46,6 +49,7 @@ public class LabyrinthSceneHelperToolsEditor : Editor
         EditorGUILayout.PropertyField(inputHandler);
         EditorGUILayout.PropertyField(animationHandler);
 
+        EditorGUILayout.PropertyField(interactivePanel);
         EditorGUILayout.PropertyField(currentLevel);
 
         GameLevel castCurrentLevel = ((LabyrinthSceneHelperTools)target).CurrentLevel;
@@ -71,7 +75,8 @@ public class LabyrinthSceneHelperToolsEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 
-    [DrawGizmo(GizmoType.Selected | GizmoType.NonSelected)]
+
+    [UnityEditor.DrawGizmo(GizmoType.Selected | GizmoType.NonSelected)]
     static void DrawGizmo(LabyrinthSceneHelperTools editorScript, GizmoType gizmoType)
     {
         if (!(showCells && editorScript.CurrentLevel != null))
@@ -87,10 +92,32 @@ public class LabyrinthSceneHelperToolsEditor : Editor
 
         foreach (InteractiveData interactive in editorScript.CurrentLevel.LabyrinthData.LabyrinthInteractives)
         {
+            HashSet<CellCoordinates> neighborCoordinates = new HashSet<CellCoordinates>(interactive.OnCoordinates);
+
             foreach (CellCoordinates coordinate in interactive.OnCoordinates)
             {
-                Gizmos.color = Color.yellow;
+                Gizmos.color = new Color(1f, 1f, 0f, .4f);
                 Gizmos.DrawSphere(editorScript.CurrentLevel.LabyrinthData.CellAtCoordinate(coordinate).Worldspace + Vector3.up * .5f, .5f);
+
+                foreach (CellCoordinates neighborOfNeighbor in coordinate.OrthogonalNeighbors)
+                {
+                    neighborCoordinates.Add(neighborOfNeighbor);
+                }
+            }
+
+            if (interactive.Kind == InteractiveKind.OutsideTileInteractive)
+            {
+                Gizmos.color = new Color(1f, 1f, 1f, .4f);
+
+                foreach (CellCoordinates neighbor in neighborCoordinates.Except(interactive.OnCoordinates))
+                {
+                    LabyrinthCell matchingCell = editorScript.CurrentLevel.LabyrinthData.CellAtCoordinate(neighbor);
+                    if (matchingCell != null && matchingCell.DefaultWalkable)
+                    {
+                        Gizmos.DrawSphere(matchingCell.Worldspace + Vector3.up * .5f, .5f);
+                    }
+                    
+                }
             }
         }
     }
@@ -191,7 +218,7 @@ public class LabyrinthSceneHelperToolsEditor : Editor
                         {
                             if (Physics.OverlapBox(cell.Worldspace, Vector3.one / 2f, Quaternion.identity, interactive.intValue).Any(foundCollider => foundCollider == interactiveCollider))
                             {
-                                Debug.Log($"{processingInteractive.Data.ObstacleEventData.ObstacleName} // {cell.Coordinate}");
+                                Debug.Log($"{processingInteractive?.Data?.ObstacleEventData?.ObstacleName} // {cell.Coordinate}");
                                 processingInteractive.Data.OnCoordinates.Add(cell.Coordinate);
                             }
                         }
@@ -205,3 +232,5 @@ public class LabyrinthSceneHelperToolsEditor : Editor
         return newLevel;
     }
 }
+
+#endif

@@ -69,6 +69,7 @@ public class Foe : MonoBehaviour
 
     public void SetKO()
     {
+        DataMember.Standing = false;
         Root.gameObject.SetActive(false);
     }
 }

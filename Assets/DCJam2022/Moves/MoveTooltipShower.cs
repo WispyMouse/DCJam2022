@@ -47,6 +47,10 @@ public class MoveTooltipShower : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         beingHovered = false;
         hoverTime = 0;
-        Tooltip.Hide();
+
+        if (Tooltip != null && Tooltip.gameObject.activeInHierarchy)
+        {
+            Tooltip.Hide();
+        }
     }
 }

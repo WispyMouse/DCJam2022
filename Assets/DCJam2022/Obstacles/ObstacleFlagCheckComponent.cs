@@ -9,7 +9,9 @@ public class ObstacleFlagCheckComponent : ObstacleEventComponent
     public List<ConditionToEvent> Conditions;
     public int FallbackEventId;
 
-    public override IGameplayState GetNewState(SaveData activeSaveData, Action<int> setPointer)
+    int chosenValue { get; set; }
+
+    public override IGameplayState GetNewState(SaveData activeSaveData)
     {
         for (int ii = 0; ii < Conditions.Count; ii++)
         {
@@ -32,12 +34,16 @@ public class ObstacleFlagCheckComponent : ObstacleEventComponent
 
             if (passes)
             {
-                setPointer(Conditions[ii].EventIDToGoTo);
+                chosenValue = Conditions[ii].EventIDToGoTo;
                 return null;
             }
         }
 
-        setPointer(FallbackEventId);
         return null;
+    }
+
+    public override int AfterStateSetPointer(SaveData activeSaveData)
+    {
+        return chosenValue;
     }
 }

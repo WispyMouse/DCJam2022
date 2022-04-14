@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,8 @@ public class HandleObstacleState : IGameplayState
     ObstacleEvent EventExperienced { get; set; }
     int curIdPointer { get; set; } = 0;
     SceneHelper sceneHelper { get; set; }
+
+    Action lastExperiencedDelayedAction { get; set; } = null;
 
     public HandleObstacleState(SceneHelper sceneHelperInstance, ObstacleEvent forEvent)
     {
@@ -61,6 +64,7 @@ public class HandleObstacleState : IGameplayState
 
         do
         {
+            lastExperiencedDelayedAction?.Invoke();
             component = EventExperienced.EventComponents.FirstOrDefault(ec => ec.EventId == curIdPointer);
 
             if (component == null)
@@ -69,7 +73,9 @@ public class HandleObstacleState : IGameplayState
                 yield break;
             }
 
-            nextState = component.GetNewState(sceneHelper.SaveDataManagerInstance.CurrentSaveData, SetPointer);
+            lastExperiencedDelayedAction = () => { curIdPointer = component.AfterStateSetPointer(sceneHelper.SaveDataManagerInstance.CurrentSaveData); };
+            nextState = component.GetNewState(sceneHelper.SaveDataManagerInstance.CurrentSaveData);
+
         } while (nextState == null);
 
         if (component.CloseCurrentState)
@@ -85,7 +91,7 @@ public class HandleObstacleState : IGameplayState
         {
             if (nextState != null)
             {
-                yield return stateMachine.PushNewState(component.GetNewState(sceneHelper.SaveDataManagerInstance.CurrentSaveData, SetPointer));
+                yield return stateMachine.PushNewState(component.GetNewState(sceneHelper.SaveDataManagerInstance.CurrentSaveData));
             }
         }
     }

@@ -9,20 +9,20 @@ public class ObstacleEncounterComponent : ObstacleEventComponent
 {
     public EncounterBattle Foes;
 
-    public override IGameplayState GetNewState(SaveData activeSaveData, Action<int> setPointer)
+    public override IGameplayState GetNewState(SaveData activeSaveData)
     {
         return new BattleState(Foes);
     }
 
-    public override void AfterStateSetPointer(SaveData activeSaveData, Action<int> setPointer)
+    public override int AfterStateSetPointer(SaveData activeSaveData)
     {
         if (BattleState.LastWasVictory)
         {
-            setPointer(EventId + 1);
+            return EventId + 1;
         }
         else
         {
-            setPointer(-1);
+            return -1;
         }
     }
 }

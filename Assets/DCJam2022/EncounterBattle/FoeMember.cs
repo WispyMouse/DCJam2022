@@ -10,6 +10,7 @@ public class FoeMember : CombatMember
     public int CurProblemJuice { get; set; }
 
     public int CurPhase { get; set; } = 0;
+    public bool Standing { get; set; } = true;
 
     public FoeMember()
     {
@@ -35,7 +36,7 @@ public class FoeMember : CombatMember
 
     public void Progress(int amount)
     {
-        CurProblemJuice = Mathf.Clamp(0, MaxProblemJuice,CurProblemJuice - amount);
+        CurProblemJuice = Mathf.Clamp(0, MaxProblemJuice, CurProblemJuice - amount);
         Visual.HealthSlider.value = CurProblemJuice;
     }
 }

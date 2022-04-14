@@ -5,8 +5,9 @@ using UnityEngine;
 public class ResolveState : IGameplayState
 {
     public const float WaitAfterLoggingTargets = .4f;
-    public const float WaitAfterLoggingEffect = .2f;
-    public const float WaitAfterActionResolves = .25f;
+    public const float WaitAfterLoggingEffect = .3f;
+    public const float WaitAfterActionResolves = .35f;
+    public const float WaitAfterProblemKO = .25f;
 
     BattleState managedBattleState { get; set; }
     GlobalStateMachine stateMachineInstance { get; set; }
@@ -66,9 +67,20 @@ public class ResolveState : IGameplayState
                 }
             }
 
-            ConsoleManager.Instance.AddToLog($"Resolve this command from {command.ActingMember.DisplayName} targeting {command.Target.DisplayName} with {command.ActionTaken}");
+            // ConsoleManager.Instance.AddToLog($"Resolve this command from {command.ActingMember.DisplayName} targeting {command.Target.DisplayName} with {command.ActionTaken.MoveName}");
 
             yield return command.TakeAction(managedBattleState);
+            yield return new WaitForSeconds(WaitAfterActionResolves);
+
+            foreach (FoeMember curFoe in managedBattleState.Opponents.OpposingMembers)
+            {
+                if (curFoe.CurProblemJuice <= 0 && curFoe.Standing)
+                {
+                    ConsoleManager.Instance.AddToLog($"{curFoe.DisplayName} has been resolved!");
+                    curFoe.Visual.SetKO();
+                    yield return new WaitForSeconds(WaitAfterProblemKO);
+                }
+            }
         }
 
         foreach (FoeMember foe in managedBattleState.Opponents.OpposingMembers)

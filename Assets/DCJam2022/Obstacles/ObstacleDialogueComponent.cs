@@ -8,9 +8,13 @@ public class ObstacleDialogueComponent : ObstacleEventComponent
 {
     public string Text;
 
-    public override IGameplayState GetNewState(SaveData activeSaveData, Action<int> setPointer)
+    public override IGameplayState GetNewState(SaveData activeSaveData)
     {
-        setPointer(EventId + 1);
         return new MessageBoxState(Text);
+    }
+
+    public override int AfterStateSetPointer(SaveData activeSaveData)
+    {
+        return EventId + 1;
     }
 }

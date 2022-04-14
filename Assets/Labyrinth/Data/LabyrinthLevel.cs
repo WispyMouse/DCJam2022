@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -97,10 +98,18 @@ public class LabyrinthLevel
             loadedNeighborMap.Add(cell.Coordinate, neighbors);
         }
 
+        LabyrinthInteractive[] interactives = GameObject.FindObjectsOfType<LabyrinthInteractive>();
         loadedInteractiveMap = new Dictionary<CellCoordinates, HashSet<InteractiveData>>();
         foreach (InteractiveData interactive in LabyrinthInteractives)
         {
-            Debug.Log($"{interactive.ObstacleEventData.ObstacleName} // {interactive.OnCoordinates.Count}");
+            Debug.Log($"{interactive?.ObstacleEventData?.ObstacleName} // {interactive.OnCoordinates.Count}");
+            interactive.WorldInteractive = interactives.FirstOrDefault(wi => wi.Data.InteractiveID == interactive.InteractiveID);
+
+            if (interactive.ObstacleEventData == null)
+            {
+                continue;
+            }
+
             foreach (CellCoordinates coordinate in interactive.OnCoordinates)
             {
                 if (loadedInteractiveMap.ContainsKey(coordinate))

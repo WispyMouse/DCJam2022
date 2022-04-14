@@ -7,8 +7,13 @@ using UnityEngine;
 public class DungeonGotoEventComponent : ObstacleEventComponent
 {
     public override bool CloseCurrentState => true;
-    public override IGameplayState GetNewState(SaveData activeSaveData, Action<int> setPointer)
+    public override IGameplayState GetNewState(SaveData activeSaveData)
     {
         return new LabyrinthState(new LabyrinthSceneHelperGrabber());
+    }
+
+    public override int AfterStateSetPointer(SaveData activeSaveData)
+    {
+        return -1;
     }
 }

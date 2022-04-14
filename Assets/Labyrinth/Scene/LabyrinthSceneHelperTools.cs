@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LabyrinthSceneHelperTools : SceneHelperTools, IGameLevelProvider
 {
@@ -36,6 +38,9 @@ public class LabyrinthSceneHelperTools : SceneHelperTools, IGameLevelProvider
     /// </summary>
     public LabyrinthAnimationHandler AnimationHandler;
 
+    public GameObject InteractiveInFrontPanel;
+    public UnityEvent InteractiveButtonPressed = new UnityEvent();
+
     public void ToTheTown()
     {
         SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.ChangeToState(new TownState()));
@@ -69,5 +74,10 @@ public class LabyrinthSceneHelperTools : SceneHelperTools, IGameLevelProvider
     public GameLevel GetLevel()
     {
         return DefaultLevel;
+    }
+
+    public void OnInteractClicked()
+    {
+        InteractiveButtonPressed.Invoke();
     }
 }

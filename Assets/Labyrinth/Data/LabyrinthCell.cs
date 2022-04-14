@@ -36,11 +36,11 @@ public class LabyrinthCell
         {
             if (DefaultWalkable)
             {
-                return new Color(.6f, 1f, 1f, .6f);
+                return new Color(.6f, 1f, 1f, .4f);
             }
             else
             {
-                return new Color(1f, .4f, .4f, .6f);
+                return new Color(1f, .4f, .4f, .4f);
             }
         }
     }

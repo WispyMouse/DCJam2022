@@ -9,8 +9,15 @@ public class ObstacleChoiceComponent : ObstacleEventComponent
     public string Text;
     public List<ObstacleChoiceEntry> Entries;
 
-    public override IGameplayState GetNewState(SaveData activeSaveData, Action<int> setPointer)
+    int chosenResult { get; set; }
+
+    public override IGameplayState GetNewState(SaveData activeSaveData)
     {
-        return new ChoiceState(setPointer, this);
+        return new ChoiceState((int value) => { chosenResult = value; }, this);
+    }
+
+    public override int AfterStateSetPointer(SaveData activeSaveData)
+    {
+        return chosenResult;
     }
 }
