@@ -15,8 +15,6 @@ public class ChooseTargetForPartyActionState : IGameplayState
         activeBattleState = battleState;
         choosingMember = forMember;
         forCommand = command;
-
-        Debug.Log("New state pushed");
     }
 
     public IEnumerator Initialize()
@@ -49,8 +47,6 @@ public class ChooseTargetForPartyActionState : IGameplayState
 
     public IEnumerator ExitState(IGameplayState nextState)
     {
-        Debug.Log("ChooseTarget ExitState");
-
         foreach (FoeMember opponent in activeBattleState.Opponents.OpposingMembers)
         {
             opponent.Visual.ClearTargetable();
@@ -80,7 +76,21 @@ public class ChooseTargetForPartyActionState : IGameplayState
         {
             if (partyMember == choosingMember)
             {
-                partyMember.Hud.SetChooseTargets("foo", ActionCanceled);
+                if (forCommand.Targeting == Target.Self)
+                {
+                    activeBattleState.BattleCommands.Add(new BattleCommand(choosingMember, choosingMember, forCommand));
+                    yield return stateMachine.EndCurrentState();
+                    yield break;
+                }
+
+                if (forCommand.Targeting == Target.AllOpposing)
+                {
+                    activeBattleState.BattleCommands.Add(new BattleCommand(choosingMember, null, forCommand));
+                    yield return stateMachine.EndCurrentState();
+                    yield break;
+                }
+
+                partyMember.Hud.SetChooseTargets(forCommand, ActionCanceled);
             }
             else
             {

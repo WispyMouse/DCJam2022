@@ -115,7 +115,7 @@ public class BattleState : SceneLoadingGameplayState
         {
             LastWasVictory = false;
             ConsoleManager.Instance.AddToLog("AOF has hit 0!");
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(.6f);
             ConsoleManager.Instance.AddToLog("Returning to Town and resting...");
             yield return new WaitForSeconds(.6f);
             SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData.Day++;
@@ -185,5 +185,18 @@ public class BattleState : SceneLoadingGameplayState
         }
 
         yield return StateMachineInstance.PushNewState(new ChoosePartysCommandsState(StateMachineInstance, this));
+    }
+
+    public void UpdateEveryonesVisuals()
+    {
+        foreach (FoeMember foe in Opponents.OpposingMembers)
+        {
+            foe.Visual.UpdateFromMember();
+        }
+
+        foreach (PartyMember partyMember in PlayerPartyPointer.PartyMembers)
+        {
+            partyMember.Hud.UpdateFromPlayer();
+        }
     }
 }

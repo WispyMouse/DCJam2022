@@ -1,6 +1,6 @@
 public enum SpeedTier
 {
-    Slow,
-    Normal,
-    Fast
+    Slow = 0,
+    Normal = 1,
+    Fast = 2
 }

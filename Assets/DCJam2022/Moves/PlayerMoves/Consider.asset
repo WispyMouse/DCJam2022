@@ -19,5 +19,5 @@ MonoBehaviour:
   DamageFloor: 2
   DamageCeiling: 3
   Description: Quickly applies {0}-{1} progress to an obstacle.
-  IsHealing: 1
+  IsHealing: 0
   Speed: 2

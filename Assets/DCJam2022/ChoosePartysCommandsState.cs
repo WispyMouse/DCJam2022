@@ -75,7 +75,6 @@ public class ChoosePartysCommandsState : IGameplayState
 
     public void CommandSelected(CombatMember forMember, PlayerMove command)
     {
-        Debug.Log("Command selected");
         managedBattleState.SceneHelperInstance.StartCoroutine(stateMachineInstance.PushNewState(new ChooseTargetForPartyActionState(stateMachineInstance, managedBattleState, forMember, command)));
     }
 

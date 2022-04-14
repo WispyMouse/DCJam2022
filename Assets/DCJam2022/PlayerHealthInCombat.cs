@@ -63,7 +63,7 @@ public class PlayerHealthInCombat : MonoBehaviour
         UpdateFromPlayer();
     }
 
-    public void SetChooseTargets(string action, Action<PartyMember> cancelAction)
+    public void SetChooseTargets(PlayerMove action, Action<PartyMember> cancelAction)
     {
         ClearOptions();
         ChooseTargetScreen.SetActive(true);

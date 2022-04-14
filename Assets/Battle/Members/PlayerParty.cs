@@ -49,7 +49,7 @@ public class PlayerParty
 
     public void LoseAOF(int amount)
     {
-        CurAOF = Mathf.Clamp(0, MaxAOF, CurAOF - amount);
+        CurAOF = Mathf.Clamp(CurAOF - amount, 0, MaxAOF);
         AOFBar.Instance.AOFSlider.value = CurAOF;
     }
 }

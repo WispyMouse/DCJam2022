@@ -11,6 +11,8 @@ public class MoveTooltip : MonoBehaviour
     public TMP_Text Speed;
     public GameObject Root;
 
+    bool nudged { get; set; } = false;
+
     public void SetFromMove(MoveBase move)
     {
         this.MoveName.text = move.MoveName;
@@ -39,6 +41,12 @@ public class MoveTooltip : MonoBehaviour
 
     public void Show()
     {
+        RectTransform pos = Root.GetComponent<RectTransform>();
+        if (!nudged && pos.position.x > Screen.width / 2f)
+        {
+            pos.anchoredPosition = pos.anchoredPosition + Vector2.left * 300f;
+        }
+
         Root.SetActive(true);
     }
 

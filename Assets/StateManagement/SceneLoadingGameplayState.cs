@@ -54,6 +54,7 @@ public abstract class SceneLoadingGameplayState : IGameplayState
 
     public virtual IEnumerator ExitState(IGameplayState nextState)
     {
+        SetSceneActiveState(false);
         yield return StaticSceneTools.UnloadScene(SceneName);
     }
 
@@ -74,10 +75,7 @@ public abstract class SceneLoadingGameplayState : IGameplayState
     {
         StateMachineInstance = globalStateMachine;
 
-        foreach (GameObject rootObj in SceneManager.GetSceneByName(SceneName).GetRootGameObjects())
-        {
-            rootObj.SetActive(true);
-        }
+        SetSceneActiveState(true);
 
         yield break;
     }
@@ -86,13 +84,18 @@ public abstract class SceneLoadingGameplayState : IGameplayState
     {
         if (nextState is SceneLoadingGameplayState)
         {
-            foreach (GameObject rootObj in SceneManager.GetSceneByName(SceneName).GetRootGameObjects())
-            {
-                rootObj.SetActive(false);
-            }
+            SetSceneActiveState(false);
         }
 
         yield break;
+    }
+
+    public virtual void SetSceneActiveState(bool toAcctive)
+    {
+        foreach (GameObject rootObj in SceneManager.GetSceneByName(SceneName).GetRootGameObjects())
+        {
+            rootObj.SetActive(toAcctive);
+        }
     }
 
     public abstract void SetControls(WarrencrawlInputs controls);

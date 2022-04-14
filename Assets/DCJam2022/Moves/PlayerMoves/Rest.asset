@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Rest
   m_EditorClassIdentifier: 
   MoveName: Rest
+  Verbs: rests
   Targeting: 0
   StatusEffect: 0
   DamageFloor: 2

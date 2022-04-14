@@ -260,7 +260,7 @@ public class LabyrinthState : SceneLoadingGameplayState
                 yield return StateMachineInstance.ChangeToState(new TownState());
                 break;
             case InteractiveKind.OutsideTileInteractive:
-                yield return StateMachineInstance.PushNewState(new HandleObstacleState(SceneHelperInstance, accessibleInteractive.ObstacleEventData));
+                yield return StateMachineInstance.PushNewState(new HandleObstacleState(this, SceneHelperInstance, accessibleInteractive.ObstacleEventData));
                 break;
         }
 
@@ -324,6 +324,21 @@ public class LabyrinthState : SceneLoadingGameplayState
                     interactive.IsActive = false;
                 }
             }
+        }
+    }
+
+    public override void SetSceneActiveState(bool toAcctive)
+    {
+        base.SetSceneActiveState(toAcctive);
+
+        if (LevelToLoad == null || string.IsNullOrEmpty(LevelToLoad.Scene))
+        {
+            return;
+        }
+
+        foreach (GameObject rootObj in SceneManager.GetSceneByName(LevelToLoad.Scene).GetRootGameObjects())
+        {
+            rootObj.SetActive(toAcctive);
         }
     }
 }

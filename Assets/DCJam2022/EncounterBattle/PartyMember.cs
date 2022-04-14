@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PartyMember : CombatMember
 {
+    public override string DisplayName => FromProfile.ProfileName;
     public PlayerHealthInCombat Hud { get; set; }
     public int MaxNRG { get; set; }
     public int CurNRG { get; set; }
@@ -18,7 +19,6 @@ public class PartyMember : CombatMember
     public PartyMember(DelverProfile fromProfile)
     {
         FromProfile = fromProfile;
-        DisplayName = fromProfile.ProfileName;
         MaxNRG = fromProfile.MaxNRG;
     }
 
@@ -29,7 +29,7 @@ public class PartyMember : CombatMember
 
     public void LoseNRG(int amount)
     {
-        CurNRG = Mathf.Clamp(0, MaxNRG, CurNRG - amount);
+        CurNRG = Mathf.Clamp(CurNRG - amount, 0, MaxNRG);
         Hud.NRGSlider.value = amount;
     }
 }

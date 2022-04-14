@@ -9,11 +9,13 @@ public class HandleObstacleState : IGameplayState
     ObstacleEvent EventExperienced { get; set; }
     int curIdPointer { get; set; } = 0;
     SceneHelper sceneHelper { get; set; }
+    LabyrinthState labyrinthState { get; set; }
 
     Action lastExperiencedDelayedAction { get; set; } = null;
 
-    public HandleObstacleState(SceneHelper sceneHelperInstance, ObstacleEvent forEvent)
+    public HandleObstacleState(LabyrinthState currentState, SceneHelper sceneHelperInstance, ObstacleEvent forEvent)
     {
+        labyrinthState = currentState;
         sceneHelper = sceneHelperInstance;
         EventExperienced = forEvent;
     }
@@ -30,6 +32,10 @@ public class HandleObstacleState : IGameplayState
 
     public IEnumerator ChangeUp(IGameplayState nextState)
     {
+        if (labyrinthState != null && nextState is SceneLoadingGameplayState)
+        {
+            labyrinthState.SetSceneActiveState(false);
+        }
         yield break;
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FoeMember : CombatMember
 {
+    public override string DisplayName { get { return BattleData.Name; } }
     public Foe Visual { get; set; }
     public FoeBattleData BattleData { get; set; }
     public int MaxProblemJuice { get; set; }
@@ -36,7 +37,14 @@ public class FoeMember : CombatMember
 
     public void Progress(int amount)
     {
-        CurProblemJuice = Mathf.Clamp(0, MaxProblemJuice, CurProblemJuice - amount);
+        CurProblemJuice = Mathf.Clamp(CurProblemJuice - amount, 0, MaxProblemJuice);
         Visual.HealthSlider.value = CurProblemJuice;
+    }
+
+    public override bool CanAct()
+    {
+        bool canAct = base.CanAct();
+        canAct &= CurProblemJuice > 0;
+        return canAct;
     }
 }

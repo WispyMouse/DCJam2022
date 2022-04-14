@@ -7,5 +7,10 @@ using UnityEngine;
 /// </summary>
 public abstract class CombatMember
 {
-    public string DisplayName { get; set; }
+    public abstract string DisplayName { get; }
+
+    public virtual bool CanAct()
+    {
+        return true;
+    }
 }

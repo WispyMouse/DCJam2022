@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.392}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.392}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1373,6 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 737f450fb3b4c824681d4c0fb0cb3299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneHelperInstance: {fileID: 0}
   ChoicePF: {fileID: 401984911414937612, guid: 1cdbdb0b7224aba428b43a3bfaee9f2e, type: 3}
   ChoiceParent: {fileID: 1807371838}
   DecisionText: {fileID: 1997920961}
@@ -1628,7 +1629,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.027765462, g: 0.5188679, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.11372549, g: 0.015686275, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

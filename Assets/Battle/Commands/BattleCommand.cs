@@ -17,15 +17,24 @@ public class BattleCommand
 
     public virtual IEnumerator TakeAction(BattleState battleState)
     {
+        if (!ActingMember.CanAct())
+        {
+            yield break;
+        }
+
         string targetText;
         List<CombatMember> targetsAffected = new List<CombatMember>();
 
         switch (ActionTaken.Targeting)
         {
+            case global::Target.Self:
+                targetText = $"{ActingMember.DisplayName} {ActionTaken.Verbs}";
+                targetsAffected.Add(ActingMember);
+                break;
             case global::Target.OneAlly:
             case global::Target.OneOpposing:
                 targetText = $"{ActingMember.DisplayName} {ActionTaken.Verbs} {Target.DisplayName}";
-                targetsAffected.Add(ActingMember);
+                targetsAffected.Add(Target);
                 break;
             case global::Target.AllOpposing:
                 if (ActingMember is PartyMember)
@@ -60,17 +69,35 @@ public class BattleCommand
 
                 if (ActionTaken.IsHealing)
                 {
-                    ConsoleManager.Instance.AddToLog($"{affectedMember.DisplayName} is refreshed by {damageRoll}");
-                    // ASSUMES ONLY PLAYERS CAN HEAL; temporary
-                    ((PartyMember)affectedMember).LoseNRG(-damageRoll);
-                    yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
+                    if (affectedMember is FoeMember)
+                    {
+                        ConsoleManager.Instance.AddToLog($"{damageRoll} more hitpoints");
+                        ((FoeMember)affectedMember).Progress(damageRoll);
+                        battleState.UpdateEveryonesVisuals();
+                        yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
+                    }
+                    else
+                    {
+                        PartyMember member = (PartyMember)affectedMember;
+                        ConsoleManager.Instance.AddToLog($"{affectedMember.DisplayName} is refreshed by {damageRoll}");
+                        member.LoseNRG(-damageRoll);
+                        battleState.UpdateEveryonesVisuals();
+                        yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
+                    }
                 }
                 else
                 {
                     if (affectedMember is FoeMember)
                     {
+                        FoeMember member = (FoeMember)affectedMember;
+                        if (member.CurProblemJuice <= 0)
+                        {
+                            continue;
+                        }
+
                         ConsoleManager.Instance.AddToLog($"{damageRoll} progress is made");
-                        ((FoeMember)affectedMember).Progress(damageRoll);
+                        member.Progress(damageRoll);
+                        battleState.UpdateEveryonesVisuals();
                         yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
                     }
                     else
@@ -81,12 +108,14 @@ public class BattleCommand
                         {
                             ConsoleManager.Instance.AddToLog($"The party loses {damageRoll} AoF!!!");
                             battleState.PlayerPartyPointer.LoseAOF(damageRoll);
+                            battleState.UpdateEveryonesVisuals();
                             yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
                         }
                         else
                         {
                             ConsoleManager.Instance.AddToLog($"{affectedMember.DisplayName} loses {damageRoll} NRG");
                             ((PartyMember)affectedMember).LoseNRG(damageRoll);
+                            battleState.UpdateEveryonesVisuals();
                             yield return new WaitForSeconds(ResolveState.WaitAfterLoggingEffect);
                         }
                     }
@@ -98,6 +127,7 @@ public class BattleCommand
         {
             int damageRoll = Random.Range(ActionTaken.DamageFloor, ActionTaken.DamageCeiling + 1);
             battleState.PlayerPartyPointer.LoseAOF(damageRoll);
+            battleState.UpdateEveryonesVisuals();
             ConsoleManager.Instance.AddToLog($"The party loses {damageRoll} AoF!!!");
             yield return new WaitForSeconds(ResolveState.WaitAfterActionResolves);
         }
