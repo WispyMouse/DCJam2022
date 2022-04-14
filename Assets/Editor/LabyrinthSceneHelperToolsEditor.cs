@@ -82,7 +82,7 @@ public class LabyrinthSceneHelperToolsEditor : Editor
         foreach (LabyrinthCell curCell in editorScript.CurrentLevel.LabyrinthData.Cells)
         {
             Gizmos.color = curCell.DebugColor;
-            Gizmos.DrawCube(curCell.Worldspace, Vector3.one);
+            Gizmos.DrawCube(curCell.Worldspace, new Vector3(1f, 3f, 1f));
         }
 
         foreach (InteractiveData interactive in editorScript.CurrentLevel.LabyrinthData.LabyrinthInteractives)
@@ -90,7 +90,7 @@ public class LabyrinthSceneHelperToolsEditor : Editor
             foreach (CellCoordinates coordinate in interactive.OnCoordinates)
             {
                 Gizmos.color = Color.yellow;
-                Gizmos.DrawSphere(editorScript.CurrentLevel.LabyrinthData.CellAtCoordinate(coordinate).Worldspace, .5f);
+                Gizmos.DrawSphere(editorScript.CurrentLevel.LabyrinthData.CellAtCoordinate(coordinate).Worldspace + Vector3.up * .5f, .5f);
             }
         }
     }
@@ -107,8 +107,20 @@ public class LabyrinthSceneHelperToolsEditor : Editor
 
         Queue<CellCoordinates> frontier = new Queue<CellCoordinates>();
         HashSet<CellCoordinates> seen = new HashSet<CellCoordinates>();
-        frontier.Enqueue(CellCoordinates.Origin);
-        seen.Add(CellCoordinates.Origin);
+
+        LabyrinthStartingPoint foundStartingPoint = FindObjectOfType<LabyrinthStartingPoint>();
+        if (foundStartingPoint == null)
+        {
+            frontier.Enqueue(CellCoordinates.Origin);
+            seen.Add(CellCoordinates.Origin);
+
+        }
+        else
+        {
+            CellCoordinates startingCoordinate = new CellCoordinates(Mathf.RoundToInt(foundStartingPoint.transform.position.x), Mathf.RoundToInt(foundStartingPoint.transform.position.z), 0);
+            frontier.Enqueue(startingCoordinate);
+            seen.Add(startingCoordinate);
+        }
 
         while (frontier.Any())
         {
@@ -122,13 +134,19 @@ public class LabyrinthSceneHelperToolsEditor : Editor
                 LabyrinthCell detectedCell = new LabyrinthCell() { Coordinate = curFront, DefaultWalkable = false };
                 newLevel.Cells.Add(detectedCell);
             }
-            else if (Physics.Raycast(new Vector3(curFront.X, 3f, curFront.Y), Vector3.down, out hit, 4f, walkable.intValue))
+            else if (Physics.Raycast(new Vector3(curFront.X, 50f, curFront.Y), Vector3.down, out hit, 100f, walkable.intValue))
             {
                 bool isWalkable = (1 << hit.collider.gameObject.layer) == walkable.intValue;
 
                 LabyrinthCell detectedCell = new LabyrinthCell() { Coordinate = curFront, Height = hit.point.y, DefaultWalkable = isWalkable };
-
                 newLevel.Cells.Add(detectedCell);
+                LabyrinthStartingPoint startingPoint = hit.collider.GetComponent<LabyrinthStartingPoint>();
+
+                if (startingPoint != null)
+                {
+                    newLevel.StartingCoordinate = curFront;
+                    newLevel.StartingFacing = startingPoint.StartingFacing;
+                }
             }
             else
             {
@@ -154,13 +172,13 @@ public class LabyrinthSceneHelperToolsEditor : Editor
 
             foreach (Collider interactiveCollider in processingInteractive.GetComponentsInChildren<Collider>())
             {
-                int farthestWest = Mathf.FloorToInt(interactiveCollider.bounds.min.x + interactiveCollider.transform.position.x);
-                int farthestSouth = Mathf.FloorToInt(interactiveCollider.bounds.min.z + interactiveCollider.transform.position.z);
-                int farthestBottom = Mathf.FloorToInt(interactiveCollider.bounds.min.y + interactiveCollider.transform.position.y);
+                int farthestWest = Mathf.FloorToInt(interactiveCollider.bounds.min.x);
+                int farthestSouth = Mathf.FloorToInt(interactiveCollider.bounds.min.z);
+                int farthestBottom = Mathf.FloorToInt(interactiveCollider.bounds.min.y);
 
-                int farthestEast = Mathf.CeilToInt(interactiveCollider.bounds.max.x + interactiveCollider.transform.position.x);
-                int farthestNorth = Mathf.CeilToInt(interactiveCollider.bounds.max.z + interactiveCollider.transform.position.z);
-                int farthestTop = Mathf.CeilToInt(interactiveCollider.bounds.max.y + interactiveCollider.transform.position.y);
+                int farthestEast = Mathf.CeilToInt(interactiveCollider.bounds.max.x);
+                int farthestNorth = Mathf.CeilToInt(interactiveCollider.bounds.max.z);
+                int farthestTop = Mathf.CeilToInt(interactiveCollider.bounds.max.y);
 
                 for (int xx = farthestWest; xx <= farthestEast; xx++)
                 {
@@ -171,7 +189,7 @@ public class LabyrinthSceneHelperToolsEditor : Editor
                         IEnumerable<LabyrinthCell> matchingCells = newLevel.Cells.Where(c => c.Coordinate.X == xx && c.Coordinate.Y == zz);
                         foreach (LabyrinthCell cell in matchingCells)
                         {
-                            if (Physics.OverlapBox(cell.Worldspace, Vector3.one / 3f, Quaternion.identity, interactive.intValue).Any(foundCollider => foundCollider == interactiveCollider))
+                            if (Physics.OverlapBox(cell.Worldspace, Vector3.one / 2f, Quaternion.identity, interactive.intValue).Any(foundCollider => foundCollider == interactiveCollider))
                             {
                                 Debug.Log($"{processingInteractive.Data.ObstacleEventData.ObstacleName} // {cell.Coordinate}");
                                 processingInteractive.Data.OnCoordinates.Add(cell.Coordinate);

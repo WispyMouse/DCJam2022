@@ -55,6 +55,9 @@ public class LabyrinthLevel
     }
     private Dictionary<CellCoordinates, HashSet<InteractiveData>> loadedInteractiveMap { get; set; }
 
+    public CellCoordinates StartingCoordinate;
+    public Direction StartingFacing;
+
     /// <summary>
     /// The data structure for all of the interactives on the map. This is serialized.
     /// </summary>

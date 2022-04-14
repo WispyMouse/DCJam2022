@@ -27,6 +27,8 @@ public class ReportCardState : SceneLoadingGameplayState
 
     void RestartGame()
     {
+        SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData = null;
+        SceneHelperInstance.PlayerParty = null;
         SceneHelperInstance.StartCoroutine(StateMachineInstance.ChangeToState(new InitialMainScreenState()));
     }
 }

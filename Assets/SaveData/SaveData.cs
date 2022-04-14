@@ -5,6 +5,8 @@ public class SaveData
     public const int FlagNotSet = -11112;
     public Dictionary<string, int> Flags { get; set; } = new Dictionary<string, int>();
 
+    public int Day { get; set; } = 1;
+
     public void SetFlag(string flagName, int value)
     {
         if (Flags.ContainsKey(flagName))

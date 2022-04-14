@@ -91,8 +91,8 @@ public class LabyrinthState : SceneLoadingGameplayState
         if (PointOfViewInstance == null)
         {
             PointOfViewInstance = GameObject.FindObjectOfType<PointOfView>();
-            PointOfViewInstance.CurFacing = Direction.North;
-            PointOfViewInstance.CurCoordinates = CellCoordinates.Origin;
+            PointOfViewInstance.CurFacing = LevelToLoad.LabyrinthData.StartingFacing;
+            PointOfViewInstance.CurCoordinates = LevelToLoad.LabyrinthData.StartingCoordinate;
         }
 
         ActiveCombatClock = new CombatClock();

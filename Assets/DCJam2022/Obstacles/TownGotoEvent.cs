@@ -9,6 +9,7 @@ public class TownGotoEvent : ObstacleEventComponent
     public override bool CloseCurrentState => true;
     public override IGameplayState GetNewState(SaveData activeSaveData, Action<int> setPointer)
     {
+        activeSaveData.Day++;
         return new TownState();
     }
 }

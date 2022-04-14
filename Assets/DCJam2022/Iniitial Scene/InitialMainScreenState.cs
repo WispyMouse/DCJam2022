@@ -18,6 +18,7 @@ public class InitialMainScreenState : SceneLoadingGameplayState
 
     void StartGame()
     {
+        SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData = new SaveData();
         SceneHelperInstance.StartCoroutine(StateMachineInstance.ChangeToState(new PartySelectionState()));
     }
 }

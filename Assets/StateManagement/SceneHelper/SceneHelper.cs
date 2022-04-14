@@ -33,6 +33,7 @@ public class SceneHelper : MonoBehaviour
 
         if (PlayerParty == null)
         {
+            Debug.Log("Setting PlayerParty");
             PlayerParty = new PlayerParty() { MaxAOF = 10, CurAOF = 10 };
             foreach (DelverProfile profile in DefaultDelvers)
             {

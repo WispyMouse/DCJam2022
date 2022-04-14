@@ -118,6 +118,7 @@ public class BattleState : SceneLoadingGameplayState
             yield return new WaitForSeconds(.2f);
             ConsoleManager.Instance.AddToLog("Returning to Town and resting...");
             yield return new WaitForSeconds(.6f);
+            SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData.Day++;
             yield return globalStateMachine.ChangeToState(new TownState());
             yield break;
         }
