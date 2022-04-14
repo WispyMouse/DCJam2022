@@ -68,6 +68,138 @@ MonoBehaviour:
       - X: 1
         Y: 1
         Z: 0
+      - X: -1
+        Y: -4
+        Z: 0
+      - X: -1
+        Y: -3
+        Z: 0
+      - X: -1
+        Y: -2
+        Z: 0
+      - X: -1
+        Y: -1
+        Z: 0
+      - X: -1
+        Y: 0
+        Z: 0
+      - X: -1
+        Y: 1
+        Z: 0
+      - X: 0
+        Y: -2
+        Z: 0
+      - X: 0
+        Y: -1
+        Z: 0
+      - X: 0
+        Y: 0
+        Z: 0
+      - X: 0
+        Y: 1
+        Z: 0
+      - X: 1
+        Y: -2
+        Z: 0
+      - X: 1
+        Y: -1
+        Z: 0
+      - X: 1
+        Y: 0
+        Z: 0
+      - X: 1
+        Y: 1
+        Z: 0
+      - X: -1
+        Y: -4
+        Z: 0
+      - X: -1
+        Y: -3
+        Z: 0
+      - X: -1
+        Y: -2
+        Z: 0
+      - X: -1
+        Y: -1
+        Z: 0
+      - X: -1
+        Y: 0
+        Z: 0
+      - X: -1
+        Y: 1
+        Z: 0
+      - X: 0
+        Y: -2
+        Z: 0
+      - X: 0
+        Y: -1
+        Z: 0
+      - X: 0
+        Y: 0
+        Z: 0
+      - X: 0
+        Y: 1
+        Z: 0
+      - X: 1
+        Y: -2
+        Z: 0
+      - X: 1
+        Y: -1
+        Z: 0
+      - X: 1
+        Y: 0
+        Z: 0
+      - X: 1
+        Y: 1
+        Z: 0
+      - X: -1
+        Y: -4
+        Z: 0
+      - X: -1
+        Y: -3
+        Z: 0
+      - X: -1
+        Y: -2
+        Z: 0
+      - X: -1
+        Y: -1
+        Z: 0
+      - X: -1
+        Y: 0
+        Z: 0
+      - X: -1
+        Y: 1
+        Z: 0
+      - X: 0
+        Y: -2
+        Z: 0
+      - X: 0
+        Y: -1
+        Z: 0
+      - X: 0
+        Y: 0
+        Z: 0
+      - X: 0
+        Y: 1
+        Z: 0
+      - X: 1
+        Y: -4
+        Z: 0
+      - X: 1
+        Y: -3
+        Z: 0
+      - X: 1
+        Y: -2
+        Z: 0
+      - X: 1
+        Y: -1
+        Z: 0
+      - X: 1
+        Y: 0
+        Z: 0
+      - X: 1
+        Y: 1
+        Z: 0
     - InteractiveID:
         serializedGuid: c17262d4-b0e0-4a16-be61-af2df533cbca
       Kind: 3
@@ -82,6 +214,54 @@ MonoBehaviour:
       - X: 0
         Y: 11
         Z: 0
+      - X: 0
+        Y: 10
+        Z: 0
+      - X: 0
+        Y: 11
+        Z: 0
+      - X: 0
+        Y: 10
+        Z: 0
+      - X: 0
+        Y: 11
+        Z: 0
+      - X: 0
+        Y: 10
+        Z: 0
+      - X: 0
+        Y: 11
+        Z: 0
+      - X: 0
+        Y: 10
+        Z: 0
+      - X: 0
+        Y: 11
+        Z: 0
+      - X: 0
+        Y: 10
+        Z: 0
+      - X: 0
+        Y: 11
+        Z: 0
+      - X: 0
+        Y: 10
+        Z: 0
+      - X: 0
+        Y: 11
+        Z: 0
+      - X: 0
+        Y: 10
+        Z: 0
+      - X: 0
+        Y: 11
+        Z: 0
+      - X: 0
+        Y: 10
+        Z: 0
+      - X: 0
+        Y: 11
+        Z: 0
     - InteractiveID:
         serializedGuid: 6ef8b83c-2535-4f00-8379-c7b0d95c99e0
       Kind: 0
@@ -90,6 +270,102 @@ MonoBehaviour:
       - FlagNameToCheck: bookcase_moved
         ShouldBeVisible: 1
       OnCoordinates:
+      - X: -2
+        Y: 9
+        Z: 0
+      - X: -2
+        Y: 10
+        Z: 0
+      - X: -1
+        Y: 9
+        Z: 0
+      - X: -1
+        Y: 10
+        Z: 0
+      - X: -2
+        Y: 9
+        Z: 0
+      - X: -2
+        Y: 10
+        Z: 0
+      - X: -1
+        Y: 9
+        Z: 0
+      - X: -1
+        Y: 10
+        Z: 0
+      - X: -2
+        Y: 9
+        Z: 0
+      - X: -2
+        Y: 10
+        Z: 0
+      - X: -1
+        Y: 9
+        Z: 0
+      - X: -1
+        Y: 10
+        Z: 0
+      - X: -2
+        Y: 9
+        Z: 0
+      - X: -2
+        Y: 10
+        Z: 0
+      - X: -1
+        Y: 9
+        Z: 0
+      - X: -1
+        Y: 10
+        Z: 0
+      - X: -2
+        Y: 9
+        Z: 0
+      - X: -2
+        Y: 10
+        Z: 0
+      - X: -1
+        Y: 9
+        Z: 0
+      - X: -1
+        Y: 10
+        Z: 0
+      - X: -2
+        Y: 9
+        Z: 0
+      - X: -2
+        Y: 10
+        Z: 0
+      - X: -1
+        Y: 9
+        Z: 0
+      - X: -1
+        Y: 10
+        Z: 0
+      - X: -2
+        Y: 9
+        Z: 0
+      - X: -2
+        Y: 10
+        Z: 0
+      - X: -1
+        Y: 9
+        Z: 0
+      - X: -1
+        Y: 10
+        Z: 0
+      - X: -2
+        Y: 9
+        Z: 0
+      - X: -2
+        Y: 10
+        Z: 0
+      - X: -1
+        Y: 9
+        Z: 0
+      - X: -1
+        Y: 10
+        Z: 0
       - X: -2
         Y: 9
         Z: 0
@@ -168,7 +444,7 @@ MonoBehaviour:
         Y: 4
         Z: 0
       DefaultWalkable: 1
-      Height: 1.46
+      Height: 1.12
     - Coordinate:
         X: 0
         Y: 5
@@ -228,7 +504,13 @@ MonoBehaviour:
         Y: 4
         Z: 0
       DefaultWalkable: 1
-      Height: 1.46
+      Height: 1.12
+    - Coordinate:
+        X: 1
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: 0
         Y: 6
@@ -312,10 +594,22 @@ MonoBehaviour:
         Y: 4
         Z: 0
       DefaultWalkable: 1
-      Height: 2.0000005
+      Height: 2
+    - Coordinate:
+        X: 2
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: 2
         Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 1
+        Y: 6
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -414,10 +708,22 @@ MonoBehaviour:
         Y: 4
         Z: 0
       DefaultWalkable: 1
-      Height: 2.0000005
+      Height: 2
+    - Coordinate:
+        X: 3
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: 3
         Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: 6
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -498,7 +804,7 @@ MonoBehaviour:
         Y: 1
         Z: 0
       DefaultWalkable: 1
-      Height: 2.0000005
+      Height: 2
     - Coordinate:
         X: 4
         Y: 2
@@ -524,14 +830,32 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: 1
+        Y: -3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: 5
         Y: 4
         Z: 0
       DefaultWalkable: 1
-      Height: 2.0000005
+      Height: 2
+    - Coordinate:
+        X: 4
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: 4
         Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 3
+        Y: 6
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -624,7 +948,13 @@ MonoBehaviour:
         Y: 2
         Z: 0
       DefaultWalkable: 1
-      Height: 2.0000005
+      Height: 2
+    - Coordinate:
+        X: 5
+        Y: 0
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1.48
     - Coordinate:
         X: 4
         Y: -1
@@ -644,8 +974,20 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: 1
+        Y: -4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: 6
         Y: 4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 5
+        Y: 5
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -654,7 +996,13 @@ MonoBehaviour:
         Y: 3
         Z: 0
       DefaultWalkable: 1
-      Height: 2.0000005
+      Height: 2
+    - Coordinate:
+        X: 4
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: 3
         Y: 7
@@ -734,6 +1082,12 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: -1
+        Y: -5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: 7
         Y: 1
         Z: 0
@@ -755,8 +1109,8 @@ MonoBehaviour:
         X: 5
         Y: -1
         Z: 0
-      DefaultWalkable: 0
-      Height: 0
+      DefaultWalkable: 1
+      Height: 1.1200001
     - Coordinate:
         X: 4
         Y: -2
@@ -776,6 +1130,12 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: 1
+        Y: -5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: 7
         Y: 4
         Z: 0
@@ -790,6 +1150,12 @@ MonoBehaviour:
     - Coordinate:
         X: 6
         Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 5
+        Y: 6
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -854,6 +1220,12 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: -6
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: -5
         Y: -2
         Z: 0
@@ -868,6 +1240,18 @@ MonoBehaviour:
     - Coordinate:
         X: -3
         Y: -4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -6
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -1013,8 +1397,14 @@ MonoBehaviour:
         X: -6
         Y: 6
         Z: 0
-      DefaultWalkable: 1
-      Height: 1
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -7
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: -5
         Y: -3
@@ -1024,6 +1414,24 @@ MonoBehaviour:
     - Coordinate:
         X: -4
         Y: -4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -7
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -1072,6 +1480,12 @@ MonoBehaviour:
     - Coordinate:
         X: 3
         Y: -5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: -6
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -1175,11 +1589,47 @@ MonoBehaviour:
         X: -6
         Y: 7
         Z: 0
-      DefaultWalkable: 1
-      Height: 1
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -7
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: -5
         Y: -4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -8
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -1222,6 +1672,18 @@ MonoBehaviour:
     - Coordinate:
         X: 4
         Y: -5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 3
+        Y: -6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: -7
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -1327,6 +1789,60 @@ MonoBehaviour:
         Z: 0
       DefaultWalkable: 1
       Height: 1
+    - Coordinate:
+        X: -7
+        Y: 7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: 9
         Y: -1
@@ -1364,6 +1880,18 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: 3
+        Y: -7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: -8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: 9
         Y: 6
         Z: 0
@@ -1465,6 +1993,66 @@ MonoBehaviour:
         Z: 0
       DefaultWalkable: 1
       Height: 1
+    - Coordinate:
+        X: -8
+        Y: 7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -10
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: 9
         Y: -2
@@ -1496,6 +2084,24 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: 4
+        Y: -7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 3
+        Y: -8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: -9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: 9
         Y: 7
         Z: 0
@@ -1597,6 +2203,66 @@ MonoBehaviour:
         Z: 0
       DefaultWalkable: 1
       Height: 1
+    - Coordinate:
+        X: -9
+        Y: 7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -10
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -10
+        Y: 4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -11
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: 9
         Y: -3
@@ -1622,6 +2288,24 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: 5
+        Y: -7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 4
+        Y: -8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 3
+        Y: -9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: 9
         Y: 8
         Z: 0
@@ -1723,6 +2407,72 @@ MonoBehaviour:
         Z: 0
       DefaultWalkable: 1
       Height: 1
+    - Coordinate:
+        X: -10
+        Y: 7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -10
+        Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 2
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -11
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: 9
         Y: -4
@@ -1742,6 +2492,18 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: 5
+        Y: -8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 4
+        Y: -9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: 9
         Y: 9
         Z: 0
@@ -1844,8 +2606,86 @@ MonoBehaviour:
       DefaultWalkable: 1
       Height: 1
     - Coordinate:
+        X: -11
+        Y: 7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -13
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -10
+        Y: 2
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -11
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: 9
         Y: -5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 5
+        Y: -9
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -1952,793 +2792,13 @@ MonoBehaviour:
       DefaultWalkable: 1
       Height: 1
     - Coordinate:
-        X: 9
-        Y: 11
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 8
-        Y: 12
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 2
-        Y: 18
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 1
-        Y: 19
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 0
-        Y: 20
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -1
-        Y: 19
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -2
-        Y: 18
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -3
-        Y: 17
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -4
-        Y: 16
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -5
-        Y: 15
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -6
-        Y: 14
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -7
-        Y: 13
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -8
-        Y: 12
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 11
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -10
-        Y: 10
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
-        Y: 9
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 8
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -11
-        Y: 7
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 9
-        Y: 12
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 2
-        Y: 19
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 1
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 0
-        Y: 21
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -1
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -2
-        Y: 19
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -3
-        Y: 18
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -4
-        Y: 17
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -5
-        Y: 16
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -6
-        Y: 15
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -7
-        Y: 14
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -8
-        Y: 13
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 12
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -10
-        Y: 11
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
-        Y: 10
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 9
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -13
-        Y: 8
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
         X: -12
         Y: 7
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -11
-        Y: 6
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 2
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 1
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 0
-        Y: 22
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -1
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -2
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -3
-        Y: 19
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -4
-        Y: 18
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -5
-        Y: 17
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -6
-        Y: 16
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -7
-        Y: 15
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -8
-        Y: 14
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 13
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -10
-        Y: 12
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
-        Y: 11
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 10
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
         X: -13
-        Y: 9
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -14
-        Y: 8
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -13
-        Y: 7
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 6
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -10
-        Y: 6
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -11
-        Y: 5
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 3
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 2
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 1
-        Y: 22
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: 0
-        Y: 23
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -1
-        Y: 22
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -2
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -3
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -4
-        Y: 19
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -5
-        Y: 18
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -6
-        Y: 17
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -7
-        Y: 16
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -8
-        Y: 15
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 14
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -10
-        Y: 13
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
-        Y: 12
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 11
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -13
-        Y: 10
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -14
-        Y: 9
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -15
-        Y: 8
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1.46
-    - Coordinate:
-        X: -14
-        Y: 7
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -13
-        Y: 6
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 5
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -10
-        Y: 5
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
-        Y: 4
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 4
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 3
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 2
-        Y: 22
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: 1
-        Y: 23
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 0
-        Y: 24
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -1
-        Y: 23
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -2
-        Y: 22
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -3
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -4
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -5
-        Y: 19
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -6
-        Y: 18
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -7
-        Y: 17
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -8
-        Y: 16
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -9
-        Y: 15
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -10
-        Y: 14
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
-        Y: 13
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 12
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -13
-        Y: 11
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -14
-        Y: 10
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -15
-        Y: 9
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -16
-        Y: 8
-        Z: 0
-      DefaultWalkable: 1
-      Height: 2.0000005
-    - Coordinate:
-        X: -15
-        Y: 7
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -14
-        Y: 6
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -13
-        Y: 5
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 4
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 5
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -10
-        Y: 4
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
-        Y: 3
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 5
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 4
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 2
-        Y: 23
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 1
-        Y: 24
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -1
-        Y: 24
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -2
-        Y: 23
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -3
-        Y: 22
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -4
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -5
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -6
-        Y: 19
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -7
-        Y: 18
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -8
-        Y: 17
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 16
-        Z: 0
-      DefaultWalkable: 1
-      Height: 1
-    - Coordinate:
-        X: -10
-        Y: 15
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
-        Y: 14
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 13
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -14
-        Y: 11
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -15
-        Y: 10
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -16
-        Y: 9
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -17
-        Y: 8
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -16
-        Y: 7
-        Z: 0
-      DefaultWalkable: 1
-      Height: 2.0000005
-    - Coordinate:
-        X: -15
         Y: 6
         Z: 0
       DefaultWalkable: 0
@@ -2757,24 +2817,6 @@ MonoBehaviour:
       Height: 0
     - Coordinate:
         X: -12
-        Y: 3
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -8
-        Y: 5
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 4
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -10
         Y: 3
         Z: 0
       DefaultWalkable: 0
@@ -2786,137 +2828,161 @@ MonoBehaviour:
       DefaultWalkable: 1
       Height: 4.07
     - Coordinate:
-        X: 5
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 4
-        Y: 22
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 3
-        Y: 23
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: 2
-        Y: 24
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -1
-        Y: 25
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -2
-        Y: 24
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -3
-        Y: 23
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -4
-        Y: 22
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -5
-        Y: 21
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -6
-        Y: 20
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -7
-        Y: 19
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -8
-        Y: 18
+        X: -10
+        Y: 1
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
         X: -9
-        Y: 17
+        Y: 0
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -10
-        Y: 16
+        X: -5
+        Y: -10
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -11
-        Y: 15
+        X: -4
+        Y: -11
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -12
-        Y: 14
+        X: -3
+        Y: -12
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -15
+        X: -2
+        Y: -13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 9
         Y: 11
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -16
+        X: 8
+        Y: 12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: 18
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 1
+        Y: 19
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 0
+        Y: 20
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -1
+        Y: 19
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: 18
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: 17
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 16
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -5
+        Y: 15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -6
+        Y: 14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -7
+        Y: 13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 11
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -10
         Y: 10
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -17
+        X: -11
         Y: 9
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -18
+        X: -12
         Y: 8
         Z: 0
-      DefaultWalkable: 0
-      Height: 0
+      DefaultWalkable: 1
+      Height: 1
     - Coordinate:
-        X: -17
+        X: -13
         Y: 7
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -16
+        X: -14
         Y: 6
         Z: 0
-      DefaultWalkable: 1
-      Height: 2.0000005
+      DefaultWalkable: 0
+      Height: 0
     - Coordinate:
         X: -15
         Y: 5
@@ -2942,26 +3008,1100 @@ MonoBehaviour:
       DefaultWalkable: 1
       Height: 4.07
     - Coordinate:
-        X: -8
-        Y: 4
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 3
+        X: -11
+        Y: 1
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
         X: -10
-        Y: 2
+        Y: 0
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: -1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -11
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 9
+        Y: 12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: 19
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 1
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 0
+        Y: 21
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -1
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: 19
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: 18
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 17
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: 16
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -6
+        Y: 15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -7
+        Y: 14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 12
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -10
+        Y: 11
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
         X: -11
+        Y: 10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -13
+        Y: 8
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -14
+        Y: 7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -15
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 5
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2
+    - Coordinate:
+        X: -15
+        Y: 4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -14
+        Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -13
+        Y: 2
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2.62
+    - Coordinate:
+        X: -12
         Y: 1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 0
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -10
+        Y: -1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: -16
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 1
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 0
+        Y: 22
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -1
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: 19
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 18
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: 17
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -6
+        Y: 16
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -7
+        Y: 15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 13
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -10
+        Y: 12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 11
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -13
+        Y: 9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -14
+        Y: 8
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1.12
+    - Coordinate:
+        X: -15
+        Y: 7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 6
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2
+    - Coordinate:
+        X: -17
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 4
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2
+    - Coordinate:
+        X: -15
+        Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -14
+        Y: 2
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2
+    - Coordinate:
+        X: -13
+        Y: 1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 0
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: -1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: -16
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 3
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 1
+        Y: 22
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: 0
+        Y: 23
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: 22
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 19
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: 18
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -6
+        Y: 17
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -7
+        Y: 16
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -8
+        Y: 15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 14
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -10
+        Y: 13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 11
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -13
+        Y: 10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -14
+        Y: 9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -15
+        Y: 8
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1.48
+    - Coordinate:
+        X: -16
+        Y: 7
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2
+    - Coordinate:
+        X: -17
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -18
+        Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -17
+        Y: 4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 3
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2
+    - Coordinate:
+        X: -15
+        Y: 2
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2
+    - Coordinate:
+        X: -14
+        Y: 1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -13
+        Y: 0
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: -1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: -16
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 4
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 3
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: 22
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: 1
+        Y: 23
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 0
+        Y: 24
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: 23
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: 22
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: 19
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -6
+        Y: 18
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -7
+        Y: 17
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 16
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -9
+        Y: 15
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -10
+        Y: 14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 12
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -13
+        Y: 11
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -14
+        Y: 10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -15
+        Y: 9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 8
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2
+    - Coordinate:
+        X: -17
+        Y: 7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -18
+        Y: 6
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -18
+        Y: 4
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -17
+        Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 2
+        Z: 0
+      DefaultWalkable: 1
+      Height: 2
+    - Coordinate:
+        X: -15
+        Y: 1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -14
+        Y: 0
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -13
+        Y: -1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: -16
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 5
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 4
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 3
+        Y: 22
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: 23
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 1
+        Y: 24
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: 24
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: 23
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: 22
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -6
+        Y: 19
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -7
+        Y: 18
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 17
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 16
+        Z: 0
+      DefaultWalkable: 1
+      Height: 1
+    - Coordinate:
+        X: -10
+        Y: 15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 13
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -14
+        Y: 11
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -15
+        Y: 10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -17
+        Y: 8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -18
+        Y: 7
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -18
+        Y: 3
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -17
+        Y: 2
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -15
+        Y: 0
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -14
+        Y: -1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: -16
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 5
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 4
+        Y: 22
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 3
+        Y: 23
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: 2
+        Y: 24
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -1
+        Y: 25
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -2
+        Y: 24
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -3
+        Y: 23
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 22
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -5
+        Y: 21
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -6
+        Y: 20
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -7
+        Y: 19
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -8
+        Y: 18
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -9
+        Y: 17
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -10
+        Y: 16
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -11
+        Y: 15
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -12
+        Y: 14
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -15
+        Y: 11
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 10
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -17
+        Y: 9
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -18
+        Y: 8
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -18
+        Y: 2
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -17
+        Y: 1
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -16
+        Y: 0
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -15
+        Y: -1
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -2998,6 +4138,12 @@ MonoBehaviour:
     - Coordinate:
         X: -3
         Y: 24
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 23
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -3069,67 +4215,19 @@ MonoBehaviour:
       Height: 0
     - Coordinate:
         X: -18
-        Y: 7
+        Y: 1
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
         X: -17
-        Y: 6
+        Y: 0
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
         X: -16
-        Y: 5
-        Z: 0
-      DefaultWalkable: 1
-      Height: 2.0000005
-    - Coordinate:
-        X: -15
-        Y: 4
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -14
-        Y: 3
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -13
-        Y: 2
-        Z: 0
-      DefaultWalkable: 1
-      Height: 2.96
-    - Coordinate:
-        X: -12
-        Y: 1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -8
-        Y: 3
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 2
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -10
-        Y: 1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
-        Y: 0
+        Y: -1
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -3146,6 +4244,12 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
+        X: 3
+        Y: 25
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
         X: -2
         Y: 26
         Z: 0
@@ -3154,6 +4258,12 @@ MonoBehaviour:
     - Coordinate:
         X: -3
         Y: 25
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 24
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -3213,60 +4323,12 @@ MonoBehaviour:
       Height: 0
     - Coordinate:
         X: -18
-        Y: 6
+        Y: 0
         Z: 0
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
         X: -17
-        Y: 5
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -16
-        Y: 4
-        Z: 0
-      DefaultWalkable: 1
-      Height: 2.0000005
-    - Coordinate:
-        X: -15
-        Y: 3
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -14
-        Y: 2
-        Z: 0
-      DefaultWalkable: 1
-      Height: 2.0000005
-    - Coordinate:
-        X: -13
-        Y: 1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: 0
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -10
-        Y: 0
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -11
         Y: -1
         Z: 0
       DefaultWalkable: 0
@@ -3286,6 +4348,12 @@ MonoBehaviour:
     - Coordinate:
         X: -3
         Y: 26
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 25
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -3332,62 +4400,14 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -18
-        Y: 5
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -17
-        Y: 4
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -16
-        Y: 3
-        Z: 0
-      DefaultWalkable: 1
-      Height: 2.0000005
-    - Coordinate:
-        X: -15
-        Y: 2
-        Z: 0
-      DefaultWalkable: 1
-      Height: 2.0000005
-    - Coordinate:
-        X: -14
-        Y: 1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -13
-        Y: 0
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -12
-        Y: -1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: 0
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -10
-        Y: -1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
         X: 5
         Y: 25
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -4
+        Y: 26
         Z: 0
       DefaultWalkable: 0
       Height: 0
@@ -3422,48 +4442,6 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -18
-        Y: 4
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -17
-        Y: 3
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -16
-        Y: 2
-        Z: 0
-      DefaultWalkable: 1
-      Height: 2.0000005
-    - Coordinate:
-        X: -15
-        Y: 1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -14
-        Y: 0
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -13
-        Y: -1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -9
-        Y: -1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
         X: -9
         Y: 22
         Z: 0
@@ -3488,36 +4466,6 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -18
-        Y: 3
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -17
-        Y: 2
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -16
-        Y: 1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -15
-        Y: 0
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -14
-        Y: -1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
         X: -10
         Y: 22
         Z: 0
@@ -3530,62 +4478,8 @@ MonoBehaviour:
       DefaultWalkable: 0
       Height: 0
     - Coordinate:
-        X: -18
-        Y: 2
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -17
-        Y: 1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -16
-        Y: 0
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -15
-        Y: -1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
         X: -11
         Y: 22
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -18
-        Y: 1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -17
-        Y: 0
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -16
-        Y: -1
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -18
-        Y: 0
-        Z: 0
-      DefaultWalkable: 0
-      Height: 0
-    - Coordinate:
-        X: -17
-        Y: -1
         Z: 0
       DefaultWalkable: 0
       Height: 0
