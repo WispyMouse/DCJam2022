@@ -132,17 +132,7 @@ public class LabyrinthState : SceneLoadingGameplayState
         PointOfViewInstance.transform.rotation = Quaternion.Euler(0, PointOfViewInstance.CurFacing.Degrees(), 0);
         PointOfViewInstance.transform.position = cellAtStart.Worldspace;
 
-        InteractiveData accessibleInteractive = AccessibleInteractive();
-        if (accessibleInteractive != null)
-        {
-            HelperTools.InteractiveButtonPressed.RemoveAllListeners();
-            HelperTools.InteractiveButtonPressed.AddListener(() => { SceneHelperInstance.StartCoroutine(Interact()); });
-            HelperTools.InteractiveInFrontPanel.SetActive(true);
-        }
-        else
-        {
-            HelperTools.InteractiveInFrontPanel.SetActive(false);
-        }
+        CheckAndPresentAccessibleInteractive();
 
         ScanInteractivesUsingFlags();
     }
@@ -178,6 +168,8 @@ public class LabyrinthState : SceneLoadingGameplayState
     /// <param name="offset">Direction to move.</param>
     public IEnumerator Step(Vector3Int offset)
     {
+        UnsetAccessibleInteractive();
+
         CellCoordinates newCoordinates = PointOfViewInstance.CurCoordinates + offset;
 
         LabyrinthCell cellAtPosition = LevelToLoad.LabyrinthData.CellAtCoordinate(newCoordinates);
@@ -224,6 +216,8 @@ public class LabyrinthState : SceneLoadingGameplayState
             yield return StateMachineInstance.PushNewState(new BattleState());
         }
 
+        CheckAndPresentAccessibleInteractive();
+
         LockingAnimationFinished?.Invoke(this, new EventArgs());
     }
 
@@ -233,9 +227,11 @@ public class LabyrinthState : SceneLoadingGameplayState
     /// <param name="newFacing">The new direction to face.</param>
     public IEnumerator Rotate(Direction newFacing)
     {
+        UnsetAccessibleInteractive();
         yield return AnimationHandler.Rotate(PointOfViewInstance, newFacing);
 
         PointOfViewInstance.CurFacing = newFacing;
+        CheckAndPresentAccessibleInteractive();
         LockingAnimationFinished?.Invoke(this, new EventArgs());
         yield break;
     }
@@ -339,6 +335,27 @@ public class LabyrinthState : SceneLoadingGameplayState
         foreach (GameObject rootObj in SceneManager.GetSceneByName(LevelToLoad.Scene).GetRootGameObjects())
         {
             rootObj.SetActive(toAcctive);
+        }
+    }
+
+    public void UnsetAccessibleInteractive()
+    {
+        HelperTools.InteractiveButtonPressed.RemoveAllListeners();
+        HelperTools.InteractiveInFrontPanel.SetActive(false);
+    }
+
+    public void CheckAndPresentAccessibleInteractive()
+    {
+        InteractiveData accessibleInteractive = AccessibleInteractive();
+        if (accessibleInteractive != null)
+        {
+            HelperTools.InteractiveButtonPressed.RemoveAllListeners();
+            HelperTools.InteractiveButtonPressed.AddListener(() => { SceneHelperInstance.StartCoroutine(Interact()); });
+            HelperTools.InteractiveInFrontPanel.SetActive(true);
+        }
+        else
+        {
+            UnsetAccessibleInteractive();
         }
     }
 }

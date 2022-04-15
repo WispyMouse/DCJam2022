@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13d347e4b301294dbe728de9d019195, type: 3}
   m_Name: 01_Choice
   m_EditorClassIdentifier: 
-  EventId: 0
+  EventId: 1
   Text: What do you do?
   Entries:
   - FlagsRequired: []

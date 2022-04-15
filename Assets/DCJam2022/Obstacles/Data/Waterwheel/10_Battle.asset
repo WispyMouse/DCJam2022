@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 10_Battle
   m_EditorClassIdentifier: 
   EventId: 10
-  Foes: {fileID: 0}
+  Foes: {fileID: 11400000, guid: ec8bf01008baf1145ba528d523de7989, type: 2}
