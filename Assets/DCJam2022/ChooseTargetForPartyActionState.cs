@@ -90,6 +90,13 @@ public class ChooseTargetForPartyActionState : IGameplayState
                     yield break;
                 }
 
+                if (forCommand.Targeting == Target.AllAllies)
+                {
+                    activeBattleState.BattleCommands.Add(new BattleCommand(choosingMember, null, forCommand));
+                    yield return stateMachine.EndCurrentState();
+                    yield break;
+                }
+
                 partyMember.Hud.SetChooseTargets(forCommand, ActionCanceled);
             }
             else

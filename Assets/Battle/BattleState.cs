@@ -152,6 +152,12 @@ public class BattleState : SceneLoadingGameplayState
         {
             Debug.Log("You win!");
             LastWasVictory = true;
+            
+            foreach (PartyMember member in PlayerPartyPointer.PartyMembers)
+            {
+                member.RefreshOutOfBattle();
+            }
+
             SceneHelperInstance.StartCoroutine(StateMachineInstance.EndCurrentState());
         }
         else

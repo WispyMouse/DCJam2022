@@ -16,21 +16,8 @@ public class WarrencrawlBar : MonoBehaviour
 
     public virtual void SetValue(int newValue, int maxValue)
     {
-        if (curValuePointer <= 0)
-        {
-            curValuePointer = newValue;
-        }
-
         BaseSlider.maxValue = maxValue;
-
-        if (maxValue >= 0)
-        {
-            Backbar.fillAmount = curValuePointer / maxValue;
-        }
-        else
-        {
-            Backbar.fillAmount = 1f;
-        }
+        BaseSlider.value = newValue;
 
         if (FadingCoroutine != null)
         {
@@ -38,30 +25,37 @@ public class WarrencrawlBar : MonoBehaviour
             FadingCoroutine = null;
         }
         
-        if (gameObject.activeInHierarchy)
+        if (curValuePointer != newValue)
         {
-            FadingCoroutine = StartCoroutine(FadeToValue(newValue));
+            if (gameObject.activeInHierarchy)
+            {
+                FadingCoroutine = StartCoroutine(FadeToValue(newValue));
+            }
+            else
+            {
+                Backbar.fillAmount = newValue / maxValue;
+            }
         }
-        else
-        {
-            Backbar.fillAmount = newValue / maxValue;
-        }
+
+        curValuePointer = newValue;
     }
 
     IEnumerator FadeToValue(int toValue)
     {
         float totalProgress = 0;
-        int curSliderValue = curValuePointer;
+        float curSliderValue = curValuePointer;
+        float startingValue = curValuePointer;
+
+        yield return new WaitForSeconds(HangTimeAfterLoss);
 
         while (totalProgress <= TimeForFullBarDrop)
         {
             totalProgress += Time.deltaTime;
-            curSliderValue = (int)Mathf.Lerp(curValuePointer, toValue, totalProgress / TimeForFullBarDrop);
-            BaseSlider.value = curSliderValue;
-            Backbar.GetComponent<RectTransform>().anchorMax = new Vector2(curSliderValue / BaseSlider.maxValue, 1f);
+            curSliderValue = Mathf.Lerp(startingValue, toValue, totalProgress / TimeForFullBarDrop);
+            Backbar.GetComponent<RectTransform>().anchorMax = new Vector2((float)curSliderValue / BaseSlider.maxValue, 1f);
             yield return new WaitForEndOfFrame();
         }
 
-        curValuePointer = curSliderValue;
+        curValuePointer = toValue;
     }
 }

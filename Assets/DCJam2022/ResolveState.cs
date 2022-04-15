@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class ResolveState : IGameplayState
 {
-    public const float WaitAfterLoggingTargets = .2f;
-    public const float WaitAfterLoggingEffect = .25f;
-    public const float WaitAfterActionResolves = .5f;
-    public const float WaitAfterProblemKO = .35f;
+    public const float WaitAfterLoggingTargets = .15f;
+    public const float WaitAfterLoggingEffect = .35f;
+    public const float WaitAfterActionResolves = .6f;
+    public const float WaitAfterProblemKO = .45f;
 
     BattleState managedBattleState { get; set; }
     GlobalStateMachine stateMachineInstance { get; set; }

@@ -35,7 +35,14 @@ public class MoveTooltip : MonoBehaviour
 
         TooltipHolder tooltipHolder = GameObject.FindObjectOfType<TooltipHolder>();
 
-        RectTransform parentToRefresh = Root.transform.parent.parent.GetComponent<RectTransform>();
+        Transform parentToUpdate = Root.transform?.parent;
+
+        if (parentToUpdate.parent != null && parentToUpdate.parent.GetComponent<RectTransform>() != null)
+        {
+            parentToUpdate = parentToUpdate.parent;
+        }
+
+        RectTransform parentToRefresh = parentToUpdate?.GetComponent<RectTransform>();
 
         if (parentToRefresh != null && parentToRefresh.gameObject != null && parentToRefresh.gameObject.activeInHierarchy)
         {
