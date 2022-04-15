@@ -52,6 +52,7 @@ public class MoveTooltip : MonoBehaviour
         if (!nudged && pos.position.x > Screen.width / 2f)
         {
             pos.anchoredPosition = pos.anchoredPosition + Vector2.left * 300f;
+            nudged = true;
         }
 
         Root.SetActive(true);

@@ -22,7 +22,15 @@ public class WarrencrawlBar : MonoBehaviour
         }
 
         BaseSlider.maxValue = maxValue;
-        Backbar.fillAmount = curValuePointer / maxValue;
+
+        if (maxValue >= 0)
+        {
+            Backbar.fillAmount = curValuePointer / maxValue;
+        }
+        else
+        {
+            Backbar.fillAmount = 1f;
+        }
 
         if (FadingCoroutine != null)
         {

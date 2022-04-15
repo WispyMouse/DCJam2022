@@ -66,6 +66,11 @@ public class Foe : MonoBehaviour
 
     public void SetUnhighlighted()
     {
+        if (gameObject == null)
+        {
+            return;
+        }
+
         NMEPreviewInstance.Hide();
         HighlightArrow.SetActive(false);
     }

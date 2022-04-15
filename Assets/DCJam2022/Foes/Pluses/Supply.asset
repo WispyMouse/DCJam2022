@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Supply
   Appearance: {fileID: 21300000, guid: e0155489cab68fc49a0cb50fd4505f7d, type: 3}
-  Health: 0
+  Health: 6
   AttackPhases:
   - AppearenceInPhase: {fileID: 21300000, guid: e0155489cab68fc49a0cb50fd4505f7d, type: 3}
     UsedMove: {fileID: 11400000, guid: dfc17bbafd395aa46bf592f1b6e5f86b, type: 2}

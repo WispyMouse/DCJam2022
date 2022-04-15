@@ -30,11 +30,8 @@ public class FoeSelectionHandler : MonoBehaviour
 
         if (foundFoe == null)
         {
-            if (lastHighlighted != null && lastHighlighted.gameObject != null)
-            {
-                lastHighlighted?.SetUnhighlighted();
-            }
-            
+            lastHighlighted?.SetUnhighlighted();
+
             lastHighlighted = null;
             return;
         }
@@ -44,6 +41,7 @@ public class FoeSelectionHandler : MonoBehaviour
 
         if (ChosenAction == null)
         {
+            lastHighlighted = foundFoe;
             return;
         }
 
