@@ -18,7 +18,7 @@ MonoBehaviour:
   StatusEffect: 0
   DamageFloor: 6
   DamageCeiling: 12
-  Description: Slow, applies {0} progress to one obstacle. One use per battle.
+  Description: Slow, applies {0} progress to one obstacle. Once per day.
   IsHealing: 0
   Speed: 0
-  SingleUsePerBattle: 1
+  SingleUsePerDay: 1

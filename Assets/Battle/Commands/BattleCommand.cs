@@ -70,7 +70,7 @@ public class BattleCommand
 
         }
 
-        if (targetsAffected.TrueForAll(x => x is FoeMember && ((FoeMember)x).CurProblemJuice <= 0))
+        if (targetsAffected.Count > 0 && targetsAffected.TrueForAll(x => x is FoeMember && ((FoeMember)x).CurProblemJuice <= 0))
         {
             ConsoleManager.Instance.AddToLog($"{ActingMember.DisplayName} had nothing to target...");
             yield return new WaitForSeconds(ResolveState.WaitAfterLoggingTargets);
@@ -79,7 +79,7 @@ public class BattleCommand
 
         if (ActingMember is PartyMember)
         {
-            ((PlayerMove)ActionTaken).UsedInThisBattle = true;
+            ((PlayerMove)ActionTaken).UsedThisDay = true;
         }
 
         ConsoleManager.Instance.AddToLog(targetText);

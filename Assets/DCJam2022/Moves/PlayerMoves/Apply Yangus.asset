@@ -16,9 +16,9 @@ MonoBehaviour:
   Verbs: yanguses
   Targeting: 1
   StatusEffect: 0
-  DamageFloor: 0
+  DamageFloor: 1
   DamageCeiling: 4
   Description: Slow, applies {0}-{1} progress to one target. Do your best!
   IsHealing: 0
   Speed: 0
-  SingleUsePerBattle: 0
+  SingleUsePerDay: 0

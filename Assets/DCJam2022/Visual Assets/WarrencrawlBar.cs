@@ -18,15 +18,15 @@ public class WarrencrawlBar : MonoBehaviour
     {
         BaseSlider.maxValue = maxValue;
         BaseSlider.value = newValue;
-
-        if (FadingCoroutine != null)
-        {
-            StopCoroutine(FadingCoroutine);
-            FadingCoroutine = null;
-        }
         
         if (curValuePointer != newValue)
         {
+            if (FadingCoroutine != null)
+            {
+                StopCoroutine(FadingCoroutine);
+                FadingCoroutine = null;
+            }
+
             if (gameObject.activeInHierarchy)
             {
                 FadingCoroutine = StartCoroutine(FadeToValue(newValue));

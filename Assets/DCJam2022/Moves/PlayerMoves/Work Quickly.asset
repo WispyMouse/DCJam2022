@@ -18,7 +18,7 @@ MonoBehaviour:
   StatusEffect: 0
   DamageFloor: 1
   DamageCeiling: 3
-  Description: Fast speed {0}-{1} to all obstacles, one use per battle.
+  Description: Fast speed {0}-{1} to all obstacles, once per day.
   IsHealing: 0
   Speed: 2
-  SingleUsePerBattle: 1
+  SingleUsePerDay: 1

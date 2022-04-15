@@ -335,9 +335,12 @@ public class LabyrinthState : SceneLoadingGameplayState
             return;
         }
 
-        foreach (GameObject rootObj in SceneManager.GetSceneByName(LevelToLoad.Scene).GetRootGameObjects())
+        if (StaticSceneTools.IsSceneLoaded(LevelToLoad.Scene))
         {
-            rootObj.SetActive(toAcctive);
+            foreach (GameObject rootObj in SceneManager.GetSceneByName(LevelToLoad.Scene).GetRootGameObjects())
+            {
+                rootObj.SetActive(toAcctive);
+            }
         }
     }
 

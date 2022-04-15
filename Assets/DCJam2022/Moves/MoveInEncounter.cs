@@ -17,7 +17,7 @@ public class MoveInEncounter : MonoBehaviour
         Clickable.onClick.AddListener(() => { clickedAction(attacker, toSetFrom); });
         Shower.Tooltip.SetFromMove(toSetFrom);
 
-        if (toSetFrom.UsedInThisBattle && toSetFrom.SingleUsePerBattle)
+        if (toSetFrom.UsedThisDay && toSetFrom.SingleUsePerDay)
         {
             Clickable.interactable = false;
         }

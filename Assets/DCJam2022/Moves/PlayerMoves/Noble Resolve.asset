@@ -18,7 +18,7 @@ MonoBehaviour:
   StatusEffect: 0
   DamageFloor: 4
   DamageCeiling: 8
-  Description: Restore {0}-{1} NRG to the party, one use per battle.
+  Description: Restore {0}-{1} NRG to the party, once per day.
   IsHealing: 1
   Speed: 1
-  SingleUsePerBattle: 1
+  SingleUsePerDay: 1

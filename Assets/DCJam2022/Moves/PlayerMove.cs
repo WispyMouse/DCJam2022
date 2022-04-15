@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "DCJam2022/PlayerMove")]
 public class PlayerMove : MoveBase
 {
-    public bool SingleUsePerBattle;
+    public bool SingleUsePerDay;
 
-    public bool UsedInThisBattle { get; set; }
+    public bool UsedThisDay { get; set; }
 }

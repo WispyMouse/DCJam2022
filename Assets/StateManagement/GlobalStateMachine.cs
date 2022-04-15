@@ -89,7 +89,7 @@ public class GlobalStateMachine
     /// Transitions out of the current state to the one below it.
     /// </summary>
     /// <returns>Yieldable IEnumerator.</returns>
-    public IEnumerator EndCurrentState()
+    public IEnumerator EndCurrentState(bool skipWarmup = false)
     {
         IGameplayState oldState = CurrentState;
         PresentStates.Pop();
@@ -100,7 +100,11 @@ public class GlobalStateMachine
         yield return oldState?.AnimateTransitionOut(nextState);
         yield return oldState?.ExitState(nextState);
 
-        yield return WarmUpAndStartCurrentState(oldState, false);
+        if (!skipWarmup)
+        {
+            yield return WarmUpAndStartCurrentState(oldState, false);
+        }
+        
     }
 
     /// <summary>

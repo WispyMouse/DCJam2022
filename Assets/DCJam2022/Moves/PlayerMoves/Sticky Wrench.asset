@@ -18,7 +18,7 @@ MonoBehaviour:
   StatusEffect: 0
   DamageFloor: 6
   DamageCeiling: 15
-  Description: Applies {0}-{1} progress, but slow. One use per battle.
+  Description: Applies {0}-{1} progress to one target, but slow. Once per day.
   IsHealing: 0
   Speed: 0
-  SingleUsePerBattle: 1
+  SingleUsePerDay: 1

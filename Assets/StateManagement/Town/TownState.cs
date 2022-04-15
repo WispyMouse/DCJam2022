@@ -24,6 +24,11 @@ public class TownState : SceneLoadingGameplayState
         foreach (PartyMember member in SceneHelperInstance.PlayerParty.PartyMembers)
         {
             member.CurNRG = member.MaxNRG;
+
+            foreach (PlayerMove curMove in member.FromProfile.AttackOptions)
+            {
+                curMove.UsedThisDay = false;
+            }
         }
 
         SceneHelperInstance.PlayerParty.CurAOF = SceneHelperInstance.PlayerParty.MaxAOF;

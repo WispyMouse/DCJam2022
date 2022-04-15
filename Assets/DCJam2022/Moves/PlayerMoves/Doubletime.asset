@@ -18,8 +18,7 @@ MonoBehaviour:
   StatusEffect: 0
   DamageFloor: 1
   DamageCeiling: 3
-  Description: Applies {0} progress to all obstacles, all quick-like. One use per
-    battle.
+  Description: Applies {0} progress to all obstacles, all quick-like. Once per day.
   IsHealing: 0
   Speed: 2
-  SingleUsePerBattle: 1
+  SingleUsePerDay: 1

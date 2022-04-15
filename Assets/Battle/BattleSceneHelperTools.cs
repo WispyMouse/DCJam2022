@@ -30,7 +30,7 @@ public class BattleSceneHelperTools : SceneHelperTools
     {
         while (SceneHelper.GlobalStateMachineInstance.CurrentState is not BattleState)
         {
-            yield return SceneHelper.GlobalStateMachineInstance.EndCurrentState();
+            yield return SceneHelper.GlobalStateMachineInstance.EndCurrentState(true);
         }
         yield return SceneHelper.GlobalStateMachineInstance.EndCurrentState();
     }
