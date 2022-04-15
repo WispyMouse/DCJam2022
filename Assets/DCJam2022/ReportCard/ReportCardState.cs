@@ -26,7 +26,29 @@ public class ReportCardState : SceneLoadingGameplayState
 
         int dayCount = helperTools.SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData.Day;
 
-        helperTools.ClearText.text = string.Format($"(clearing text not set yet) You cleared {0}% of major obstacles and {1}% of minor obstacles in {2} days.", 0, 0, dayCount);
+        int majorSolved = 0, minorSolved = 0;
+
+        foreach (string majorProblem in helperTools.MajorProblems)
+        {
+            if (SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData.GetFlag(majorProblem) > 0)
+            {
+                majorSolved++;
+            }
+        }
+
+        foreach (string minorProblem in helperTools.MinorProblems)
+        {
+            if (SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData.GetFlag(minorProblem) > 0)
+            {
+                minorSolved++;
+            }
+        }
+
+        float percentageOfMajor = helperTools.MajorProblems.Count;
+
+        string solutionText = string.Format("(clearing text not set yet) You cleared {0}% of major obstacles and {1}% of minor obstacles in {2} days.", ((float)majorSolved / (float)helperTools.MajorProblems.Count).ToString(), ((float)minorSolved / (float)helperTools.MinorProblems.Count).ToString(), dayCount);
+
+        helperTools.ClearText.text = solutionText;
         helperTools.SupervisorStatement.text = "This is the set supervisor statement text.";
     }
 

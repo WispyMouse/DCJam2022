@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d347e4b301294dbe728de9d019195, type: 3}
-  m_Name: 01_Choice
+  m_Name: 0_Choice
   m_EditorClassIdentifier: 
-  EventId: 1
-  Text: What do you do?
+  EventId: 0
+  Text: A locked gate is in front of you.
   Entries:
   - FlagsRequired: []
-    ChoiceName: Repair It Fully (very hard)
+    ChoiceName: Force It Open
     GotoId: 10
   - FlagsRequired:
-    - FlagToCheck: have_oils
+    - FlagToCheck: tiny
       RequiredMinValue: 1
-    ChoiceName: Apply Oils
+    ChoiceName: Fit Through and Open
     GotoId: 20
   - FlagsRequired: []
     ChoiceName: Leave

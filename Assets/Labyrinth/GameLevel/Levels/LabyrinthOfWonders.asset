@@ -21,46 +21,115 @@ MonoBehaviour:
     StartingFacing: 0
     LabyrinthInteractives:
     - InteractiveID:
-        serializedGuid: 64fd818c-dffe-487b-893a-332365f1c12f
-      Kind: 3
-      ObstacleEventData: {fileID: 11400000, guid: 4153916e29e5f0f4d976824d85d5a49b, type: 2}
+        serializedGuid: 4cd3a002-147f-4efe-9450-b567f948dea8
+      Kind: 0
+      ObstacleEventData: {fileID: 0}
       Checks: []
       OnCoordinates:
-      - X: -7
-        Y: 12
+      - X: -12
+        Y: 2
         Z: 0
-      - X: -7
-        Y: 13
+      - X: -11
+        Y: 2
         Z: 0
-      - X: -7
-        Y: 14
+    - InteractiveID:
+        serializedGuid: f1317723-a914-4d50-a8b8-4e8831b6b592
+      Kind: 3
+      ObstacleEventData: {fileID: 11400000, guid: 8493c4f033e930044886e85168a6dc12, type: 2}
+      Checks: []
+      OnCoordinates:
+      - X: 1
+        Y: 21
         Z: 0
-      - X: -6
-        Y: 12
+      - X: 1
+        Y: 22
         Z: 0
-      - X: -6
-        Y: 13
+      - X: 2
+        Y: 21
         Z: 0
-      - X: -6
-        Y: 14
+      - X: 2
+        Y: 22
         Z: 0
-      - X: -5
-        Y: 12
+    - InteractiveID:
+        serializedGuid: 44869fd7-f231-48ed-a30f-abe157033eb2
+      Kind: 0
+      ObstacleEventData: {fileID: 0}
+      Checks:
+      - FlagNameToCheck: gate_opened
+        ShouldBeVisible: 1
+      OnCoordinates: []
+    - InteractiveID:
+        serializedGuid: 34c25c3a-b097-4367-8fca-253bdf148a7f
+      Kind: 3
+      ObstacleEventData: {fileID: 11400000, guid: a4790293f57183b4abb005e5bd2d9347, type: 2}
+      Checks:
+      - FlagNameToCheck: gate_opened
+        ShouldBeVisible: 0
+      OnCoordinates:
+      - X: 0
+        Y: 17
         Z: 0
-      - X: -5
-        Y: 13
+    - InteractiveID:
+        serializedGuid: 1234d7bf-c364-4ae3-9725-a662a7c29d85
+      Kind: 0
+      ObstacleEventData: {fileID: 0}
+      Checks:
+      - FlagNameToCheck: pulled_lever
+        ShouldBeVisible: 1
+      OnCoordinates: []
+    - InteractiveID:
+        serializedGuid: 9789a3dd-1a18-41be-a958-c982e003a647
+      Kind: 3
+      ObstacleEventData: {fileID: 11400000, guid: 12a5bf63ab4d3914aa5d0c4b1b121544, type: 2}
+      Checks:
+      - FlagNameToCheck: pulled_lever
+        ShouldBeVisible: 0
+      OnCoordinates:
+      - X: 4
+        Y: -3
         Z: 0
-      - X: -5
-        Y: 14
+      - X: 4
+        Y: -2
         Z: 0
-      - X: -4
-        Y: 12
+      - X: 5
+        Y: -3
         Z: 0
-      - X: -4
-        Y: 13
+      - X: 5
+        Y: -2
         Z: 0
-      - X: -4
-        Y: 14
+      - X: 6
+        Y: -3
+        Z: 0
+      - X: 6
+        Y: -2
+        Z: 0
+    - InteractiveID:
+        serializedGuid: 15418997-0628-4c2f-8344-1662f39e8da7
+      Kind: 0
+      ObstacleEventData: {fileID: 0}
+      Checks:
+      - FlagNameToCheck: torch_replaced
+        ShouldBeVisible: 1
+      OnCoordinates: []
+    - InteractiveID:
+        serializedGuid: 3a8cc503-f462-496e-8bca-744b0f2217ff
+      Kind: 3
+      ObstacleEventData: {fileID: 11400000, guid: efc44273f24375a4e8fba53f7a68324d, type: 2}
+      Checks:
+      - FlagNameToCheck: torch_replaced
+        ShouldBeVisible: 0
+      OnCoordinates:
+      - X: -2
+        Y: 3
+        Z: 0
+      - X: -2
+        Y: 4
+        Z: 0
+      - X: -1
+        Y: 3
+        Z: 0
+      - X: -1
+        Y: 4
         Z: 0
     - InteractiveID:
         serializedGuid: 8639f475-15d6-4eee-861b-39b45965bd99
@@ -115,6 +184,58 @@ MonoBehaviour:
         Z: 0
       - X: 1
         Y: 1
+        Z: 0
+    - InteractiveID:
+        serializedGuid: bbe97c77-40b8-451f-b7ce-a703e5902ef8
+      Kind: 0
+      ObstacleEventData: {fileID: 11400000, guid: 4153916e29e5f0f4d976824d85d5a49b, type: 2}
+      Checks:
+      - FlagNameToCheck: waterwheel_repaired
+        ShouldBeVisible: 1
+      OnCoordinates: []
+    - InteractiveID:
+        serializedGuid: 64fd818c-dffe-487b-893a-332365f1c12f
+      Kind: 3
+      ObstacleEventData: {fileID: 11400000, guid: 4153916e29e5f0f4d976824d85d5a49b, type: 2}
+      Checks:
+      - FlagNameToCheck: waterwheel_repaired
+        ShouldBeVisible: 0
+      OnCoordinates:
+      - X: -7
+        Y: 12
+        Z: 0
+      - X: -7
+        Y: 13
+        Z: 0
+      - X: -7
+        Y: 14
+        Z: 0
+      - X: -6
+        Y: 12
+        Z: 0
+      - X: -6
+        Y: 13
+        Z: 0
+      - X: -6
+        Y: 14
+        Z: 0
+      - X: -5
+        Y: 12
+        Z: 0
+      - X: -5
+        Y: 13
+        Z: 0
+      - X: -5
+        Y: 14
+        Z: 0
+      - X: -4
+        Y: 12
+        Z: 0
+      - X: -4
+        Y: 13
+        Z: 0
+      - X: -4
+        Y: 14
         Z: 0
     - InteractiveID:
         serializedGuid: c17262d4-b0e0-4a16-be61-af2df533cbca
@@ -808,6 +929,12 @@ MonoBehaviour:
     - Coordinate:
         X: -5
         Y: 5
+        Z: 0
+      DefaultWalkable: 0
+      Height: 0
+    - Coordinate:
+        X: -6
+        Y: 4
         Z: 0
       DefaultWalkable: 0
       Height: 0

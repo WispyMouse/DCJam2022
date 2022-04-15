@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b080d3b5a6ec2c419a3c50e1d0f4daa, type: 3}
+  m_Name: Gate
+  m_EditorClassIdentifier: 
+  EventComponents:
+  - {fileID: 11400000, guid: 93992058ea3eb5340a279cfc02cc5867, type: 2}
+  - {fileID: 11400000, guid: 2bd48ef3b4b5ef943adbd0ebebb21bbf, type: 2}
+  - {fileID: 11400000, guid: 4a204ab760dde454ba965b2dcc1bc447, type: 2}
+  - {fileID: 11400000, guid: b307dda2f38fafe4488e4fb7a68eb3ce, type: 2}
+  ObstacleName: Gate

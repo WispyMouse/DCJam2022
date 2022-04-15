@@ -27,6 +27,11 @@ public class FoeMember : CombatMember
 
     public void GoNextPhase()
     {
+        if (!Standing)
+        {
+            return;
+        }
+
         if (BattleData == null)
         {
             return;
@@ -45,6 +50,7 @@ public class FoeMember : CombatMember
     {
         bool canAct = base.CanAct();
         canAct &= CurProblemJuice > 0;
+        canAct &= Standing;
         return canAct;
     }
 }

@@ -52,11 +52,11 @@ public class InteractiveData
 
         // If every check relates to being shown, then be hidden by default
         // vice versa, if every check relates to being hidden, it should be shown by default
-        if (Checks.TrueForAll((InteractiveAppearanceCheck iac) => { return iac.ShouldBeVisible == true; }))
+        if (Checks.Count > 0 && Checks.TrueForAll((InteractiveAppearanceCheck iac) => { return iac.ShouldBeVisible == true; }))
         {
             shouldBeVisible = false;
         }
-        else if (Checks.TrueForAll((InteractiveAppearanceCheck iac) => { return iac.ShouldBeVisible == false; }))
+        else if (Checks.Count > 0 && Checks.TrueForAll((InteractiveAppearanceCheck iac) => { return iac.ShouldBeVisible == false; }))
         {
             shouldBeVisible = true;
         }

@@ -593,6 +593,13 @@ MonoBehaviour:
   SupervisorStatement: {fileID: 1640171164}
   ClearText: {fileID: 767469129}
   ReportCardMusic: {fileID: 8300000, guid: cac7b681be8743248bbe33cc8fcfd2a2, type: 3}
+  MajorProblems:
+  - waterwheel_fixed
+  MinorProblems:
+  - bookcase_moved
+  - have_oils
+  - lever_pulled
+  - gate_opened
 --- !u!4 &854342465
 Transform:
   m_ObjectHideFlags: 0

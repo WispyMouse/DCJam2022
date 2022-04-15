@@ -9,6 +9,19 @@ public class TownSceneHelperTools : SceneHelperTools
 
     public void ToTheLabyrinth()
     {
+        // heal the party back to full when they visit town
+        foreach (PartyMember member in SceneHelperInstance.PlayerParty.PartyMembers)
+        {
+            member.CurNRG = member.MaxNRG;
+
+            foreach (PlayerMove curMove in member.FromProfile.AttackOptions)
+            {
+                curMove.UsedThisDay = false;
+            }
+        }
+
+        SceneHelperInstance.PlayerParty.CurAOF = SceneHelperInstance.PlayerParty.MaxAOF;
+
         SceneHelperInstance.StartCoroutine(SceneHelper.GlobalStateMachineInstance.ChangeToState(new LabyrinthState(new LabyrinthSceneHelperGrabber())));
     }
 

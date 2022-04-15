@@ -12,9 +12,12 @@ public class ReportCardSceneHelperTools : SceneHelperTools
 
     public AudioClip ReportCardMusic;
 
+    public List<string> MajorProblems = new List<string>();
+    public List<string> MinorProblems = new List<string>();
+
     public override IGameplayState GetNewDemoState()
     {
-        AudioManager.Instance.PlayMusic(ReportCardMusic);
+        AudioManager.Instance?.PlayMusic(ReportCardMusic);
         return new ReportCardState();
     }
 }

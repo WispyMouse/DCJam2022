@@ -56,7 +56,7 @@ public class ResolveState : IGameplayState
 
     public IEnumerator StartState(GlobalStateMachine stateMachine, IGameplayState previousState)
     {
-        managedBattleState.BattleCommands = managedBattleState.BattleCommands.OrderByDescending(bc => (int)bc.ActionTaken.Speed).ThenBy(bc => bc.ActingMember is PartyMember).ToList();
+        managedBattleState.BattleCommands = managedBattleState.BattleCommands.OrderByDescending(bc => (int)bc.ActionTaken.Speed).ThenByDescending(bc => bc.ActingMember is PartyMember).ToList();
 
         foreach (BattleCommand command in managedBattleState.BattleCommands)
         {

@@ -107,7 +107,7 @@ public class LabyrinthSceneHelperToolsEditor : Editor
 
             if (interactive.Kind == InteractiveKind.OutsideTileInteractive)
             {
-                Gizmos.color = new Color(1f, 1f, 1f, .4f);
+                Gizmos.color = new Color(1f, 1f, 1f, .85f);
 
                 foreach (CellCoordinates neighbor in neighborCoordinates.Except(interactive.OnCoordinates))
                 {
