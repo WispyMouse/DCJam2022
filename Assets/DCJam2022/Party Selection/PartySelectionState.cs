@@ -40,7 +40,7 @@ public class PartySelectionState : SceneLoadingGameplayState
 
         foreach (PartyMember member in HelperTools.SceneHelperInstance.PlayerParty.PartyMembers)
         {
-            foreach (string skill in new List<string>() { member.FromProfile.FirstSkill, member.FromProfile.SecondSkill, member.FromProfile.ThirdSkill })
+            foreach (string skill in new List<string>() { member.FromProfile.FirstSkill, member.FromProfile.SecondSkill })
             {
                 if (!string.IsNullOrEmpty(skill))
                 {

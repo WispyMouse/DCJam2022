@@ -16,7 +16,6 @@ public class DelverProfile : ScriptableObject
 
     public string FirstSkill;
     public string SecondSkill;
-    public string ThirdSkill;
 
     public List<PlayerMove> AttackOptions;
 }

@@ -76,6 +76,9 @@ public class GlobalStateMachine
     public IEnumerator PushNewState(IGameplayState newState)
     {
         IGameplayState oldState = CurrentState;
+
+        oldState?.UnsetControls(lastActiveControls);
+
         yield return oldState?.AnimateTransitionOut(newState);
         yield return oldState?.ChangeUp(newState);
         PresentStates.Push(newState);
@@ -90,6 +93,8 @@ public class GlobalStateMachine
     {
         IGameplayState oldState = CurrentState;
         PresentStates.Pop();
+
+        oldState?.UnsetControls(lastActiveControls);
 
         PresentStates.TryPeek(out IGameplayState nextState);
         yield return oldState?.AnimateTransitionOut(nextState);

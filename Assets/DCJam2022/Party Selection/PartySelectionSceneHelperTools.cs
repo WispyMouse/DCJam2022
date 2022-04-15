@@ -21,7 +21,6 @@ public class PartySelectionSceneHelperTools : SceneHelperTools
 
     public TMP_Text FirstSkill;
     public TMP_Text SecondSkill;
-    public TMP_Text ThirdSkill;
 
     public Transform SelectedDelversRoot;
 
@@ -50,7 +49,6 @@ public class PartySelectionSceneHelperTools : SceneHelperTools
 
             FirstSkill.gameObject.SetActive(false);
             SecondSkill.gameObject.SetActive(false);
-            ThirdSkill.gameObject.SetActive(false);
         }
         else 
         {
@@ -82,16 +80,6 @@ public class PartySelectionSceneHelperTools : SceneHelperTools
             else
             {
                 SecondSkill.gameObject.SetActive(false);
-            }
-
-            if (!string.IsNullOrEmpty(profile.ThirdSkill))
-            {
-                ThirdSkill.text = profile.ThirdSkill;
-                ThirdSkill.gameObject.SetActive(true);
-            }
-            else
-            {
-                ThirdSkill.gameObject.SetActive(false);
             }
         }
     }
