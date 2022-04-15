@@ -4306,11 +4306,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.501
       objectReference: {fileID: 0}
     - target: {fileID: 8816518090911114164, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_RootOrder
@@ -4359,6 +4359,10 @@ PrefabInstance:
     - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_Name
       value: FoeInBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
@@ -5379,11 +5383,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.501
       objectReference: {fileID: 0}
     - target: {fileID: 8816518090911114164, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_RootOrder
@@ -5432,6 +5436,10 @@ PrefabInstance:
     - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_Name
       value: FoeInBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
@@ -6345,11 +6353,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.501
       objectReference: {fileID: 0}
     - target: {fileID: 8816518090911114164, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_RootOrder
@@ -6398,6 +6406,10 @@ PrefabInstance:
     - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_Name
       value: FoeInBattle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
@@ -7400,11 +7412,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.501
       objectReference: {fileID: 0}
     - target: {fileID: 8816518090911114164, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_RootOrder
@@ -7453,6 +7465,10 @@ PrefabInstance:
     - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_Name
       value: FoeInBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
@@ -7602,11 +7618,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.501
       objectReference: {fileID: 0}
     - target: {fileID: 8816518090911114164, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_RootOrder
@@ -7655,6 +7671,10 @@ PrefabInstance:
     - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_Name
       value: FoeInBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
@@ -7818,11 +7838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.501
       objectReference: {fileID: 0}
     - target: {fileID: 8349544559630146151, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7879,6 +7899,10 @@ PrefabInstance:
     - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_Name
       value: FoeInBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}

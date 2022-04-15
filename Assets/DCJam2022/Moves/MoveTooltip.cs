@@ -13,7 +13,7 @@ public class MoveTooltip : MonoBehaviour
 
     bool nudged { get; set; } = false;
 
-    public void SetFromMove(MoveBase move)
+    public virtual void SetFromMove(MoveBase move)
     {
         this.MoveName.text = move.MoveName;
         this.AbilityDescription.text = string.Format(move.Description, move.DamageFloor, move.DamageCeiling);

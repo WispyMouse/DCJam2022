@@ -17,10 +17,7 @@ public class PartySelectionSceneHelperTools : SceneHelperTools
     public Image Portrait;
     public TMP_Text Name;
     public TMP_Text Blurb;
-
-    public TMP_Text FirstStat;
-    public TMP_Text SecondStat;
-    public TMP_Text ThirdStat;
+    public TMP_Text NRG;
 
     public TMP_Text FirstSkill;
     public TMP_Text SecondSkill;
@@ -48,11 +45,8 @@ public class PartySelectionSceneHelperTools : SceneHelperTools
         {
             Portrait.gameObject.SetActive(false);
             Name.gameObject.SetActive(false);
+            NRG.gameObject.SetActive(false);
             Blurb.gameObject.SetActive(false);
-
-            FirstStat.gameObject.SetActive(false);
-            SecondStat.gameObject.SetActive(false);
-            ThirdStat.gameObject.SetActive(false);
 
             FirstSkill.gameObject.SetActive(false);
             SecondSkill.gameObject.SetActive(false);
@@ -62,10 +56,12 @@ public class PartySelectionSceneHelperTools : SceneHelperTools
         {
             Portrait.gameObject.SetActive(true);
             Name.gameObject.SetActive(true);
+            NRG.gameObject.SetActive(true);
             Blurb.gameObject.SetActive(true);
 
             Portrait.sprite = profile.ChooseAPartyMemberPicture;
             Name.text = profile.ProfileName;
+            NRG.text = $"NRG: {profile.MaxNRG}";
             Blurb.text = profile.Blurb;
 
             if (!string.IsNullOrEmpty(profile.FirstSkill))
@@ -97,14 +93,6 @@ public class PartySelectionSceneHelperTools : SceneHelperTools
             {
                 ThirdSkill.gameObject.SetActive(false);
             }
-
-            FirstStat.gameObject.SetActive(true);
-            SecondStat.gameObject.SetActive(true);
-            ThirdStat.gameObject.SetActive(true);
-
-            FirstStat.text = $"Perception: {profile.Perception}";
-            SecondStat.text = $"Precision: {profile.Precision}";
-            ThirdStat.text = $"Perseverence: {profile.Perseverence}";
         }
     }
 

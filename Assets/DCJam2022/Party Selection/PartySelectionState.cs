@@ -37,6 +37,18 @@ public class PartySelectionState : SceneLoadingGameplayState
         HelperTools.SceneHelperInstance.PlayerParty = new PlayerParty(SelectedDelvers);
         HelperTools.SceneHelperInstance.PlayerParty.MaxAOF = 10;
         HelperTools.SceneHelperInstance.PlayerParty.CurAOF = HelperTools.SceneHelperInstance.PlayerParty.MaxAOF;
+
+        foreach (PartyMember member in HelperTools.SceneHelperInstance.PlayerParty.PartyMembers)
+        {
+            foreach (string skill in new List<string>() { member.FromProfile.FirstSkill, member.FromProfile.SecondSkill, member.FromProfile.ThirdSkill })
+            {
+                if (!string.IsNullOrEmpty(skill))
+                {
+                    SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData.SetFlag(skill, 1);
+                }    
+            }
+        }
+
         SceneHelperInstance.TransitionsInstance.StartCoroutine(StateMachineInstance.ChangeToState(new TownState()));
     }
 

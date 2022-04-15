@@ -141,6 +141,7 @@ public class LabyrinthState : SceneLoadingGameplayState
     {
         yield return base.ChangeUp(nextState);
         HelperTools.InteractiveButtonPressed.RemoveAllListeners();
+        HelperTools.InteractiveInFrontPanel.SetActive(false);
     }
 
     public override IEnumerator ExitState(IGameplayState nextState)
@@ -151,6 +152,7 @@ public class LabyrinthState : SceneLoadingGameplayState
         }
 
         HelperTools.InteractiveButtonPressed.RemoveAllListeners();
+        HelperTools.InteractiveInFrontPanel.SetActive(false);
 
         yield return base.ExitState(nextState);
     }
