@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9293ec3b2e09a5649a16cc2b6f9bf93b, type: 3}
-  m_Name: w1_20_Combat
+  m_Name: 10_Battle_Data
   m_EditorClassIdentifier: 
-  EncounterName: Repair Crack
+  EncounterName: Place a new Torch
   Foes:
   - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
       FoeStartingPhase: 0
     - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
       FoeStartingPhase: 0

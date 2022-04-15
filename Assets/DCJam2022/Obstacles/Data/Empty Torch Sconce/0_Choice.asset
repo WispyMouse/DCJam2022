@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d347e4b301294dbe728de9d019195, type: 3}
-  m_Name: w1_1_WhatDoYouDo
+  m_Name: 0_Choice
   m_EditorClassIdentifier: 
-  EventId: 1
-  Text: What do you do?
+  EventId: 0
+  Text: An empty torch sconce. What do you do?
   Entries:
-  - ChoiceName: Rekindle Magic
+  - FlagsRequired: []
+    ChoiceName: Place a new Torch
     GotoId: 10
-  - ChoiceName: Repair Crack
-    GotoId: 20
-  - ChoiceName: Open New Wellspring
-    GotoId: 30
-  - ChoiceName: Turn Back
+  - FlagsRequired: []
+    ChoiceName: Leave
     GotoId: -1

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3c698e8815a2f746b85f8bf0d324f77, type: 3}
-  m_Name: w1_0_Start
+  m_Script: {fileID: 11500000, guid: 9d0f78bfe16c559479d1f9f5eb7e7795, type: 3}
+  m_Name: 11_Flag_waterway_clear
   m_EditorClassIdentifier: 
-  EventId: 0
-  Text: A dull crystal is affixed to the wall. This device used to provide clean
-    water to the dungeon from a distant source.
+  EventId: 11
+  FlagToSet: waterway_clear
+  Value: 1

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3df33f197c47e184683a1f2862a92b1f, type: 3}
-  m_Name: w1_10_RekindleMagicEncounter
+  m_Name: 10_Battle
   m_EditorClassIdentifier: 
   EventId: 10
-  Foes: {fileID: 11400000, guid: 549b820bf11438f4b87df65b790ff116, type: 2}
+  Foes: {fileID: 11400000, guid: 9f62aaa95be44b14981b0d2fedb518db, type: 2}

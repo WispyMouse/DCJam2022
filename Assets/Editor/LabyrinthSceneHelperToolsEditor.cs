@@ -196,6 +196,7 @@ public class LabyrinthSceneHelperToolsEditor : Editor
         foreach (LabyrinthInteractive processingInteractive in FindObjectsOfType<LabyrinthInteractive>())
         {
             HashSet<CellCoordinates> onCoordinates = new HashSet<CellCoordinates>();
+            processingInteractive.Data.OnCoordinates.Clear();
 
             foreach (Collider interactiveCollider in processingInteractive.GetComponentsInChildren<Collider>())
             {

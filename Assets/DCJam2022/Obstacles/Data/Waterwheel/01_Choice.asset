@@ -9,8 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df33f197c47e184683a1f2862a92b1f, type: 3}
-  m_Name: w1_20_RepairCrackEncounter
+  m_Script: {fileID: 11500000, guid: c13d347e4b301294dbe728de9d019195, type: 3}
+  m_Name: 01_Choice
   m_EditorClassIdentifier: 
-  EventId: 20
-  Foes: {fileID: 11400000, guid: 51cf288aba7808840b088b4643a3554f, type: 2}
+  EventId: 0
+  Text: What do you do?
+  Entries:
+  - FlagsRequired: []
+    ChoiceName: Repair It Fully (very hard)
+    GotoId: 10
+  - FlagsRequired: []
+    ChoiceName: Leave
+    GotoId: -1
