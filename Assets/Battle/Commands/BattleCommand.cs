@@ -58,6 +58,13 @@ public class BattleCommand
 
         }
 
+        if (targetsAffected.TrueForAll(x => x is FoeMember && ((FoeMember)x).CurProblemJuice <= 0))
+        {
+            ConsoleManager.Instance.AddToLog($"{ActingMember.DisplayName} had nothing to target...");
+            yield return new WaitForSeconds(ResolveState.WaitAfterLoggingTargets);
+            yield break;
+        }
+
         ConsoleManager.Instance.AddToLog(targetText);
         yield return new WaitForSeconds(ResolveState.WaitAfterLoggingTargets);
 

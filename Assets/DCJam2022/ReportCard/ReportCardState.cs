@@ -23,6 +23,11 @@ public class ReportCardState : SceneLoadingGameplayState
         yield return base.Load();
         helperTools = GameObject.FindObjectOfType<ReportCardSceneHelperTools>();
         helperTools.RestartButton.onClick.AddListener(() => RestartGame());
+
+        int dayCount = helperTools.SceneHelperInstance.SaveDataManagerInstance.CurrentSaveData.Day;
+
+        helperTools.ClearText.text = string.Format($"(clearing text not set yet) You cleared {0}% of major obstacles and {1}% of minor obstacles in {2} days.", 0, 0, dayCount);
+        helperTools.SupervisorStatement.text = "This is the set supervisor statement text.";
     }
 
     void RestartGame()

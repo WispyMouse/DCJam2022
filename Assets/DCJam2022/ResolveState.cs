@@ -60,6 +60,16 @@ public class ResolveState : IGameplayState
 
         foreach (BattleCommand command in managedBattleState.BattleCommands)
         {
+            if (managedBattleState.PlayerPartyPointer.CurAOF <= 0)
+            {
+                break;
+            }
+
+            if (managedBattleState.Opponents.OpposingMembers.TrueForAll(x => x.CurProblemJuice <= 0))
+            {
+                break;
+            }
+
             if (command.ActingMember is FoeMember)
             {
                 FoeMember foeMember = (FoeMember)command.ActingMember;
@@ -69,8 +79,6 @@ public class ResolveState : IGameplayState
                     continue;
                 }
             }
-
-            // ConsoleManager.Instance.AddToLog($"Resolve this command from {command.ActingMember.DisplayName} targeting {command.Target.DisplayName} with {command.ActionTaken.MoveName}");
 
             yield return command.TakeAction(managedBattleState);
             managedBattleState.UpdateEveryonesVisuals();
