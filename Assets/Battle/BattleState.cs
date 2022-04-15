@@ -136,6 +136,12 @@ public class BattleState : SceneLoadingGameplayState
         {
             yield return globalStateMachine.PushNewState(new ChoosePartysCommandsState(globalStateMachine, this));
         }
+
+        foreach (FoeMember foe in Opponents.OpposingMembers)
+        {
+            foe.Visual.NMEPreviewInstance.SetFromMove(foe.BattleData.AttackPhases[foe.CurPhase].UsedMove);
+        }
+
     }
 
     public IEnumerator ProceedNextWave()

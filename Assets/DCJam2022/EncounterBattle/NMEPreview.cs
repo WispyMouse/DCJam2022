@@ -6,10 +6,11 @@ using TMPro;
 public class NMEPreview : MoveTooltip
 {
     public TMP_Text NMEName;
+    public Foe AttachedFoe;
 
     public override void SetFromMove(MoveBase move)
     {
         base.SetFromMove(move);
-        NMEName.text = GetComponentInParent<Foe>().DataMember.DisplayName;
+        NMEName.text = AttachedFoe.DataMember.DisplayName;
     }
 }

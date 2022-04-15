@@ -826,7 +826,7 @@ MonoBehaviour:
   ActionSelectedScreen: {fileID: 2997813950577123828}
   AttackOption: {fileID: 6342385935005449561, guid: 73b7377c05ffb4343a41cc786c609c23, type: 3}
   AttackOptionParent: {fileID: 9151743920181956845}
-  NRGSlider: {fileID: 766191040402013459}
+  NRGSlider: {fileID: 1838515857749821560}
   NRGLabel: {fileID: 7073001859696712405}
 --- !u!114 &869481272790013018
 MonoBehaviour:
@@ -2018,15 +2018,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5692237c1314d7741b1d4f223b8ab588, type: 3}
---- !u!114 &766191040402013459 stripped
+--- !u!114 &1838515857749821560 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1187554172066446225, guid: 5692237c1314d7741b1d4f223b8ab588, type: 3}
+  m_CorrespondingSourceObject: {fileID: 241713225503854330, guid: 5692237c1314d7741b1d4f223b8ab588, type: 3}
   m_PrefabInstance: {fileID: 1934582511467366018}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Script: {fileID: 11500000, guid: ada1536ade0b5614f8ea06457f00401d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &3326010091953643521 stripped

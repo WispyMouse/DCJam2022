@@ -17,7 +17,7 @@ public class PlayerHealthInCombat : MonoBehaviour
     public MoveInEncounter AttackOption;
     public Transform AttackOptionParent;
 
-    public Slider NRGSlider;
+    public WarrencrawlBar NRGSlider;
     public TMP_Text NRGLabel;
 
     public PartyMember Player { get; private set; }
@@ -32,8 +32,7 @@ public class PlayerHealthInCombat : MonoBehaviour
 
     public void UpdateFromPlayer()
     {
-        NRGSlider.maxValue = Player.MaxNRG;
-        NRGSlider.value = Player.CurNRG;
+        NRGSlider.SetValue(Player.CurNRG, Player.MaxNRG);
         NRGLabel.text = Player.CurNRG.ToString();
 
         if (Player.CurNRG <= 0)

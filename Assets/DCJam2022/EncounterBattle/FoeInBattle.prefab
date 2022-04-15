@@ -410,7 +410,6 @@ GameObject:
   - component: {fileID: 8816518090911114163}
   - component: {fileID: 1517298617485806157}
   - component: {fileID: 5742961882765562701}
-  - component: {fileID: 4335109560881707617}
   m_Layer: 10
   m_Name: FoeInBattle
   m_TagString: Untagged
@@ -501,10 +500,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HighlightArrow: {fileID: 328686197978589089}
-  HealthSlider: {fileID: 5561716035324015164}
+  HealthSlider: {fileID: 6777523383680796503}
   HealthText: {fileID: 4070313262869722562}
   Renderer: {fileID: 8816518090911114163}
   Root: {fileID: 8816518090911114165}
+  NMEPreviewInstance: {fileID: 6174341820570722790}
 --- !u!65 &5742961882765562701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -518,20 +518,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4335109560881707617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8816518090911114165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 659e95536a86aba4ab99c97f4b61ea61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Tooltip: {fileID: 6174341820570722790}
-  HoverTimeToShow: 0.6
 --- !u!1 &9036483549069622656
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,15 +668,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7082272057820188411, guid: ec013d03213359949b810835eadf4af0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5571777
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7082272057820188411, guid: ec013d03213359949b810835eadf4af0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5571777
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7082272057820188411, guid: ec013d03213359949b810835eadf4af0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5571777
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7082272057820188411, guid: ec013d03213359949b810835eadf4af0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -740,6 +726,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7142267167344329013, guid: ec013d03213359949b810835eadf4af0, type: 3}
+      propertyPath: AttachedFoe
+      value: 
+      objectReference: {fileID: 1517298617485806157}
     - target: {fileID: 7926942553725104855, guid: ec013d03213359949b810835eadf4af0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -875,15 +865,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5692237c1314d7741b1d4f223b8ab588, type: 3}
---- !u!114 &5561716035324015164 stripped
+--- !u!114 &6777523383680796503 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1187554172066446225, guid: 5692237c1314d7741b1d4f223b8ab588, type: 3}
+  m_CorrespondingSourceObject: {fileID: 241713225503854330, guid: 5692237c1314d7741b1d4f223b8ab588, type: 3}
   m_PrefabInstance: {fileID: 6725041366979135917}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Script: {fileID: 11500000, guid: ada1536ade0b5614f8ea06457f00401d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &7612628715736510254 stripped

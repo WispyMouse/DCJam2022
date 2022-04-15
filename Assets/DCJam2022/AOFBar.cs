@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class AOFBar : MonoBehaviour
+public class AOFBar : WarrencrawlBar
 {
     public TMP_Text AOFLabel;
     public Slider AOFSlider;
@@ -15,10 +15,9 @@ public class AOFBar : MonoBehaviour
         Instance = this;
     }
 
-    public void SetValue(int cur, int max)
+    public override void SetValue(int cur, int max)
     {
-        AOFSlider.maxValue = max;
-        AOFSlider.value = cur;
+        base.SetValue(cur, max);
         AOFLabel.text = cur.ToString();
     }
 }

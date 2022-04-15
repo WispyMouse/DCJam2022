@@ -12,11 +12,6 @@ public class FoeSelectionHandler : MonoBehaviour
 
     void Update()
     {
-        if (ChosenAction == null)
-        {
-            return;
-        }
-
         bool buttonHit = false;
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -40,7 +35,15 @@ public class FoeSelectionHandler : MonoBehaviour
                 lastHighlighted?.SetUnhighlighted();
             }
             
-            lastHighlighted = foundFoe;
+            lastHighlighted = null;
+            return;
+        }
+
+        lastHighlighted?.NMEPreviewInstance.Hide();
+        foundFoe.NMEPreviewInstance.Show();
+
+        if (ChosenAction == null)
+        {
             return;
         }
 

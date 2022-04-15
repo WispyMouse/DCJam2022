@@ -11,11 +11,13 @@ public class Foe : MonoBehaviour
 
     public GameObject HighlightArrow;
 
-    public Slider HealthSlider;
+    public WarrencrawlBar HealthSlider;
     public TMP_Text HealthText;
     public SpriteRenderer Renderer;
 
     public GameObject Root;
+
+    public NMEPreview NMEPreviewInstance;
 
     public void SetDataMember(FoeMember member)
     {
@@ -26,8 +28,7 @@ public class Foe : MonoBehaviour
 
     public void UpdateFromMember()
     {
-        HealthSlider.maxValue = DataMember.MaxProblemJuice;
-        HealthSlider.value = DataMember.CurProblemJuice;
+        HealthSlider.SetValue(DataMember.CurProblemJuice, DataMember.MaxProblemJuice);
         HealthText.text = DataMember.CurProblemJuice.ToString();
 
         if (DataMember.BattleData != null)
@@ -59,11 +60,13 @@ public class Foe : MonoBehaviour
 
     public void SetHighlighted()
     {
+        NMEPreviewInstance.Show();
         HighlightArrow.SetActive(true);
     }
 
     public void SetUnhighlighted()
     {
+        NMEPreviewInstance.Hide();
         HighlightArrow.SetActive(false);
     }
 

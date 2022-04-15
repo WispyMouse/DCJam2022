@@ -34,7 +34,14 @@ public class MoveTooltip : MonoBehaviour
         }
 
         TooltipHolder tooltipHolder = GameObject.FindObjectOfType<TooltipHolder>();
-        LayoutRebuilder.ForceRebuildLayoutImmediate(Root.transform.parent.parent.GetComponent<RectTransform>());
+
+        RectTransform parentToRefresh = Root.transform.parent.parent.GetComponent<RectTransform>();
+
+        if (parentToRefresh != null && parentToRefresh.gameObject != null && parentToRefresh.gameObject.activeInHierarchy)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(parentToRefresh);
+        }
+        
         transform.SetParent(tooltipHolder.transform, true);
         Hide();
     }

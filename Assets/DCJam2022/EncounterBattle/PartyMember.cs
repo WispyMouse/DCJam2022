@@ -34,6 +34,6 @@ public class PartyMember : CombatMember
     public void LoseNRG(int amount)
     {
         CurNRG = Mathf.Clamp(CurNRG - amount, 0, MaxNRG);
-        Hud.NRGSlider.value = amount;
+        Hud.NRGSlider.SetValue(amount, MaxNRG);
     }
 }

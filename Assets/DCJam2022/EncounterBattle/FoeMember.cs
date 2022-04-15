@@ -38,7 +38,7 @@ public class FoeMember : CombatMember
     public void Progress(int amount)
     {
         CurProblemJuice = Mathf.Clamp(CurProblemJuice - amount, 0, MaxProblemJuice);
-        Visual.HealthSlider.value = CurProblemJuice;
+        Visual.HealthSlider.SetValue(CurProblemJuice, MaxProblemJuice);
     }
 
     public override bool CanAct()

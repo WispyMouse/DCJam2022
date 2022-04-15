@@ -1312,6 +1312,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5155081646779502559, guid: 5692237c1314d7741b1d4f223b8ab588, type: 3}
+      propertyPath: m_FillAmount
+      value: 0.904
+      objectReference: {fileID: 0}
     - target: {fileID: 8691227109025003131, guid: 5692237c1314d7741b1d4f223b8ab588, type: 3}
       propertyPath: m_Name
       value: AOFBar
@@ -1351,6 +1355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feeab2a906203847b1948f8ea0d0442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BaseSlider: {fileID: 297744801}
+  Backbar: {fileID: 517971850}
   AOFLabel: {fileID: 131709540}
   AOFSlider: {fileID: 297744801}
 --- !u!1001 &306762247
@@ -1663,6 +1669,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398039738}
   m_CullTransparentMesh: 1
+--- !u!114 &517971850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1298130997524009571, guid: 5692237c1314d7741b1d4f223b8ab588, type: 3}
+  m_PrefabInstance: {fileID: 297744798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &529977893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7754,11 +7771,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045163444013439857, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.501
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8816518090911114164, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_RootOrder
@@ -7807,10 +7824,6 @@ PrefabInstance:
     - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
       propertyPath: m_Name
       value: FoeInBattle
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816518090911114165, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2509665a9c7c0f0459eb0ef63b3b1613, type: 3}
