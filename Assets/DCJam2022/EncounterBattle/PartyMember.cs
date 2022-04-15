@@ -24,6 +24,10 @@ public class PartyMember : CombatMember
 
     public void RefreshOutOfBattle()
     {
+        foreach (PlayerMove curMove in FromProfile.AttackOptions)
+        {
+            curMove.UsedInThisBattle = false;
+        }
         CurNRG = MaxNRG;
     }
 

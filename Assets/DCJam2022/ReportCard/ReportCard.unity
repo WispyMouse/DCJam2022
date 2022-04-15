@@ -590,6 +590,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RestartButton: {fileID: 438181670}
+  SupervisorStatement: {fileID: 1640171164}
+  ClearText: {fileID: 767469129}
+  ReportCardMusic: {fileID: 8300000, guid: cac7b681be8743248bbe33cc8fcfd2a2, type: 3}
 --- !u!4 &854342465
 Transform:
   m_ObjectHideFlags: 0

@@ -175,6 +175,7 @@ public class LabyrinthState : SceneLoadingGameplayState
         CellCoordinates newCoordinates = PointOfViewInstance.CurCoordinates + offset;
 
         LabyrinthCell cellAtPosition = LevelToLoad.LabyrinthData.CellAtCoordinate(newCoordinates);
+        CheckAndPresentAccessibleInteractive();
 
         if (cellAtPosition == null)
         {

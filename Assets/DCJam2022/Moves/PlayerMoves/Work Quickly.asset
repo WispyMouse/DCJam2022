@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveName: Work Quickly
   Verbs: works quickly on
-  Targeting: 1
+  Targeting: 2
   StatusEffect: 0
-  DamageFloor: 2
+  DamageFloor: 1
   DamageCeiling: 3
-  Description: Fast speed {0}-{1} to an obstacle.
+  Description: Fast speed {0}-{1} to all obstacles, one use per battle.
   IsHealing: 0
   Speed: 2
+  SingleUsePerBattle: 1

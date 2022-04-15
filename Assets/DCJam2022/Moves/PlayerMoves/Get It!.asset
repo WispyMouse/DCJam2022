@@ -18,6 +18,7 @@ MonoBehaviour:
   StatusEffect: 0
   DamageFloor: 3
   DamageCeiling: 5
-  Description: Get {0}-{1} progress done on one obstacle.
+  Description: Get {0}-{1} progress done on one obstacle. One use per battle.
   IsHealing: 0
   Speed: 1
+  SingleUsePerBattle: 1

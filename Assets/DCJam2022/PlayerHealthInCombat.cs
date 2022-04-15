@@ -86,6 +86,7 @@ public class PlayerHealthInCombat : MonoBehaviour
     public void SetFade()
     {
         ClearOptions();
+        UpdateFromPlayer();
         FadeScreen.SetActive(true);
     }
 

@@ -15,16 +15,9 @@ MonoBehaviour:
   EncounterName: Move the Furniture
   Foes:
   - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 863a9180e824b9349a32c668582ccd34, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 9ba4d95f3d5445047b2f4a8ef82a19be, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 3e2fdd91b2c7c6e47a929837a0c067da, type: 2}
       FoeStartingPhase: 1
-  - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: 65e5d93ec64375947b98055f79c02e1f, type: 2}
-      FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
-      FoeStartingPhase: 1
-    - EncounteredFoe: {fileID: 11400000, guid: 65e5d93ec64375947b98055f79c02e1f, type: 2}
-      FoeStartingPhase: 2

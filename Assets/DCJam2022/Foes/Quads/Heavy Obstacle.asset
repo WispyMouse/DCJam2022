@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa8366e57162d34c833b084868e687f, type: 3}
+  m_Name: Heavy Obstacle
+  m_EditorClassIdentifier: 
+  Name: Heavy Obstacle
+  Appearance: {fileID: 21300000, guid: 7bfa8d1011154d846a1c3d431c1142eb, type: 3}
+  Health: 8
+  AttackPhases:
+  - AppearenceInPhase: {fileID: 21300000, guid: 7bfa8d1011154d846a1c3d431c1142eb, type: 3}
+    UsedMove: {fileID: 11400000, guid: b620c2bd3e32d3c4893b818af1e93fc4, type: 2}
+  - AppearenceInPhase: {fileID: 21300000, guid: eaa011090f5f1484d9ac275b2396e07a, type: 3}
+    UsedMove: {fileID: 11400000, guid: 57fcced401ea21846a85e08527bd6c81, type: 2}

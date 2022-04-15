@@ -16,8 +16,9 @@ MonoBehaviour:
   Verbs: wrenches
   Targeting: 1
   StatusEffect: 0
-  DamageFloor: 2
-  DamageCeiling: 10
-  Description: Applies {0}-{1} progress.
+  DamageFloor: 6
+  DamageCeiling: 15
+  Description: Applies {0}-{1} progress, but slow. One use per battle.
   IsHealing: 0
   Speed: 0
+  SingleUsePerBattle: 1

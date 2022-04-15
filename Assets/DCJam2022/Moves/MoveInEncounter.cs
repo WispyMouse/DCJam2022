@@ -16,5 +16,10 @@ public class MoveInEncounter : MonoBehaviour
         ButtonLabel.text = toSetFrom.MoveName;
         Clickable.onClick.AddListener(() => { clickedAction(attacker, toSetFrom); });
         Shower.Tooltip.SetFromMove(toSetFrom);
+
+        if (toSetFrom.UsedInThisBattle && toSetFrom.SingleUsePerBattle)
+        {
+            Clickable.interactable = false;
+        }
     }
 }

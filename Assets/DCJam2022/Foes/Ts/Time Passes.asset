@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1209a45dadcf5bd4485eea52352d35bc, type: 3}
-  m_Name: Hop to It
+  m_Script: {fileID: 11500000, guid: fd489af11194f9b43894a5d468706909, type: 3}
+  m_Name: Time Passes
   m_EditorClassIdentifier: 
-  MoveName: Hop To It
-  Verbs: hops to
+  MoveName: Time Passes
+  Verbs: passes the time with
   Targeting: 1
   StatusEffect: 0
-  DamageFloor: 2
-  DamageCeiling: 4
-  Description: Quickly applies {0}-{1} progress to one obstacle.
+  DamageFloor: 0
+  DamageCeiling: 1
+  Description: Fast, causes {0}-{1} NRG loss to one Dungeoneer. Not dangerous yet...
   IsHealing: 0
-  Speed: 2
+  Speed: 0

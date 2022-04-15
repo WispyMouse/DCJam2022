@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveName: Tickle
   Verbs: tickles
-  Targeting: 2
+  Targeting: 1
   StatusEffect: 0
   DamageFloor: 1
-  DamageCeiling: 1
-  Description: Quickly applies {0} progress to all obstacles.
+  DamageCeiling: 5
+  Description: Quickly applies {0}-{1} progress to an obstacle, once per battle.
   IsHealing: 0
   Speed: 2
+  SingleUsePerBattle: 1

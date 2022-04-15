@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveName: Brag
   Verbs: brags
-  Targeting: 0
+  Targeting: 2
   StatusEffect: 0
-  DamageFloor: 5
-  DamageCeiling: 8
-  Description: Restores {0}-{1} NRG to self. And only yourself.
-  IsHealing: 1
-  Speed: 0
+  DamageFloor: 0
+  DamageCeiling: 2
+  Description: Fast, applies {0}-{1} progress to each obstacle. Sometimes.
+  IsHealing: 0
+  Speed: 2
+  SingleUsePerBattle: 0

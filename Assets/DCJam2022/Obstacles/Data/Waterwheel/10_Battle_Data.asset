@@ -15,30 +15,25 @@ MonoBehaviour:
   EncounterName: Repair It Fully
   Foes:
   - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: a0c807162cafd2041989ba9a6fe1f102, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 863a9180e824b9349a32c668582ccd34, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
-      FoeStartingPhase: 0
-  - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
-      FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: 65e5d93ec64375947b98055f79c02e1f, type: 2}
-      FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: a0c807162cafd2041989ba9a6fe1f102, type: 2}
       FoeStartingPhase: 0
   - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
-      FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: 65e5d93ec64375947b98055f79c02e1f, type: 2}
-      FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 9ba4d95f3d5445047b2f4a8ef82a19be, type: 2}
+      FoeStartingPhase: 1
+    - EncounteredFoe: {fileID: 11400000, guid: 9ba4d95f3d5445047b2f4a8ef82a19be, type: 2}
+      FoeStartingPhase: 1
+    - EncounteredFoe: {fileID: 11400000, guid: f1d28ce030cd3f54bb0871dfff9d71dd, type: 2}
       FoeStartingPhase: 0
   - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: d14f595b5163b404a9356bf2bde255d7, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: de1126b31f50a9a449b7b005bf755cc9, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: 65e5d93ec64375947b98055f79c02e1f, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: a1122fc02fc9bfe409631b70d92d8c72, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
-      FoeStartingPhase: 0
+    - EncounteredFoe: {fileID: 11400000, guid: bc8b08d02f8593b42a59f64d43ddd2ea, type: 2}
+      FoeStartingPhase: 1
+    - EncounteredFoe: {fileID: 11400000, guid: 863a9180e824b9349a32c668582ccd34, type: 2}
+      FoeStartingPhase: 1

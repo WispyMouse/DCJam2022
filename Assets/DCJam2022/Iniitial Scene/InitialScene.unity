@@ -1001,6 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartButton: {fileID: 1468696126}
+  InitialScreenMusic: {fileID: 8300000, guid: d55ad26d22d021c4dbcc42b8d24c5887, type: 3}
 --- !u!4 &1729127628
 Transform:
   m_ObjectHideFlags: 0

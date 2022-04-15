@@ -10,8 +10,11 @@ public class ReportCardSceneHelperTools : SceneHelperTools
     public TMP_Text SupervisorStatement;
     public TMP_Text ClearText;
 
+    public AudioClip ReportCardMusic;
+
     public override IGameplayState GetNewDemoState()
     {
+        AudioManager.Instance.PlayMusic(ReportCardMusic);
         return new ReportCardState();
     }
 }

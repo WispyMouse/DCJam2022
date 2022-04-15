@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1209a45dadcf5bd4485eea52352d35bc, type: 3}
-  m_Name: Explore
+  m_Script: {fileID: 11500000, guid: fd489af11194f9b43894a5d468706909, type: 3}
+  m_Name: Time Running Out
   m_EditorClassIdentifier: 
-  MoveName: Explore
-  Verbs: explores
-  Targeting: 2
+  MoveName: Time Running Out
+  Verbs: runs out of time with
+  Targeting: 3
   StatusEffect: 0
-  DamageFloor: 2
-  DamageCeiling: 3
-  Description: Applies {0}-{1} progress to all obstacles, slowly.
+  DamageFloor: 1
+  DamageCeiling: 2
+  Description: Causes {0}-{1} AoF loss. Stop it while you can!
   IsHealing: 0
-  Speed: 0
+  Speed: 1

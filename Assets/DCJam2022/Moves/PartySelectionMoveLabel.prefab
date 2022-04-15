@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tooltip: {fileID: 359927595181543149}
-  HoverTimeToShow: 0.6
+  HoverTimeToShow: 0.2
 --- !u!1 &7705913387961437582
 GameObject:
   m_ObjectHideFlags: 0

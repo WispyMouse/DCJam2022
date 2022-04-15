@@ -15,9 +15,9 @@ MonoBehaviour:
   EncounterName: Place a new Torch
   Foes:
   - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: bc8b08d02f8593b42a59f64d43ddd2ea, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 3e2fdd91b2c7c6e47a929837a0c067da, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 45c6ea299ffa7ed40ba57a3e834ea8fb, type: 2}
       FoeStartingPhase: 0

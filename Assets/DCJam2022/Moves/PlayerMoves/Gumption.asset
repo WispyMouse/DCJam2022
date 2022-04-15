@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveName: Gumption
   Verbs: applies gumption to
-  Targeting: 1
+  Targeting: 2
   StatusEffect: 0
-  DamageFloor: 3
+  DamageFloor: 1
   DamageCeiling: 3
-  Description: Apply {0} progress to one obstacle.
+  Description: Apply {0}-{1} progress to each obstacle.
   IsHealing: 0
   Speed: 1
+  SingleUsePerBattle: 0

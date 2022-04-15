@@ -4,5 +4,6 @@
     OneOpposing,
     AllOpposing,
     AoF,
-    OneAlly
+    OneAlly,
+    AllAllies
 }

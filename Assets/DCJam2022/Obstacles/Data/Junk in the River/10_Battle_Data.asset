@@ -15,10 +15,16 @@ MonoBehaviour:
   EncounterName: Clean the Junk in the Waterway
   Foes:
   - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: f1d28ce030cd3f54bb0871dfff9d71dd, type: 2}
       FoeStartingPhase: 0
-    - EncounteredFoe: {fileID: 11400000, guid: 5105aa59977bf50478c93ae232d75338, type: 2}
+    - EncounteredFoe: {fileID: 11400000, guid: 45c6ea299ffa7ed40ba57a3e834ea8fb, type: 2}
+      FoeStartingPhase: 0
+    - EncounteredFoe: {fileID: 11400000, guid: 45c6ea299ffa7ed40ba57a3e834ea8fb, type: 2}
       FoeStartingPhase: 0
   - FoesInWave:
-    - EncounteredFoe: {fileID: 11400000, guid: 65e5d93ec64375947b98055f79c02e1f, type: 2}
-      FoeStartingPhase: 2
+    - EncounteredFoe: {fileID: 11400000, guid: 863a9180e824b9349a32c668582ccd34, type: 2}
+      FoeStartingPhase: 0
+    - EncounteredFoe: {fileID: 11400000, guid: 863a9180e824b9349a32c668582ccd34, type: 2}
+      FoeStartingPhase: 1
+    - EncounteredFoe: {fileID: 11400000, guid: f1d28ce030cd3f54bb0871dfff9d71dd, type: 2}
+      FoeStartingPhase: 1

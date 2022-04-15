@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Organize
   m_EditorClassIdentifier: 
   MoveName: Organize
+  Verbs: 
   Targeting: 1
   StatusEffect: 0
   DamageFloor: 3
-  DamageCeiling: 3
+  DamageCeiling: 4
   Description: '{0} to an obstacle.'
   IsHealing: 0
   Speed: 1
+  SingleUsePerBattle: 0

@@ -15,9 +15,10 @@ MonoBehaviour:
   MoveName: Insight
   Verbs: gets insight into
   Targeting: 1
-  StatusEffect: 1
-  DamageFloor: 1
+  StatusEffect: 0
+  DamageFloor: 2
   DamageCeiling: 2
-  Description: Applies {0}-{1} progress and stuns an obstacle.
+  Description: Applies {0} progress to an obstacle, fast.
   IsHealing: 0
-  Speed: 1
+  Speed: 2
+  SingleUsePerBattle: 0

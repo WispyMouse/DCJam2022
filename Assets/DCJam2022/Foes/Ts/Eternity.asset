@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa8366e57162d34c833b084868e687f, type: 3}
+  m_Name: Eternity
+  m_EditorClassIdentifier: 
+  Name: Eternity
+  Appearance: {fileID: 21300000, guid: 4864a872db3f4784bb56c09338dd03de, type: 3}
+  Health: 30
+  AttackPhases:
+  - AppearenceInPhase: {fileID: 21300000, guid: 4864a872db3f4784bb56c09338dd03de, type: 3}
+    UsedMove: {fileID: 11400000, guid: 33e2e43726bc2244cb442413d2a4e8a3, type: 2}
+  - AppearenceInPhase: {fileID: 21300000, guid: 401866650a53b8e41a8a7c417e054e82, type: 3}
+    UsedMove: {fileID: 11400000, guid: ca1ace82bfdd3ff4988064f3a84070c8, type: 2}
+  - AppearenceInPhase: {fileID: 21300000, guid: 4290b53df9655b7498547e3db199e5c7, type: 3}
+    UsedMove: {fileID: 11400000, guid: 155c4f2968dc11a459bc945328ac39b4, type: 2}
+  - AppearenceInPhase: {fileID: 21300000, guid: a941298476d3bb5428fd4121a2ba1999, type: 3}
+    UsedMove: {fileID: 11400000, guid: 11cfb01815c2ee9448c9ec444259d19d, type: 2}

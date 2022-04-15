@@ -16,8 +16,9 @@ MonoBehaviour:
   Verbs: listens to
   Targeting: 2
   StatusEffect: 0
-  DamageFloor: 1
-  DamageCeiling: 2
+  DamageFloor: 2
+  DamageCeiling: 4
   Description: '{0}-{1} to all obstacles. Slow.'
   IsHealing: 0
   Speed: 0
+  SingleUsePerBattle: 0

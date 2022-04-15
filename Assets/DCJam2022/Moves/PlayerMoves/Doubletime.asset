@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Doubletime
   m_EditorClassIdentifier: 
   MoveName: Doubletime
-  Verbs: doubletimes it on
-  Targeting: 1
+  Verbs: doubletimes it
+  Targeting: 2
   StatusEffect: 0
-  DamageFloor: 3
+  DamageFloor: 1
   DamageCeiling: 3
-  Description: Applies {0} progress to an obstacle, all quick-like.
+  Description: Applies {0} progress to all obstacles, all quick-like. One use per
+    battle.
   IsHealing: 0
   Speed: 2
+  SingleUsePerBattle: 1

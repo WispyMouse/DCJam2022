@@ -17,7 +17,8 @@ MonoBehaviour:
   Targeting: 0
   StatusEffect: 0
   DamageFloor: 0
-  DamageCeiling: 4
-  Description: Restores {0}-{1} NRG.
+  DamageCeiling: 2
+  Description: Restores {0}-{1} NRG. Yangus doesn't rest often...
   IsHealing: 1
-  Speed: 0
+  Speed: 2
+  SingleUsePerBattle: 0

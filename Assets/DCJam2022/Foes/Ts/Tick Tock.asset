@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd489af11194f9b43894a5d468706909, type: 3}
+  m_Name: Tick Tock
+  m_EditorClassIdentifier: 
+  MoveName: Tick Tock
+  Verbs: ticks and tocks
+  Targeting: 2
+  StatusEffect: 0
+  DamageFloor: 0
+  DamageCeiling: 1
+  Description: Slowly causes {0}-{1} NRG loss to the party. A long way from the worst
+    it could be.
+  IsHealing: 0
+  Speed: 0

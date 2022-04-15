@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveName: Show For It
   Verbs: shows off to
-  Targeting: 2
+  Targeting: 1
   StatusEffect: 0
-  DamageFloor: 1
-  DamageCeiling: 3
-  Description: Applies {0}-{1} progress to each obstacle.
+  DamageFloor: 0
+  DamageCeiling: 5
+  Description: Applies {0}-{1} progress to one obstacle.
   IsHealing: 0
   Speed: 1
+  SingleUsePerBattle: 0

@@ -31,6 +31,18 @@ public class BattleCommand
                 targetText = $"{ActingMember.DisplayName} {ActionTaken.Verbs}";
                 targetsAffected.Add(ActingMember);
                 break;
+            case global::Target.AllAllies:
+                if (ActingMember is PartyMember)
+                {
+                    targetText = $"{ActingMember.DisplayName} {ActionTaken.Verbs} everyone";
+                    targetsAffected.AddRange(battleState.PlayerPartyPointer.PartyMembers);
+                }
+                else
+                {
+                    targetText = $"{ActingMember.DisplayName} {ActionTaken.Verbs}";
+                    targetsAffected.AddRange(battleState.Opponents.OpposingMembers);
+                }
+                break;
             case global::Target.OneAlly:
             case global::Target.OneOpposing:
                 targetText = $"{ActingMember.DisplayName} {ActionTaken.Verbs} {Target.DisplayName}";
@@ -63,6 +75,11 @@ public class BattleCommand
             ConsoleManager.Instance.AddToLog($"{ActingMember.DisplayName} had nothing to target...");
             yield return new WaitForSeconds(ResolveState.WaitAfterLoggingTargets);
             yield break;
+        }
+
+        if (ActingMember is PartyMember)
+        {
+            ((PlayerMove)ActionTaken).UsedInThisBattle = true;
         }
 
         ConsoleManager.Instance.AddToLog(targetText);
